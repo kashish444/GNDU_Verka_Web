@@ -352,7 +352,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="/university-logo.jpg"
                   alt="Guru Nanak Dev University Logo"
                   width={60}
                   height={60}
