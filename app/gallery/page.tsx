@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Dialog,
@@ -12,12 +11,7 @@ import {
 } from "@/components/ui/dialog"
 
 import {
-  Bell,
-  BookOpen,
-  Calendar,
-  ChevronRight,
   Facebook,
-  GraduationCap,
   Instagram,
   Linkedin,
   Mail,

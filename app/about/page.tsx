@@ -5,12 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  Bell,
-  BookOpen,
   Calendar,
-  ChevronRight,
   Facebook,
-  GraduationCap,
   Instagram,
   Linkedin,
   Mail,
