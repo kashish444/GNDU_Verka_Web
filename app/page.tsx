@@ -312,7 +312,7 @@ export default function Home() {
                 <Card key={item} className="hover:shadow-lg transition-shadow overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="/annual.png"
+                      src="/Annual.png"
                       alt={`Event ${item}`}
                       fill
                       className="object-cover"
