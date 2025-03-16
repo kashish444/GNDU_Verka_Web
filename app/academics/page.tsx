@@ -1,0 +1,702 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Mail, MapPin, Phone, Download, Calendar, BookOpen, GraduationCap, Award, Users } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+export default function AcademicsPage() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      {/* Top Bar */}
+      <div className="bg-[#0c2340] text-white py-2 px-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center space-x-4 text-sm">
+            <Link href="/contact" className="flex items-center hover:text-amber-300">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>81465-14040</span>
+            </Link>
+            <Link href="mailto:osd.verka@gndu.ac.in" className="flex items-center hover:text-amber-300">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>osd.verka@gndu.ac.in</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center mb-4 md:mb-0">
+            <Image
+              src="/placeholder.svg?height=80&width=80"
+              alt="Guru Nanak Dev University Logo"
+              width={80}
+              height={80}
+              className="mr-3"
+            />
+            <div>
+              <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
+              <p className="text-sm text-gray-600">College Verka-Amritsar</p>
+            </div>
+          </div>
+          <nav className="hidden lg:flex space-x-6">
+            <Link href="/" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Home
+            </Link>
+            <Link href="/about" className="font-medium text-[#0c2340] hover:text-amber-600">
+              About
+            </Link>
+            <Link href="/academics" className="font-medium text-amber-600 border-b-2 border-amber-600">
+              Academics
+            </Link>
+            <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Admissions
+            </Link>
+            <Link href="/research" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Research
+            </Link>
+            <Link href="/campus-life" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Campus Life
+            </Link>
+            <Link href="/placements" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Placements
+            </Link>
+            <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </header>
+
+      <main className="flex-1">
+        {/* Page Title */}
+        <section className="bg-[#0c2340] text-white py-12">
+          <div className="container mx-auto px-4">
+            <h1 className="text-3xl md:text-4xl font-bold">Academics</h1>
+            <p className="mt-2 text-lg">Excellence in Education at GNDU College Verka-Amritsar</p>
+          </div>
+        </section>
+
+        {/* Academic Overview */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0c2340]">Academic Excellence</h2>
+              <p className="text-gray-700">
+                At GNDU College Verka-Amritsar, we are committed to providing quality education through innovative
+                teaching methodologies, comprehensive curriculum, and a supportive learning environment. Our academic
+                programs are designed to foster critical thinking, creativity, and practical skills that prepare
+                students for successful careers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-amber-100 flex items-center justify-center mb-4">
+                    <GraduationCap className="h-8 w-8 text-amber-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Quality Education</h3>
+                  <p className="text-gray-600">
+                    Comprehensive curriculum designed to meet industry standards and academic excellence.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                    <Users className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Expert Faculty</h3>
+                  <p className="text-gray-600">
+                    Highly qualified and dedicated faculty members committed to student success.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center mb-4">
+                    <Award className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Recognized Programs</h3>
+                  <p className="text-gray-600">
+                    UGC recognized programs with focus on both theoretical knowledge and practical skills.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Courses Offered */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Courses Offered</h2>
+
+            <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
+              <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="ug">UG Programmes</TabsTrigger>
+                <TabsTrigger value="pg">PG Programmes</TabsTrigger>
+                <TabsTrigger value="diploma">Diploma/Certificate</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="ug">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Undergraduate Programmes</CardTitle>
+                    <CardDescription>4-year UG Degree Programme</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Duration</TableHead>
+                            <TableHead>Eligibility</TableHead>
+                            <TableHead className="text-right">Seats</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">Bachelor of Arts (BA)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">400</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Medical)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 with Biology</TableCell>
+                            <TableCell className="text-right">45</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>3</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Non-Medical)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 with Physics & Math</TableCell>
+                            <TableCell className="text-right">45</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>4</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Computer Science)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 with Math</TableCell>
+                            <TableCell className="text-right">45</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>5</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Economics)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">45</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>6</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Fashion Designing)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>7</TableCell>
+                            <TableCell className="font-medium">Bachelor of Computer Application (BCA)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">140</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>8</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (IT)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">40</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>9</TableCell>
+                            <TableCell className="font-medium">B.Com. (Regular)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">300</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>10</TableCell>
+                            <TableCell className="font-medium">B.Com. (Financial Services)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">60</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>11</TableCell>
+                            <TableCell className="font-medium">Bachelor of Business Administration (BBA)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>12</TableCell>
+                            <TableCell className="font-medium">B.Voc. (Software Development)</TableCell>
+                            <TableCell>4 Years</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">50</TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
+                    
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="pg">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Postgraduate Programmes</CardTitle>
+                    <CardDescription>Master's Degree and PG Diploma Programmes</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Duration</TableHead>
+                            <TableHead>Eligibility</TableHead>
+                            <TableHead className="text-right">Seats</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">M.Com.</TableCell>
+                            <TableCell>2 Years</TableCell>
+                            <TableCell>B.Com or equivalent</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">MA (Political Science)</TableCell>
+                            <TableCell>2 Years</TableCell>
+                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell className="text-right">60</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>3</TableCell>
+                            <TableCell className="font-medium">M.Sc. (Computer Science)</TableCell>
+                            <TableCell>2 Years</TableCell>
+                            <TableCell>BCA/B.Sc. IT or equivalent</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>4</TableCell>
+                            <TableCell className="font-medium">M.Sc. Mathematics</TableCell>
+                            <TableCell>2 Years</TableCell>
+                            <TableCell>B.Sc. with Mathematics</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>5</TableCell>
+                            <TableCell className="font-medium">PGDCA</TableCell>
+                            <TableCell>1 Year</TableCell>
+                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>6</TableCell>
+                            <TableCell className="font-medium">
+                              PG Diploma in Financial Services (Banking and Insurance)
+                            </TableCell>
+                            <TableCell>1 Year</TableCell>
+                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell className="text-right">30</TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Download className="mr-2 h-4 w-4" /> Download PG Brochure
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="diploma">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Diploma & Certificate Courses</CardTitle>
+                    <CardDescription>Short-term Professional Courses</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Duration</TableHead>
+                            <TableHead>Eligibility</TableHead>
+                            <TableHead className="text-right">Seats</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">
+                              Certificate Course in Medical Lab Technology (CMLT)
+                            </TableCell>
+                            <TableCell>6 Months</TableCell>
+                            <TableCell>10+2 with Science</TableCell>
+                            <TableCell className="text-right">50</TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">Diploma in Computer Application (DCA)</TableCell>
+                            <TableCell>1 Year</TableCell>
+                            <TableCell>10+2 in any stream</TableCell>
+                            <TableCell className="text-right">50</TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
+                    <div className="mt-6 flex justify-center">
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Download className="mr-2 h-4 w-4" /> Download Diploma Brochure
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </section>
+
+        {/* Faculty Details */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
+              Our Distinguished Faculty
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  id: 73005,
+                  name: "Mrs. Puneet Randhawa",
+                  position: "OSD/Principal",
+                  subject: "English",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=PR",
+                },
+                {
+                  id: 73003,
+                  name: "Mr. Sukhmaninder Pal Singh",
+                  subject: "History",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=SPS",
+                },
+                {
+                  id: 73002,
+                  name: "Dr. Nisha Chhabra",
+                  subject: "Psychology",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=NC",
+                },
+                {
+                  id: 73004,
+                  name: "Dr. Sonika Thakur",
+                  subject: "Physics",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=ST",
+                },
+                {
+                  id: 73006,
+                  name: "Dr. Rupinder Preet Kaur",
+                  subject: "Chemistry",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=RPK",
+                },
+                {
+                  id: 73007,
+                  name: "Dr. Manjit Kaur",
+                  subject: "Political Science",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=MK",
+                },
+                {
+                  id: 73008,
+                  name: "Dr. Jatinder Kaur",
+                  subject: "Mathematics",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=JK",
+                },
+                {
+                  id: 73009,
+                  name: "Mr. Gurmeet Singh",
+                  subject: "Mathematics",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=GS",
+                },
+                {
+                  id: 73010,
+                  name: "Dr. Jamaninder Pal Singh",
+                  subject: "Economics",
+                  type: "Permanent",
+                  image: "/placeholder.svg?height=200&width=200&text=JPS",
+                },
+              ].map((faculty) => (
+                <Card key={faculty.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative h-48 bg-gray-100 flex items-center justify-center">
+                    <Image
+                      src={faculty.image || "/placeholder.svg"}
+                      alt={faculty.name}
+                      width={150}
+                      height={150}
+                      className="rounded-full object-cover border-4 border-white shadow-md"
+                    />
+                  </div>
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-xl font-bold mb-1">{faculty.name}</h3>
+                    {faculty.position && <p className="text-amber-600 font-medium mb-2">{faculty.position}</p>}
+                    <p className="text-gray-600 mb-1">Subject: {faculty.subject}</p>
+                    <p className="text-gray-600">Type: {faculty.type}</p>
+                    <p className="text-gray-600 text-sm mt-2">Faculty ID: {faculty.id}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Button variant="outline" className="border-[#0c2340] text-[#0c2340] hover:bg-[#0c2340] hover:text-white">
+                View All Faculty Members
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Academic Resources */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Academic Resources</h2>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-lg font-medium">Academic Calendar</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 p-2">
+                      <p className="text-gray-700">
+                        The academic calendar provides important dates for the academic year, including:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Semester start and end dates</li>
+                        <li>Examination schedules</li>
+                        <li>Holidays and vacations</li>
+                        <li>Special events and functions</li>
+                      </ul>
+                      <Button className="mt-2" variant="outline">
+                        <Calendar className="mr-2 h-4 w-4" /> Download Academic Calendar
+                      </Button>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-lg font-medium">Syllabus</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 p-2">
+                      <p className="text-gray-700">
+                        The syllabus for each course outlines the course objectives, content, recommended readings, and
+                        assessment methods.
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <Button variant="outline" className="justify-start">
+                          <BookOpen className="mr-2 h-4 w-4" /> Undergraduate Syllabus
+                        </Button>
+                        <Button variant="outline" className="justify-start">
+                          <BookOpen className="mr-2 h-4 w-4" /> Postgraduate Syllabus
+                        </Button>
+                        <Button variant="outline" className="justify-start">
+                          <BookOpen className="mr-2 h-4 w-4" /> Diploma Course Syllabus
+                        </Button>
+                        <Button variant="outline" className="justify-start">
+                          <BookOpen className="mr-2 h-4 w-4" /> Certificate Course Syllabus
+                        </Button>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-lg font-medium">Examination Guidelines</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 p-2">
+                      <p className="text-gray-700">
+                        The examination guidelines provide information about examination rules, regulations, and
+                        procedures.
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Examination schedule and pattern</li>
+                        <li>Evaluation criteria and grading system</li>
+                        <li>Rules for conduct during examinations</li>
+                        <li>Procedures for revaluation and supplementary examinations</li>
+                      </ul>
+                      <Button className="mt-2" variant="outline">
+                        <Download className="mr-2 h-4 w-4" /> Download Examination Guidelines
+                      </Button>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-lg font-medium">Library Resources</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 p-2">
+                      <p className="text-gray-700">
+                        The college library provides access to a wide range of resources to support academic learning
+                        and research.
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Books, journals, and magazines</li>
+                        <li>Digital resources and e-journals</li>
+                        <li>Reference materials and research papers</li>
+                        <li>Study spaces and computer facilities</li>
+                      </ul>
+                      <div className="mt-4">
+                        <Link href="/library" className="text-amber-600 hover:text-amber-700 font-medium">
+                          Explore Library Resources →
+                        </Link>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-12 bg-[#0c2340] text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Begin Your Academic Journey?</h2>
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
+              Join GNDU College Verka-Amritsar to experience quality education and comprehensive academic programs.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button className="bg-amber-600 hover:bg-amber-700">Apply for Admission</Button>
+              <Button variant="outline" className="text-white border-white hover:bg-white/10">
+                Contact Academic Office
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-[#0c2340] text-white pt-12 pb-6">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center mb-4">
+                <Image
+                  src="/placeholder.svg?height=60&width=60"
+                  alt="Guru Nanak Dev University Logo"
+                  width={60}
+                  height={60}
+                  className="mr-3 bg-white rounded-full p-1"
+                />
+                <div>
+                  <h3 className="text-lg font-bold">GNDU</h3>
+                  <p className="text-sm text-gray-300">College Verka-Amritsar</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Guru Nanak Dev University College, Verka-Amritsar is committed to providing quality education and
+                fostering academic excellence.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" className="text-gray-300 hover:text-amber-300">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/academics" className="text-gray-300 hover:text-amber-300">
+                    Academics
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/admissions" className="text-gray-300 hover:text-amber-300">
+                    Admissions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold mb-4">Important Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/examination" className="text-gray-300 hover:text-amber-300">
+                    Examination
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/results" className="text-gray-300 hover:text-amber-300">
+                    Results
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers" className="text-gray-300 hover:text-amber-300">
+                    Careers
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+              <ul className="space-y-3">
+                <li className="flex">
+                  <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="text-gray-300">
+                    Guru Nanak Dev University College, Verka-Amritsar, Punjab - 143001
+                  </span>
+                </li>
+                <li className="flex">
+                  <Phone className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="text-gray-300">81465-14040</span>
+                </li>
+                <li className="flex">
+                  <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="text-gray-300">osd.verka@gndu.ac.in</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-6 mt-6 text-center text-gray-300 text-sm">
+            <p>
+              &copy; {new Date().getFullYear()} Guru Nanak Dev University College, Verka-Amritsar. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
