@@ -6,6 +6,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
+
 
 export default function AcademicsPage() {
   return (
@@ -18,9 +20,28 @@ export default function AcademicsPage() {
               <Phone className="h-4 w-4 mr-1" />
               <span>81465-14040</span>
             </Link>
-            <Link href="mailto:osd.verka@gndu.ac.in" className="flex items-center hover:text-amber-300">
+            <Link href="mailto:info@gndu.ac.in" className="flex items-center hover:text-amber-300">
               <Mail className="h-4 w-4 mr-1" />
               <span>osd.verka@gndu.ac.in</span>
+            </Link>
+            
+          </div>
+          <span>Guru Nanak Dev University Verka Branch</span>
+          <div className="flex items-center space-x-3">
+            <Link href="https://facebook.com" aria-label="Facebook">
+              <Facebook className="h-4 w-4 hover:text-amber-300" />
+            </Link>
+            <Link href="https://twitter.com" aria-label="Twitter">
+              <Twitter className="h-4 w-4 hover:text-amber-300" />
+            </Link>
+            <Link href="https://instagram.com" aria-label="Instagram">
+              <Instagram className="h-4 w-4 hover:text-amber-300" />
+            </Link>
+            <Link href="https://linkedin.com" aria-label="LinkedIn">
+              <Linkedin className="h-4 w-4 hover:text-amber-300" />
+            </Link>
+            <Link href="https://youtube.com" aria-label="YouTube">
+              <Youtube className="h-4 w-4 hover:text-amber-300" />
             </Link>
           </div>
         </div>
@@ -31,7 +52,7 @@ export default function AcademicsPage() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Image
-              src="/placeholder.svg?height=80&width=80"
+              src="/university-logo.jpg"
               alt="Guru Nanak Dev University Logo"
               width={80}
               height={80}
@@ -55,15 +76,11 @@ export default function AcademicsPage() {
             <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
               Admissions
             </Link>
-            <Link href="/research" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Research
+            
+            <Link href="/gallery" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Gallery
             </Link>
-            <Link href="/campus-life" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Campus Life
-            </Link>
-            <Link href="/placements" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Placements
-            </Link>
+            
             <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
               Contact
             </Link>
@@ -260,7 +277,7 @@ export default function AcademicsPage() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-xl text-[#0c2340]">Postgraduate Programmes</CardTitle>
-                    <CardDescription>Master's Degree and PG Diploma Programmes</CardDescription>
+                    <CardDescription>Master&apos;;s Degree and PG Diploma Programmes</CardDescription>
                   </CardHeader>
                   <CardContent className="p-6">
                     <div className="overflow-x-auto">
@@ -286,7 +303,7 @@ export default function AcademicsPage() {
                             <TableCell>2</TableCell>
                             <TableCell className="font-medium">MA (Political Science)</TableCell>
                             <TableCell>2 Years</TableCell>
-                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell>Bachelor&apos;;s degree</TableCell>
                             <TableCell className="text-right">60</TableCell>
                           </TableRow>
                           <TableRow>
@@ -307,7 +324,7 @@ export default function AcademicsPage() {
                             <TableCell>5</TableCell>
                             <TableCell className="font-medium">PGDCA</TableCell>
                             <TableCell>1 Year</TableCell>
-                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell>Bachelor&apos;s degree</TableCell>
                             <TableCell className="text-right">30</TableCell>
                           </TableRow>
                           <TableRow>
@@ -316,7 +333,7 @@ export default function AcademicsPage() {
                               PG Diploma in Financial Services (Banking and Insurance)
                             </TableCell>
                             <TableCell>1 Year</TableCell>
-                            <TableCell>Bachelor's degree</TableCell>
+                            <TableCell>Bachelor&apos;s degree</TableCell>
                             <TableCell className="text-right">30</TableCell>
                           </TableRow>
                         </TableBody>
@@ -592,12 +609,7 @@ export default function AcademicsPage() {
             <p className="text-lg mb-8 max-w-2xl mx-auto">
               Join GNDU College Verka-Amritsar to experience quality education and comprehensive academic programs.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-amber-600 hover:bg-amber-700">Apply for Admission</Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
-                Contact Academic Office
-              </Button>
-            </div>
+            
           </div>
         </section>
       </main>
@@ -609,7 +621,7 @@ export default function AcademicsPage() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="/university-logo.jpg"
                   alt="Guru Nanak Dev University Logo"
                   width={60}
                   height={60}

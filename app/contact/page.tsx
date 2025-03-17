@@ -104,7 +104,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#0c2340]">Get In Touch</h2>
                 <p className="text-gray-700 mb-8">
-                  We're here to help and answer any questions you might have. We look forward to hearing from you.
+                  We&apos;re here to help and answer any questions you might have. We look forward to hearing from you.
                 </p>
 
                 <div className="space-y-6">
