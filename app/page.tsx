@@ -3,13 +3,13 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Bell,
-  BookOpen,
-  Calendar,
+  
   ChevronRight,
   Facebook,
-  GraduationCap,
+  
   Instagram,
   Linkedin,
   Mail,
@@ -70,7 +70,7 @@ export default function Home() {
             />
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
-              <p className="text-sm text-gray-600">Verka Branch, Amritsar</p>
+              <p className="text-sm text-gray-600">Verka-Amritsar</p>
             </div>
           </div>
           <nav className="hidden lg:flex space-x-6">
@@ -86,11 +86,15 @@ export default function Home() {
             <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
               Admissions
             </Link>
-            
+            <Link href="/student-corner" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Student Corner
+            </Link>
             <Link href="/gallery" className="font-medium text-[#0c2340] hover:text-amber-600">
               Gallery
             </Link>
-            
+            <Link href="/library" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Library
+            </Link>
             <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
               Contact
             </Link>
@@ -129,68 +133,162 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Important Links Section */}
+        {/* Principal's Message Section */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">Quick Access</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-4">
-                    <GraduationCap className="h-8 w-8 text-amber-600" />
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">Principal's Message</h2>
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-1">
+                <div className="relative h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/placeholder.svg?height=300&width=300&text=Principal"
+                    alt="Mrs. Puneet Randhawa - Principal"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <h3 className="font-bold text-lg">Mrs. Puneet Randhawa</h3>
+                  <p className="text-gray-600">OSD/Principal</p>
+                </div>
+              </div>
+              <div className="md:col-span-2">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <p className="text-gray-700 mb-4 italic">"Dear Students, Parents, and Visitors,</p>
+                  <p className="text-gray-700 mb-4">
+                    It is my privilege to welcome you to Guru Nanak Dev University College, Verka-Amritsar. Our
+                    institution is committed to providing quality education that nurtures intellectual growth, character
+                    development, and social responsibility.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    At GNDU College Verka, we believe in holistic education that goes beyond textbooks and classrooms.
+                    Our dedicated faculty members strive to create a stimulating learning environment that encourages
+                    critical thinking, creativity, and innovation.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    We are proud of our state-of-the-art facilities, diverse academic programs, and vibrant campus life
+                    that provide students with ample opportunities to discover and develop their talents. Our goal is to
+                    prepare students not just for successful careers, but for meaningful lives as responsible citizens.
+                  </p>
+                  <p className="text-gray-700">
+                    I invite you to explore our website and learn more about what makes GNDU College Verka a special
+                    place for learning and growth.
+                  </p>
+                  <div className="mt-4 text-right">
+                    <p className="font-semibold text-[#0c2340]">Mrs. Puneet Randhawa</p>
+                    <p className="text-sm text-gray-600">OSD/Principal</p>
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Admissions</h3>
-                  <p className="text-gray-600 mb-4">Admission process, eligibility criteria, and application details</p>
-                  <Link href="/admissions" className="text-amber-600 hover:text-amber-700 flex items-center">
-                    Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          {/* Mission & Vision */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="h-full">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-[#0c2340]">Our Mission</CardTitle>
+                  <CardDescription>What drives us forward</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
+                      <span>
+                        To foster quest for excellence by quality and value based education and create competitive
+                        academic environment.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
+                      <span>
+                        To ensure holistic development, inculcate moral, social and ethical value system in students.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
+                      <span>
+                        To sensitize and educate young learners about concern for environment and create informed and
+                        global citizens endowed with love and respect for the society and nation.
+                      </span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                    <BookOpen className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2">Departments</h3>
-                  <p className="text-gray-600 mb-4">Explore our academic departments and programs offered</p>
-                  <Link href="/departments" className="text-blue-600 hover:text-blue-700 flex items-center">
-                    Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                    <Bell className="h-8 w-8 text-green-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2">Notices</h3>
-                  <p className="text-gray-600 mb-4">Important notifications, circulars, and announcements</p>
-                  <Link href="/notices" className="text-green-600 hover:text-green-700 flex items-center">
-                    Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                    <Calendar className="h-8 w-8 text-purple-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2">Events</h3>
-                  <p className="text-gray-600 mb-4">Upcoming events, seminars, workshops, and cultural activities</p>
-                  <Link href="/events" className="text-purple-600 hover:text-purple-700 flex items-center">
-                    Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
+              <Card className="h-full">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-[#0c2340]">Our Vision</CardTitle>
+                  <CardDescription>Where we aim to be</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">1</span>
+                      <span>To provide quality education to the students.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">2</span>
+                      <span>To transform and enhance quality of life of the community through value education.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">3</span>
+                      <span>To enable and groom the students for accepting future challenges.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">4</span>
+                      <span>
+                        To endeavor for creating a vibrant and inclusive learning atmosphere that promotes critical
+                        thinking.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">5</span>
+                      <span>To pursue academic excellence and holistic development of students.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">6</span>
+                      <span>To establish as a leading and self-sustained institution of higher education.</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
+        
+        {/* Campus Highlights */}
+        <section className="py-12 bg-[#0c2340] text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Campus Highlights</h2>
 
-        {/* News & Announcements Section */}
-        <section className="py-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
+                <p className="text-lg">Academic Programs</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-4xl font-bold text-amber-400 mb-2">100+</div>
+                <p className="text-lg">Faculty Members</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-4xl font-bold text-amber-400 mb-2">5000+</div>
+                <p className="text-lg">Students</p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Button className="bg-amber-600 hover:bg-amber-700">Virtual Campus Tour</Button>
+            </div>
+          </div>
+        </section>
+
+         {/* News & Announcements Section */}
+         <section className="py-12">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">News & Announcements</h2>
 
@@ -273,78 +371,7 @@ export default function Home() {
             </Tabs>
           </div>
         </section>
-
-        {/* Campus Highlights */}
-        <section className="py-12 bg-[#0c2340] text-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Campus Highlights</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
-                <p className="text-lg">Academic Programs</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">100+</div>
-                <p className="text-lg">Faculty Members</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">5000+</div>
-                <p className="text-lg">Students</p>
-              </div>
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button className="bg-amber-600 hover:bg-amber-700">Virtual Campus Tour</Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Upcoming Events */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">Upcoming Events</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {[1, 2, 3].map((item) => (
-                <Card key={item} className="hover:shadow-lg transition-shadow overflow-hidden">
-                  <div className="relative h-48">
-                    <Image
-                      src="/Annual.png"
-                      alt={`Event ${item}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-3">
-                      <div className="bg-amber-100 text-amber-600 p-2 rounded text-sm font-medium mr-2">
-                        May {item + 15}
-                      </div>
-                      <div className="text-sm text-gray-500">10:00 AM</div>
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">Annual Cultural Festival</h3>
-                    <p className="text-gray-600 text-sm mb-3">
-                      Join us for a celebration of art, music, and cultural performances by students and faculty.
-                    </p>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span>Main Auditorium</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Button variant="outline">View All Events</Button>
-            </div>
-          </div>
-        </section>
-      </main>
-
+</main>
       {/* Footer */}
       <footer className="bg-[#0c2340] text-white pt-12 pb-6">
         <div className="container mx-auto px-4">

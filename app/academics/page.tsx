@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+
 import { Mail, MapPin, Phone, Download, Calendar, BookOpen, GraduationCap, Award, Users } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -47,8 +48,8 @@ export default function AcademicsPage() {
         </div>
       </div>
 
-      {/* Header */}
-      <header className="bg-white py-4 shadow-md sticky top-0 z-50">
+     {/* Header */}
+     <header className="bg-white py-4 shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Image
@@ -60,7 +61,7 @@ export default function AcademicsPage() {
             />
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
-              <p className="text-sm text-gray-600">College Verka-Amritsar</p>
+              <p className="text-sm text-gray-600">Verka-Amritsar</p>
             </div>
           </div>
           <nav className="hidden lg:flex space-x-6">
@@ -70,21 +71,28 @@ export default function AcademicsPage() {
             <Link href="/about" className="font-medium text-[#0c2340] hover:text-amber-600">
               About
             </Link>
-            <Link href="/academics" className="font-medium text-amber-600 border-b-2 border-amber-600">
+            <Link href="/academics" className="font-medium text-[#0c2340] hover:text-amber-600">
               Academics
             </Link>
             <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
               Admissions
             </Link>
-            
+            <Link href="/student-corner" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Student Corner
+            </Link>
             <Link href="/gallery" className="font-medium text-[#0c2340] hover:text-amber-600">
               Gallery
             </Link>
-            
+            <Link href="/library" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Library
+            </Link>
             <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
               Contact
             </Link>
           </nav>
+          <Button variant="outline" className="lg:hidden">
+            Menu
+          </Button>
         </div>
       </header>
 

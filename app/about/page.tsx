@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { Award, School, Users } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent,} from "@/components/ui/card"
+
 import {
   Calendar,
   Facebook,
@@ -55,6 +55,7 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* Header */}
       <header className="bg-white py-4 shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
@@ -67,14 +68,14 @@ export default function AboutPage() {
             />
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
-              <p className="text-sm text-gray-600">College Verka-Amritsar</p>
+              <p className="text-sm text-gray-600">Verka-Amritsar</p>
             </div>
           </div>
           <nav className="hidden lg:flex space-x-6">
             <Link href="/" className="font-medium text-[#0c2340] hover:text-amber-600">
               Home
             </Link>
-            <Link href="/about" className="font-medium text-amber-600 border-b-2 border-amber-600">
+            <Link href="/about" className="font-medium text-[#0c2340] hover:text-amber-600">
               About
             </Link>
             <Link href="/academics" className="font-medium text-[#0c2340] hover:text-amber-600">
@@ -83,15 +84,22 @@ export default function AboutPage() {
             <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
               Admissions
             </Link>
-            
+            <Link href="/student-corner" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Student Corner
+            </Link>
             <Link href="/gallery" className="font-medium text-[#0c2340] hover:text-amber-600">
               Gallery
             </Link>
-            
+            <Link href="/library" className="font-medium text-[#0c2340] hover:text-amber-600">
+              Library
+            </Link>
             <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
               Contact
             </Link>
           </nav>
+          <Button variant="outline" className="lg:hidden">
+            Menu
+          </Button>
         </div>
       </header>
 
@@ -270,343 +278,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission & Vision */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-[#0c2340]">Our Mission</CardTitle>
-                  <CardDescription>What drives us forward</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
-                      <span>
-                        To foster quest for excellence by quality and value based education and create competitive
-                        academic environment.
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
-                      <span>
-                        To ensure holistic development, inculcate moral, social and ethical value system in students.
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">•</span>
-                      <span>
-                        To sensitize and educate young learners about concern for environment and create informed and
-                        global citizens endowed with love and respect for the society and nation.
-                      </span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+        
 
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-[#0c2340]">Our Vision</CardTitle>
-                  <CardDescription>Where we aim to be</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">1</span>
-                      <span>To provide quality education to the students.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">2</span>
-                      <span>To transform and enhance quality of life of the community through value education.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">3</span>
-                      <span>To enable and groom the students for accepting future challenges.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">4</span>
-                      <span>
-                        To endeavor for creating a vibrant and inclusive learning atmosphere that promotes critical
-                        thinking.
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">5</span>
-                      <span>To pursue academic excellence and holistic development of students.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">6</span>
-                      <span>To establish as a leading and self-sustained institution of higher education.</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        
 
-        {/* Courses Offered */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Courses Offered</h2>
-
-            <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
-              <TabsList className="grid w-full grid-cols-3 mb-8">
-                <TabsTrigger value="ug">UG Programmes</TabsTrigger>
-                <TabsTrigger value="pg">PG Programmes</TabsTrigger>
-                <TabsTrigger value="diploma">Diploma/Certificate</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="ug">
-                <Card>
-                  <CardContent className="p-6">
-                    <Table>
-                      <TableCaption>4-year UG Degree Programme</TableCaption>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead className="text-right">Seats</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell>Bachelor of Arts (BA)</TableCell>
-                          <TableCell className="text-right">400</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell>Bachelor of Science (Medical)</TableCell>
-                          <TableCell className="text-right">45</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>3</TableCell>
-                          <TableCell>Bachelor of Science (Non-Medical)</TableCell>
-                          <TableCell className="text-right">45</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>4</TableCell>
-                          <TableCell>Bachelor of Science (Computer Science)</TableCell>
-                          <TableCell className="text-right">45</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>5</TableCell>
-                          <TableCell>Bachelor of Science (Economics)</TableCell>
-                          <TableCell className="text-right">45</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>6</TableCell>
-                          <TableCell>Bachelor of Science (Fashion Designing)</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>7</TableCell>
-                          <TableCell>Bachelor of Computer Application (BCA)</TableCell>
-                          <TableCell className="text-right">140</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>8</TableCell>
-                          <TableCell>Bachelor of Science (IT)</TableCell>
-                          <TableCell className="text-right">40</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>9</TableCell>
-                          <TableCell>B.Com. (Regular)</TableCell>
-                          <TableCell className="text-right">300</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>10</TableCell>
-                          <TableCell>B.Com. (Financial Services)</TableCell>
-                          <TableCell className="text-right">60</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>11</TableCell>
-                          <TableCell>Bachelor of Business Administration (BBA)</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>12</TableCell>
-                          <TableCell>B.Voc. (Software Development)</TableCell>
-                          <TableCell className="text-right">50</TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="pg">
-                <Card>
-                  <CardContent className="p-6">
-                    <Table>
-                      <TableCaption>Post Graduate Programme</TableCaption>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead className="text-right">Seats</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell>M.Com.</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell>MA (Political Science)</TableCell>
-                          <TableCell className="text-right">60</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>3</TableCell>
-                          <TableCell>M.Sc. (Computer Science)</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>4</TableCell>
-                          <TableCell>M.Sc Mathematics</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>5</TableCell>
-                          <TableCell>PGDCA</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>6</TableCell>
-                          <TableCell>PG Diploma in Financial Services (Banking and Insurance)</TableCell>
-                          <TableCell className="text-right">30</TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="diploma">
-                <Card>
-                  <CardContent className="p-6">
-                    <Table>
-                      <TableCaption>Diploma/Certificate Courses</TableCaption>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead className="text-right">Seats</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell>Certificate Course in Medical Lab Technology (CMLT)</TableCell>
-                          <TableCell className="text-right">50</TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell>Diploma in Computer Application (DCA)</TableCell>
-                          <TableCell className="text-right">50</TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </section>
-
-        {/* Faculty Details */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Faculty Details</h2>
-
-            <Card className="max-w-5xl mx-auto">
-              <CardContent className="p-6">
-                <Table>
-                  <TableCaption>Faculty Members</TableCaption>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="w-[80px]">Sr. No.</TableHead>
-                      <TableHead className="w-[100px]">Faculty ID</TableHead>
-                      <TableHead>Name</TableHead>
-                      <TableHead>Subject</TableHead>
-                      <TableHead>Appointment Type</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell>1</TableCell>
-                      <TableCell>73005</TableCell>
-                      <TableCell>Mrs. Puneet Randhawa (OSD/Principal)</TableCell>
-                      <TableCell>English</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>2</TableCell>
-                      <TableCell>73003</TableCell>
-                      <TableCell>Mr. Sukhmaninder Pal Singh</TableCell>
-                      <TableCell>History</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>3</TableCell>
-                      <TableCell>73002</TableCell>
-                      <TableCell>Dr. Nisha Chhabra</TableCell>
-                      <TableCell>Psychology</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>4</TableCell>
-                      <TableCell>73004</TableCell>
-                      <TableCell>Dr. Sonika Thakur</TableCell>
-                      <TableCell>Physics</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>5</TableCell>
-                      <TableCell>73006</TableCell>
-                      <TableCell>Dr. Rupinder Preet Kaur</TableCell>
-                      <TableCell>Chemistry</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>6</TableCell>
-                      <TableCell>73007</TableCell>
-                      <TableCell>Dr. Manjit Kaur</TableCell>
-                      <TableCell>Political Science</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>7</TableCell>
-                      <TableCell>73008</TableCell>
-                      <TableCell>Dr. Jatinder Kaur</TableCell>
-                      <TableCell>Mathematics</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>8</TableCell>
-                      <TableCell>73009</TableCell>
-                      <TableCell>Mr. Gurmeet Singh</TableCell>
-                      <TableCell>Mathematics</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>9</TableCell>
-                      <TableCell>73010</TableCell>
-                      <TableCell>Dr. Jamaninder Pal Singh</TableCell>
-                      <TableCell>Economics</TableCell>
-                      <TableCell>Permanent</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </main>
+        </main>
 
       {/* Footer - Reusing the same footer structure from the homepage */}
       <footer className="bg-[#0c2340] text-white pt-12 pb-6">
