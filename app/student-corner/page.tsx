@@ -196,7 +196,7 @@ export default function StudentCornerPage() {
                       <ul className="list-disc pl-5 space-y-1 text-gray-700">
                         <li>Post-Matric Scholarship for SC/ST students</li>
                         <li>Central Sector Scholarship Scheme</li>
-                        <li>Prime Minister's Scholarship Scheme</li>
+                        <li>Prime Minister&apos;s Scholarship Scheme</li>
                         <li>State Government Scholarships for minority communities</li>
                       </ul>
                       <p className="text-gray-700 mt-2">

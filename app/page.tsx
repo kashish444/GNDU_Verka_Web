@@ -154,7 +154,7 @@ export default function Home() {
               </div>
               <div className="md:col-span-2">
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <p className="text-gray-700 mb-4 italic">"Dear Students, Parents, and Visitors,</p>
+                  <p className="text-gray-700 mb-4 italic">&quot;Dear Students, Parents, and Visitors,</p>
                   <p className="text-gray-700 mb-4">
                     It is my privilege to welcome you to Guru Nanak Dev University College, Verka-Amritsar. Our
                     institution is committed to providing quality education that nurtures intellectual growth, character

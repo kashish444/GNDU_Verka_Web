@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, MapPin, Phone, BookOpen, Search, Clock, Download, FileText, Newspaper, Globe } from "lucide-react"
+import { Mail, MapPin, Phone, BookOpen, Clock, Download, FileText, Newspaper, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -363,7 +363,7 @@ export default function LibraryPage() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-700 mb-4">
-                      The library provides access to various digital resources and online databases through INFLIBNET's
+                      The library provides access to various digital resources and online databases through INFLIBNET&apos;s
                       N-LIST program, enabling students and faculty to access e-journals, e-books, and research papers.
                     </p>
                     <div className="space-y-4">
@@ -373,7 +373,7 @@ export default function LibraryPage() {
                           <li>E-journals through N-LIST</li>
                           <li>E-books collection</li>
                           <li>Online research databases</li>
-                          <li>Digital repository of previous years' question papers</li>
+                          <li>Digital repository of previous years&apos; question papers</li>
                           <li>Access to National Digital Library of India</li>
                         </ul>
                       </div>
