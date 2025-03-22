@@ -136,7 +136,7 @@ export default function Home() {
         {/* Principal's Message Section */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">Principal's Message</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">Principal&apos;s Message</h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-1">
                 <div className="relative h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
