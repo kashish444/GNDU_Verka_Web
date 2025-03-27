@@ -1,114 +1,27 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Award, School, Users } from "lucide-react"
-import { Card, CardContent,} from "@/components/ui/card"
+import Image from "next/image";
+import Link from "next/link";
+import { Award, School, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
-import {
-  Calendar,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-  Youtube,
-} from "lucide-react"
+import { Calendar, Mail, MapPin, Phone } from "lucide-react";
+import Navbar from "@/components/ui/Navbar";
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header - Reusing the same header structure from the homepage */}
-       {/* Top Bar */}
-     <div className="bg-[#0c2340] text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4 text-sm">
-            <Link href="/contact" className="flex items-center hover:text-amber-300">
-              <Phone className="h-4 w-4 mr-1" />
-              <span>81465-14040</span>
-            </Link>
-            <Link href="mailto:info@gndu.ac.in" className="flex items-center hover:text-amber-300">
-              <Mail className="h-4 w-4 mr-1" />
-              <span>osd.verka@gndu.ac.in</span>
-            </Link>
-            
-          </div>
-          <span>Guru Nanak Dev University Verka Branch</span>
-          <div className="flex items-center space-x-3">
-            <Link href="https://facebook.com" aria-label="Facebook">
-              <Facebook className="h-4 w-4 hover:text-amber-300" />
-            </Link>
-            <Link href="https://twitter.com" aria-label="Twitter">
-              <Twitter className="h-4 w-4 hover:text-amber-300" />
-            </Link>
-            <Link href="https://instagram.com" aria-label="Instagram">
-              <Instagram className="h-4 w-4 hover:text-amber-300" />
-            </Link>
-            <Link href="https://linkedin.com" aria-label="LinkedIn">
-              <Linkedin className="h-4 w-4 hover:text-amber-300" />
-            </Link>
-            <Link href="https://youtube.com" aria-label="YouTube">
-              <Youtube className="h-4 w-4 hover:text-amber-300" />
-            </Link>
-          </div>
-        </div>
-      </div>
-
+      {/* Top Bar */}
+      <Navbar />
       {/* Header */}
-      <header className="bg-white py-4 shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-4 md:mb-0">
-            <Image
-              src="/university-logo.jpg"
-              alt="Guru Nanak Dev University Logo"
-              width={80}
-              height={80}
-              className="mr-3"
-            />
-            <div>
-              <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
-              <p className="text-sm text-gray-600">Verka-Amritsar</p>
-            </div>
-          </div>
-          <nav className="hidden lg:flex space-x-6">
-            <Link href="/" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Home
-            </Link>
-            <Link href="/about" className="font-medium text-[#0c2340] hover:text-amber-600">
-              About
-            </Link>
-            <Link href="/academics" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Academics
-            </Link>
-            <Link href="/admissions" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Admissions
-            </Link>
-            <Link href="/student-corner" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Student Corner
-            </Link>
-            <Link href="/gallery" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Gallery
-            </Link>
-            <Link href="/library" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Library
-            </Link>
-            <Link href="/contact" className="font-medium text-[#0c2340] hover:text-amber-600">
-              Contact
-            </Link>
-          </nav>
-          <Button variant="outline" className="lg:hidden">
-            Menu
-          </Button>
-        </div>
-      </header>
 
       <main className="flex-1">
         {/* Page Title */}
         <section className="bg-[#0c2340] text-white py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
-            <p className="mt-2 text-lg">Learn about Guru Nanak Dev University College Verka-Amritsar</p>
+            <p className="mt-2 text-lg">
+              Learn about Guru Nanak Dev University College Verka-Amritsar
+            </p>
           </div>
         </section>
 
@@ -117,29 +30,39 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#0c2340]">About the College</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#0c2340]">
+                  About the College
+                </h2>
                 <p className="text-gray-700 mb-4">
-                  Guru Nanak Dev University College, Verka was established as a constituent college of Guru Nanak Dev
-                  University in 2011. It is a co-educational college. The administrative functioning of the college is
-                  regulated by Guru Nanak Dev University, Amritsar.
+                  Guru Nanak Dev University College, Verka was established as a
+                  constituent college of Guru Nanak Dev University in 2011. It
+                  is a co-educational college. The administrative functioning of
+                  the college is regulated by Guru Nanak Dev University,
+                  Amritsar.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  It is situated in the lush green surroundings of the countryside away from the din of the city. It is
-                  located between the Amritsar-Jalandhar by-pass and Amritsar-Batala bypass. It has a sprawling campus
-                  covering 15 acres of land donated by Mushtarqa Malkan Committee of the village Verka. The people of
-                  Verka would be remembered for this act forever.
+                  It is situated in the lush green surroundings of the
+                  countryside away from the din of the city. It is located
+                  between the Amritsar-Jalandhar by-pass and Amritsar-Batala
+                  bypass. It has a sprawling campus covering 15 acres of land
+                  donated by Mushtarqa Malkan Committee of the village Verka.
+                  The people of Verka would be remembered for this act forever.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The constituent colleges were set up to bring higher education within the reach of the people of
-                  remote rural areas, so that maximum benefit reaches the less privileged and the needy. The college
-                  will scale new heights under the able guidance of Dr. Karamjeet Singh, the present Vice-Chancellor of
-                  Guru Nanak Dev University.
+                  The constituent colleges were set up to bring higher education
+                  within the reach of the people of remote rural areas, so that
+                  maximum benefit reaches the less privileged and the needy. The
+                  college will scale new heights under the able guidance of Dr.
+                  Karamjeet Singh, the present Vice-Chancellor of Guru Nanak Dev
+                  University.
                 </p>
                 <p className="text-gray-700">
-                  The College is covered under the 2(F) & 12(B) scheme of the UGC. As a result, it is entitled to
-                  receive financial support from the Central government, the government of Punjab and the UGC. The
-                  teaching fraternity of college is highly qualified and dedicated who constantly strive for their
-                  growth as well as for the holistic development of their students.
+                  The College is covered under the 2(F) & 12(B) scheme of the
+                  UGC. As a result, it is entitled to receive financial support
+                  from the Central government, the government of Punjab and the
+                  UGC. The teaching fraternity of college is highly qualified
+                  and dedicated who constantly strive for their growth as well
+                  as for the holistic development of their students.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
@@ -157,7 +80,9 @@ export default function AboutPage() {
         {/* College Details */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">College Details</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
+              College Details
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card>
                 <CardContent className="p-6">
@@ -166,8 +91,12 @@ export default function AboutPage() {
                       <School className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">College Type</h3>
-                      <p className="font-semibold">Constituent College of GNDU Amritsar</p>
+                      <h3 className="font-medium text-gray-500">
+                        College Type
+                      </h3>
+                      <p className="font-semibold">
+                        Constituent College of GNDU Amritsar
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -180,8 +109,12 @@ export default function AboutPage() {
                       <Users className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">College Nature</h3>
-                      <p className="font-semibold">Post Graduate, Multi-Faculty, Co-educational</p>
+                      <h3 className="font-medium text-gray-500">
+                        College Nature
+                      </h3>
+                      <p className="font-semibold">
+                        Post Graduate, Multi-Faculty, Co-educational
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -238,7 +171,9 @@ export default function AboutPage() {
                       <Users className="h-6 w-6 text-indigo-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">Total Students</h3>
+                      <h3 className="font-medium text-gray-500">
+                        Total Students
+                      </h3>
                       <p className="font-semibold">869</p>
                     </div>
                   </div>
@@ -277,12 +212,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        
-
-        
-
-        </main>
+      </main>
 
       {/* Footer - Reusing the same footer structure from the homepage */}
       <footer className="bg-[#0c2340] text-white pt-12 pb-6">
@@ -299,12 +229,15 @@ export default function AboutPage() {
                 />
                 <div>
                   <h3 className="text-lg font-bold">GNDU</h3>
-                  <p className="text-sm text-gray-300">College Verka-Amritsar</p>
+                  <p className="text-sm text-gray-300">
+                    College Verka-Amritsar
+                  </p>
                 </div>
               </div>
               <p className="text-gray-300 mb-4">
-                Guru Nanak Dev University College, Verka-Amritsar is committed to providing quality education and
-                fostering academic excellence.
+                Guru Nanak Dev University College, Verka-Amritsar is committed
+                to providing quality education and fostering academic
+                excellence.
               </p>
             </div>
 
@@ -312,17 +245,26 @@ export default function AboutPage() {
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/about" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/about"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/academics" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/academics"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     Academics
                   </Link>
                 </li>
                 <li>
-                  <Link href="/admissions" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/admissions"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     Admissions
                   </Link>
                 </li>
@@ -333,17 +275,26 @@ export default function AboutPage() {
               <h3 className="text-lg font-bold mb-4">Important Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/examination" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/examination"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     Examination
                   </Link>
                 </li>
                 <li>
-                  <Link href="/results" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/results"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     Results
                   </Link>
                 </li>
                 <li>
-                  <Link href="/careers" className="text-gray-300 hover:text-amber-300">
+                  <Link
+                    href="/careers"
+                    className="text-gray-300 hover:text-amber-300"
+                  >
                     Careers
                   </Link>
                 </li>
@@ -356,7 +307,8 @@ export default function AboutPage() {
                 <li className="flex">
                   <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
                   <span className="text-gray-300">
-                    Guru Nanak Dev University College, Verka-Amritsar, Punjab - 143001
+                    Guru Nanak Dev University College, Verka-Amritsar, Punjab -
+                    143001
                   </span>
                 </li>
                 <li className="flex">
@@ -373,12 +325,12 @@ export default function AboutPage() {
 
           <div className="border-t border-gray-700 pt-6 mt-6 text-center text-gray-300 text-sm">
             <p>
-              &copy; {new Date().getFullYear()} Guru Nanak Dev University College, Verka-Amritsar. All rights reserved.
+              &copy; {new Date().getFullYear()} Guru Nanak Dev University
+              College, Verka-Amritsar. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
-

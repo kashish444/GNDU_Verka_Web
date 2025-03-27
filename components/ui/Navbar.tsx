@@ -7,6 +7,7 @@ import {
   Mail,
   Phone,
   Twitter,
+  User,
   Youtube,
 } from "lucide-react";
 import Image from "next/image";
@@ -50,6 +51,14 @@ export default function Navbar() {
             </Link>
             <Link href="https://youtube.com" aria-label="YouTube">
               <Youtube className="h-4 w-4 hover:text-amber-300" />
+            </Link>
+
+            <Link
+              href="/admin"
+              className="flex flex-row justify-center items-center space-x-1 hover:text-amber-300"
+            >
+              <User className="h-4 w-4 hover:text-amber-300" />
+              <p>Admin</p>
             </Link>
           </div>
         </div>

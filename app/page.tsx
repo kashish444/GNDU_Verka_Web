@@ -58,10 +58,10 @@ export default function Home() {
               Principal&apos;s Message
             </h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-1">
-                <div className="relative h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="md:col-span-1 flex flex-col justify-center items-center">
+                <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden shadow-lg">
                   <Image
-                    src="/placeholder.svg?height=300&width=300&text=Principal"
+                    src="/person.png"
                     alt="Mrs. Puneet Randhawa - Principal"
                     fill
                     className="object-cover"
