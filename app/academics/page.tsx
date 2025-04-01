@@ -327,107 +327,99 @@ export default function AcademicsPage() {
         </section>
 
         {/* Faculty Details */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
+        <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Our Distinguished Faculty
             </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {[
-                {
-                  id: 73005,
-                  name: "Mrs. Puneet Randhawa",
-                  position: "OSD/Principal",
-                  subject: "English",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=PR",
-                },
-                {
-                  id: 73003,
-                  name: "Mr. Sukhmaninder Pal Singh",
-                  subject: "History",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=SPS",
-                },
-                {
-                  id: 73002,
-                  name: "Dr. Nisha Chhabra",
-                  subject: "Psychology",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=NC",
-                },
-                {
-                  id: 73004,
-                  name: "Dr. Sonika Thakur",
-                  subject: "Physics",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=ST",
-                },
-                {
-                  id: 73006,
-                  name: "Dr. Rupinder Preet Kaur",
-                  subject: "Chemistry",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=RPK",
-                },
-                {
-                  id: 73007,
-                  name: "Dr. Manjit Kaur",
-                  subject: "Political Science",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=MK",
-                },
-                {
-                  id: 73008,
-                  name: "Dr. Jatinder Kaur",
-                  subject: "Mathematics",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=JK",
-                },
-                {
-                  id: 73009,
-                  name: "Mr. Gurmeet Singh",
-                  subject: "Mathematics",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=GS",
-                },
-                {
-                  id: 73010,
-                  name: "Dr. Jamaninder Pal Singh",
-                  subject: "Economics",
-                  type: "Permanent",
-                  image: "/placeholder.svg?height=200&width=200&text=JPS",
-                },
-              ].map((faculty) => (
-                <Card key={faculty.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative h-48 bg-gray-100 flex items-center justify-center">
-                    <Image
-                      src={faculty.image || "/placeholder.svg"}
-                      alt={faculty.name}
-                      width={150}
-                      height={150}
-                      className="rounded-full object-cover border-4 border-white shadow-md"
-                    />
-                  </div>
-                  <CardContent className="p-6 text-center">
-                    <h3 className="text-xl font-bold mb-1">{faculty.name}</h3>
-                    {faculty.position && <p className="text-amber-600 font-medium mb-2">{faculty.position}</p>}
-                    <p className="text-gray-600 mb-1">Subject: {faculty.subject}</p>
-                    <p className="text-gray-600">Type: {faculty.type}</p>
-                    <p className="text-gray-600 text-sm mt-2">Faculty ID: {faculty.id}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-              <Button variant="outline" className="border-[#0c2340] text-[#0c2340] hover:bg-[#0c2340] hover:text-white">
-                View All Faculty Members
-              </Button>
-            </div>
-          </div>
-        </section>
+            <Card>
+            <TableHeader>
+  <TableRow>
+    <TableHead>Sr.No</TableHead>
+    <TableHead>Name</TableHead>
+    <TableHead>Email ID</TableHead>
+    <TableHead>Subject</TableHead>
+    <TableHead>Area of Specialization</TableHead>
+    <TableHead>D.O.J</TableHead>
+  </TableRow>
+</TableHeader>
+            <TableBody>
+  <TableRow>
+    <TableCell>1</TableCell>
+    <TableCell className="font-medium">Mrs. Puneet Randhawa</TableCell>
+    <TableCell>Puneetkaurbrar1@gmail.com</TableCell>
+    <TableCell>English</TableCell>
+    <TableCell>Woman, Family and Society in the select texts of Dilip Kaur Tiwana, Ashapurna Devi and Githa Hariharan: A Comparative study</TableCell>
+    <TableCell>04/10/2011</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>2</TableCell>
+    <TableCell className="font-medium">Mr. Sukhmaninder Pal Singh</TableCell>
+    <TableCell>sukhmaninder.verka@gndu.ac.in</TableCell>
+    <TableCell>History</TableCell>
+    <TableCell>Modern India</TableCell>
+    <TableCell>05/10/2011</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>3</TableCell>
+    <TableCell className="font-medium">Dr. Nisha Chhabra</TableCell>
+    <TableCell>nisha.verka@gndu.ac.in</TableCell>
+    <TableCell>Psychology</TableCell>
+    <TableCell>Mental Health Councelling, Research and Mindful Meditation</TableCell>
+    <TableCell>05/10/2011</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>4</TableCell>
+    <TableCell className="font-medium">Dr. Sonika Thakur</TableCell>
+    <TableCell>sonikaphy.verka@gndu.ac.in</TableCell>
+    <TableCell>Physics</TableCell>
+    <TableCell>Material Science</TableCell>
+    <TableCell>05/10/2011</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>5</TableCell>
+    <TableCell className="font-medium">Dr. Rupinder Preet Kaur</TableCell>
+    <TableCell>rupinderpreet@gmail.com</TableCell>
+    <TableCell>Chemistry</TableCell>
+    <TableCell>Computational and Theoretical Chemistry-Density Functional Theory, Ab-into methods, QSAR, Molecular Dynamics</TableCell>
+    <TableCell>10/09/2012</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>6</TableCell>
+    <TableCell className="font-medium">Dr. Manjit Kaur</TableCell>
+    <TableCell>manjit.polverka@gndu.ac.in</TableCell>
+    <TableCell>Political Science</TableCell>
+    <TableCell>International Politics, Nationalism, Mohajir Politics in Pakistan, Diaspora, Issues in Punjab Politics</TableCell>
+    <TableCell>01/11/2012</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>7</TableCell>
+    <TableCell className="font-medium">Dr. Jatinder Kaur</TableCell>
+    <TableCell>jatinderkaulakh@gmail.com</TableCell>
+    <TableCell>Mathematics</TableCell>
+    <TableCell>Applied Mathematics, Stochastic Modelling and Forecasting using soft Computing Techniques</TableCell>
+    <TableCell>02/11/2012</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>8</TableCell>
+    <TableCell className="font-medium">Mr. Gurmeet Singh</TableCell>
+    <TableCell>gurmeetgill905@gmail.com</TableCell>
+    <TableCell>Mathematics</TableCell>
+    <TableCell>Real Analysis, Algebra</TableCell>
+    <TableCell>02/11/2012</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>9</TableCell>
+    <TableCell className="font-medium">Dr. Jamaninder Pal Singh</TableCell>
+    <TableCell>jasminderpal@gmail.com</TableCell>
+    <TableCell>Economics</TableCell>
+    <TableCell>Microeconomics, Industrial Economics, Quantitative Techniques, Development Economics</TableCell>
+    <TableCell>06/11/2012</TableCell>
+  </TableRow>
+</TableBody>
+</Card>
+</div>
+</section>
 
         {/* Academic Resources */}
         <section className="py-12 bg-gray-50">

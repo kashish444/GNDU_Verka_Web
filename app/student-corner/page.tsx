@@ -417,11 +417,9 @@ export default function StudentCornerPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    The Discipline and Grievance Redressal Committee addresses
+                    The Discipline Redressal Committee addresses
                     student grievances and ensures that discipline is maintained
-                    on campus. Students can approach the committee for
-                    resolution of academic, administrative, or personal
-                    grievances.
+                    on campus. 
                   </p>
                   <div className="space-y-2">
                     <p className="text-gray-700">
@@ -460,18 +458,7 @@ export default function StudentCornerPage() {
               various activities, joining clubs, and utilizing the resources
               available to you.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-amber-600 hover:bg-amber-700">
-                Join a Club
-              </Button>
-              <Button
-                variant="outline"
-                className="text-white border-white hover:bg-white/10"
-              >
-                Student Handbook
-              </Button>
             </div>
-          </div>
         </section>
       </main>
 
@@ -482,7 +469,7 @@ export default function StudentCornerPage() {
             <div>
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="/university-logo.jpg"
                   alt="Guru Nanak Dev University Logo"
                   width={60}
                   height={60}

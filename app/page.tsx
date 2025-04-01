@@ -61,7 +61,7 @@ export default function Home() {
               <div className="md:col-span-1 flex flex-col justify-center items-center">
                 <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden shadow-lg">
                   <Image
-                    src="/person.png"
+                    src="/picture.png"
                     alt="Mrs. Puneet Randhawa - Principal"
                     fill
                     className="object-cover"
@@ -260,9 +260,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 text-center">
-              <Button className="bg-amber-600 hover:bg-amber-700">
-                Virtual Campus Tour
-              </Button>
+              
             </div>
           </div>
         </section>

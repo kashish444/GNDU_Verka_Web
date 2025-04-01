@@ -35,7 +35,7 @@ export default function Navbar() {
               <span>osd.verka@gndu.ac.in</span>
             </Link>
           </div>
-          <span>Guru Nanak Dev University Verka Branch</span>
+          <span>Guru Nanak Dev University Verka College</span>
           <div className="flex items-center space-x-3">
             <Link href="https://facebook.com" aria-label="Facebook">
               <Facebook className="h-4 w-4 hover:text-amber-300" />
@@ -54,7 +54,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/admin"
+              href="/login"
               className="flex flex-row justify-center items-center space-x-1 hover:text-amber-300"
             >
               <User className="h-4 w-4 hover:text-amber-300" />
@@ -91,7 +91,7 @@ export default function Navbar() {
             href="/about"
             className="font-medium text-[#0c2340] hover:text-amber-600"
           >
-            About
+            About Us
           </Link>
           <Link
             href="/academics"
@@ -127,7 +127,7 @@ export default function Navbar() {
             href="/contact"
             className="font-medium text-[#0c2340] hover:text-amber-600"
           >
-            Contact
+            Contact Us
           </Link>
         </nav>
         <Button variant="outline" className="lg:hidden">
