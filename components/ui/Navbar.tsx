@@ -59,7 +59,7 @@ export default function Navbar() {
                 <span className="md:block hidden">osd.verka@gndu.ac.in</span>
               </Link>
             </div>
-            <span className="absolute left-0 right-0 m-auto md:flex hidden text-center justify-center items-center ">
+            <span className="absolute left-0 right-0 m-auto lg:flex hidden text-center justify-center items-center ">
               Guru Nanak Dev University Verka College
             </span>
             <div className="flex items-center space-x-3">
