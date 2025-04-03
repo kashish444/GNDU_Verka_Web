@@ -4,10 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Bell,
-  ChevronRight,
-} from "lucide-react";
+import { Bell, ChevronRight } from "lucide-react";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
@@ -21,7 +18,7 @@ export default function Home() {
         <section className="relative">
           <div className="relative h-[400px] md:h-[500px] overflow-hidden">
             <Image
-              src="/image.png"
+              src="/banner.jpg"
               alt="University Campus"
               fill
               className="object-cover"
@@ -67,35 +64,47 @@ export default function Home() {
               </div>
               <div className="md:col-span-2">
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <p className="text-gray-700 mb-4 italic">
-                    &quot;Dear Students, Parents, and Visitors,
+                  <p className="text-gray-700 mb-4">
+                    Education is a fundamental societal need which churns human
+                    mind with the essentialities of a basic value system. Values
+                    and worldly education share a dialectical relationship.
+                    Students imbibe values and simultaneously study hard for
+                    career building and thus achieve self-actualization. The
+                    Bhagwad Gita states, “Right knowledge is the ultimate
+                    solution to all our problems.” As we delve deeply into Lord
+                    Krishna&apos;s &apos;Karamyog Philosophy&apos; we realise that every act
+                    can be an act of prayer. Career building and spiritual
+                    enhancement must evolve in a parallel pattern. Guru Nanak
+                    Dev University College, Verka is an insignia of an
+                    institutionalised value system. In this prestigious
+                    institution, we aim to channelize our students towards a
+                    challenging path of self-realisation and cultivate primal
+                    human values which will assist them to be honest and sincere
+                    human beings. The aim of our tenacious faculty is to assist
+                    the students to garner adequate social skills to make a
+                    profitable career and at the same time, nurture a path of
+                    values like truth, honesty, innate goodness, consistent hard
+                    work, catering to the value of living life in the present,
+                    punctuality, good conduct, developing a multi-tasking
+                    calibre, nourishing holistic skills and above all being
+                    simple individuals with a ripe character. Our college
+                    aspires to create dedicated citizens who are proud to be
+                    diminutive specks of a great motherland. We need secular
+                    minded beings who stand in awe of a country which is
+                    multilingual, multicultural and has a kaleidoscopic variety
+                    of traditions and religions. Right from the Himalayan peaks,
+                    stretching forth towards southern tip of Kanya Kumari, India
+                    has a magnanimity with a secular mindset, which we
+                    incorporate to our students.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    It is my privilege to welcome you to Guru Nanak Dev
-                    University College, Verka-Amritsar. Our institution is
-                    committed to providing quality education that nurtures
-                    intellectual growth, character development, and social
-                    responsibility.
-                  </p>
-                  <p className="text-gray-700 mb-4">
-                    At GNDU College Verka, we believe in holistic education that
-                    goes beyond textbooks and classrooms. Our dedicated faculty
-                    members strive to create a stimulating learning environment
-                    that encourages critical thinking, creativity, and
-                    innovation.
-                  </p>
-                  <p className="text-gray-700 mb-4">
-                    We are proud of our state-of-the-art facilities, diverse
-                    academic programs, and vibrant campus life that provide
-                    students with ample opportunities to discover and develop
-                    their talents. Our goal is to prepare students not just for
-                    successful careers, but for meaningful lives as responsible
-                    citizens.
-                  </p>
-                  <p className="text-gray-700">
-                    I invite you to explore our website and learn more about
-                    what makes GNDU College Verka a special place for learning
-                    and growth.
+                    The session 2023-2024 has been an immensely successful
+                    pursuit. It is with profound contentment that I acknowledge
+                    the cumulative effort of the entire workforce, primarily
+                    students and teachers, who have put in their best efforts
+                    for such an efficient and fruitful session. I also express
+                    my gratitude to all our other employees who constantly work
+                    for the cleanliness and maintenance of the college.
                   </p>
                   <div className="mt-4 text-right">
                     <p className="font-semibold text-[#0c2340]">
@@ -121,7 +130,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
+                    <li className="flex items-center flex-row m-auto justify-center">
                       <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">
                         •
                       </span>
@@ -131,7 +140,7 @@ export default function Home() {
                         environment.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center m-auto justify-center">
                       <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">
                         •
                       </span>
@@ -140,7 +149,7 @@ export default function Home() {
                         and ethical value system in students.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-600 p-1 rounded-full mr-2 mt-1">
                         •
                       </span>
@@ -164,13 +173,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         1
                       </span>
                       <span>To provide quality education to the students.</span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         2
                       </span>
@@ -179,7 +188,7 @@ export default function Home() {
                         community through value education.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         3
                       </span>
@@ -188,7 +197,7 @@ export default function Home() {
                         challenges.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         4
                       </span>
@@ -197,7 +206,7 @@ export default function Home() {
                         learning atmosphere that promotes critical thinking.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         5
                       </span>
@@ -206,7 +215,7 @@ export default function Home() {
                         of students.
                       </span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-600 p-1 rounded-full mr-2 mt-1">
                         6
                       </span>
@@ -252,9 +261,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 text-center">
-              
-            </div>
+            <div className="mt-12 text-center"></div>
           </div>
         </section>
 
@@ -361,7 +368,7 @@ export default function Home() {
         </section>
       </main>
       {/* Footer */}
-     <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -1,25 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  BookOpen,
-  Clock,
-  Download,
-  FileText,
-  Newspaper,
-  Globe,
-} from "lucide-react";
+import { Mail, MapPin, Phone, BookOpen, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -27,22 +10,45 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "@/components/ui/Navbar";
+import Lander from "@/components/ui/Lander";
 
 export default function LibraryPage() {
+  const rules = [
+    "All users are required to show their college IDs to the security person/officer upon entrance to the library.",
+    "All users must observe total silence in the library and its environs at all times.",
+    "Students are advised to stand in queue for issued and return books.",
+    "Books will be issued only for 21 days.",
+    "Defaulters will be charged fine of Rs.3/- per day after due date.",
+    "Library book is lost/damaged student will have to pay fine @ current price of book.",
+    "Books will issue only to card holder. Any student found trying to issue on other's card his/her membership will be cancelled.",
+    "Bags, polybags, folders etc. must be left in the luggage area inside the library. Personal books can be allowed inside the library with the permission of library staff.",
+    "Reference books, magazines, journals, dictionaries, encyclopedias and other reference materials are only for reading within library and can't be issued to anybody.",
+    "No discussion permitted inside the Library.",
+    "No student is allowed to enter the circulation area without the consent of the library staff.",
+    "All users are required to show all items to the security person/officer before leaving the library.",
+  ];
+
+  const collections = [
+    { name: "Fiction", count: 120 },
+    { name: "Non-Fiction", count: 85 },
+    { name: "Science", count: 60 },
+    { name: "History", count: 45 },
+    { name: "Technology", count: 30 },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
       <main className="flex-1">
         {/* Page Title */}
-        <section className="bg-[#0c2340] text-white py-12">
-          <div className="container mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl font-bold">Library</h1>
-            <p className="mt-2 text-lg">
-              Knowledge Hub of GNDU College Verka-Amritsar
-            </p>
-          </div>
-        </section>
+
+        <Lander
+          image="library2.jpeg"
+          heading="Library"
+          description="Knowledge Hub of GNDU College Verka-Amritsar"
+          cover="100% 30%"
+        />
 
         {/* Library Overview */}
         <section className="py-12">
@@ -98,7 +104,7 @@ export default function LibraryPage() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Library"
+                  src="/library.jpeg"
                   alt="College Library"
                   fill
                   className="object-cover"
@@ -108,9 +114,47 @@ export default function LibraryPage() {
           </div>
         </section>
 
+        {/* Library Collections */}
+        <section className="py-12">
+          <div className="container mx-auto px-4 w-1/2">
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
+              Library Collections
+            </h2>
+
+            <div className="max-w-4xl mx-auto">
+              <Card>
+                <CardContent className="p-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b border-gray-300 text-left">
+                        <th className="p-3 text-gray-600">Collection</th>
+                        <th className="p-3 text-gray-600">No. of Items</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {collections.map((collection, index) => (
+                        <tr key={index} className="border-b border-gray-200">
+                          <td className="p-3 flex items-center gap-3 text-gray-700">
+                            <div className="bg-blue-100 text-blue-600 p-2 rounded-full">
+                              <BookOpen className="w-4 h-4" />
+                            </div>
+                            {collection.name}
+                          </td>
+                          <td className="p-3 text-gray-700">
+                            {collection.count}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
         {/* Library Rules */}
         <section className="py-12">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 w-1/2">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Library Rules
             </h2>
@@ -119,98 +163,23 @@ export default function LibraryPage() {
               <Card>
                 <CardContent className="p-6">
                   <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        1
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Library Cards:</span>{" "}
-                        Each student will be issued a library card, which must
-                        be presented when borrowing books. Library cards are
-                        non-transferable.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        2
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Borrowing Limit:</span>{" "}
-                        Undergraduate students can borrow up to 3 books, and
-                        postgraduate students can borrow up to 5 books at a
-                        time.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        3
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Loan Period:</span>{" "}
-                        Books are issued for 14 days and can be renewed once if
-                        no reservation has been made for the same.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        4
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Late Fees:</span> A fine
-                        of Rs. 5 per day will be charged for books returned
-                        after the due date.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        5
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">
-                          Reference Materials:
-                        </span>{" "}
-                        Reference books, journals, magazines, and newspapers can
-                        only be consulted within the library premises.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        6
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Silence:</span> Maintain
-                        silence in the library. Mobile phones must be kept on
-                        silent mode.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        7
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Food and Drinks:</span>{" "}
-                        Eating, drinking, and smoking are strictly prohibited in
-                        the library.
-                      </p>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                        8
-                      </div>
-                      <p className="text-gray-700">
-                        <span className="font-semibold">Damage to Books:</span>{" "}
-                        Users will be held responsible for any damage to library
-                        materials and will be required to replace the damaged
-                        item.
-                      </p>
-                    </li>
+                    {rules.map((rule, index) => (
+                      <>
+                        <li className="flex items-center" key={index}>
+                          <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
+                            {index + 1}
+                          </div>
+                          <p className="text-gray-700">{rule}</p>
+                        </li>
+                      </>
+                    ))}
                   </ul>
-                  <div className="mt-6 text-center">
+                  {/* <div className="mt-6 text-center">
                     <Button variant="outline">
                       <Download className="mr-2 h-4 w-4" /> Download Complete
                       Library Guidelines
                     </Button>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </div>
@@ -218,7 +187,7 @@ export default function LibraryPage() {
         </section>
 
         {/* Resources */}
-        <section className="py-12 bg-gray-50">
+        {/* <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Library Resources
@@ -433,21 +402,21 @@ export default function LibraryPage() {
               </TabsContent>
             </Tabs>
           </div>
-        </section>
+        </section> */}
 
         {/* Library Staff */}
         <section className="py-12">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 flex flex-col justify-center items-center m-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Library Staff
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card className="text-center">
+            <div className="flex md:flex-row flex-col gap-6 max-w-5xl mx-auto flex-wrap justify-center m-auto">
+              <Card className="text-center w-72">
                 <div className="pt-6">
                   <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                     <Image
-                      src="/placeholder.svg?height=150&width=150&text=Librarian"
+                      src="/person.png"
                       alt="Chief Librarian"
                       fill
                       className="object-cover"
@@ -455,24 +424,21 @@ export default function LibraryPage() {
                   </div>
                 </div>
                 <CardContent>
-                  <h3 className="text-xl font-bold">Dr. Harpreet Singh</h3>
+                  <h3 className="text-xl font-bold">Dr. Manjit Kaur</h3>
                   <p className="text-amber-600 font-medium mb-2">
-                    Chief Librarian
+                    Library Teacher Incharge
                   </p>
                   <p className="text-gray-700 text-sm mb-2">
-                    Ph.D. in Library Science
-                  </p>
-                  <p className="text-gray-700 text-sm">
-                    harpreet.library@gndu-verka.ac.in
+                    Assistant Professor in Political Science
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center  w-72">
                 <div className="pt-6">
                   <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                     <Image
-                      src="/placeholder.svg?height=150&width=150&text=Assistant"
+                      src="/person.png"
                       alt="Assistant Librarian"
                       fill
                       className="object-cover"
@@ -480,44 +446,34 @@ export default function LibraryPage() {
                   </div>
                 </div>
                 <CardContent>
-                  <h3 className="text-xl font-bold">Ms. Rajwinder Kaur</h3>
+                  <h3 className="text-xl font-bold">Mr. Navjit Singh</h3>
                   <p className="text-amber-600 font-medium mb-2">
-                    Assistant Librarian
-                  </p>
-                  <p className="text-gray-700 text-sm mb-2">M.Lib.I.Sc.</p>
-                  <p className="text-gray-700 text-sm">
-                    rajwinder.library@gndu-verka.ac.in
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center">
-                <div className="pt-6">
-                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                    <Image
-                      src="/placeholder.svg?height=150&width=150&text=Technical"
-                      alt="Technical Assistant"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <CardContent>
-                  <h3 className="text-xl font-bold">Mr. Gurpreet Singh</h3>
-                  <p className="text-amber-600 font-medium mb-2">
-                    Technical Assistant
-                  </p>
-                  <p className="text-gray-700 text-sm mb-2">
-                    B.Lib.I.Sc., PGDCA
-                  </p>
-                  <p className="text-gray-700 text-sm">
-                    gurpreet.library@gndu-verka.ac.in
+                    Library Restorer
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
+        <div className="flex md:w-1/2 w-[80%] mx-auto mb-20 ">
+          <Card>
+            <CardContent className="p-6 text-center">
+              <h3 className="text-xl font-bold text-[#0c2340] mb-4">
+                Message from Library Teacher Incharge
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Library is a window to the world of possibilities and
+                opportunities. In order to cater to the needs of the students
+                and teachers of different disciplines, the college library has a
+                wide range of acquisitions of books, magazines, and newspapers.
+                We welcome the readers to take benefit of the library
+                facilities. We aspire to upgrade our library and move towards
+                its digitization. Our library staff is always available to serve
+                the best interests of our readers.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* FAQ Section */}
         <section className="py-12 bg-gray-50">
