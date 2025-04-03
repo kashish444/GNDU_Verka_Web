@@ -26,11 +26,14 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-black/40 flex items-center">
               <div className="container mx-auto px-4">
-                <div className="max-w-2xl text-white">
-                  <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                    Welcome to Guru Nanak Dev University
+                <div className="max-w-2xl text-white leading-tight">
+                  <h1 className="text-xl md:text-3xl font-bold">
+                    Welcome to 
                   </h1>
-                  <p className="text-lg md:text-xl mb-6">
+                  <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                    Guru Nanak Dev University <br /> College, Verka
+                  </h1>
+                  <p className="text-lg md:text-xl leading-tight">
                     Empowering minds, transforming lives through quality
                     education and research excellence
                   </p>
@@ -72,11 +75,11 @@ export default function Home() {
                     career building and thus achieve self-actualization. The
                     Bhagwad Gita states, “Right knowledge is the ultimate
                     solution to all our problems.” As we delve deeply into Lord
-                    Krishna&apos;s &apos;Karamyog Philosophy&apos; we realise that every act
-                    can be an act of prayer. Career building and spiritual
-                    enhancement must evolve in a parallel pattern. Guru Nanak
-                    Dev University College, Verka is an insignia of an
-                    institutionalised value system. In this prestigious
+                    Krishna&apos;s &apos;Karamyog Philosophy&apos; we realise
+                    that every act can be an act of prayer. Career building and
+                    spiritual enhancement must evolve in a parallel pattern.
+                    Guru Nanak Dev University College, Verka is an insignia of
+                    an institutionalised value system. In this prestigious
                     institution, we aim to channelize our students towards a
                     challenging path of self-realisation and cultivate primal
                     human values which will assist them to be honest and sincere
