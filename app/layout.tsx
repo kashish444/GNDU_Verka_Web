@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Guru Nanak Dev University - Verka Branch",
-  description: "Official website of Guru Nanak Dev University, Verka Branch, Amritsar",
+  description: "Official website of Guru Nanak Dev University, College Verka",
 }
 
 export default function RootLayout({
