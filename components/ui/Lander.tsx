@@ -33,4 +33,8 @@ export default function Lander({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8

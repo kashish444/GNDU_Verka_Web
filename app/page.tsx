@@ -6,7 +6,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bell, ChevronRight } from "lucide-react";
 import Navbar from "@/components/ui/Navbar";
+<<<<<<< HEAD
 import Footer from "@/components/ui/Footer"
+=======
+import Footer from "@/components/ui/Footer";
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
 
 export default function Home() {
   return (
@@ -79,10 +83,14 @@ export default function Home() {
                     that every act can be an act of prayer. Career building and
                     spiritual enhancement must evolve in a parallel pattern.
                     Guru Nanak Dev University College, Verka is an insignia of
+<<<<<<< HEAD
                     an institutionalised value system. 
                     </p>
                     <p className="text-gray-700 mb-4">
                     In this prestigious
+=======
+                    an institutionalised value system. In this prestigious
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
                     institution, we aim to channelize our students towards a
                     challenging path of self-realisation and cultivate primal
                     human values which will assist them to be honest and sincere

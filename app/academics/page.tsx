@@ -347,7 +347,14 @@ export default function AcademicsPage() {
                       </Table>
                     </div>
                     <div className="mt-6 flex justify-center">
+<<<<<<< HEAD
                       
+=======
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Download className="mr-2 h-4 w-4" /> Download PG
+                        Brochure
+                      </Button>
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
                     </div>
                   </CardContent>
                 </Card>
@@ -399,7 +406,14 @@ export default function AcademicsPage() {
                       </Table>
                     </div>
                     <div className="mt-6 flex justify-center">
+<<<<<<< HEAD
                     
+=======
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Download className="mr-2 h-4 w-4" /> Download Diploma
+                        Brochure
+                      </Button>
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
                     </div>
                   </CardContent>
                 </Card>
@@ -803,4 +817,8 @@ export default function AcademicsPage() {
       </footer>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
