@@ -103,8 +103,4 @@ export default function AdminLoginPage() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fa8718c10f72e03494c2df271df80ad3edfa9ab8
