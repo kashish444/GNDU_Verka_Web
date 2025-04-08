@@ -18,86 +18,86 @@ export default function CampusLifePage() {
     {
       id: 1,
       imageSrc: "/verka.png",
-      title: "Campus Building 1",
+      title: "Campus Building",
       description:
         "Modern infrastructure with state-of-the-art facilities for students.",
     },
     {
       id: 2,
-      imageSrc: "/campus2.png",
-      title: "Campus Building 2",
+      imageSrc: "/gallery2.jpg",
+      title: "NSS SOCIETY",
       description:
-        "Modern infrastructure with state-of-the-art facilities for students.",
+        "Students of NSS Society raising awareness about drugs.",
     },
     {
       id: 3,
-      imageSrc: "/collegeevent1.png",
-      title: "College Event 1",
+      imageSrc: "/gallery3.jpg",
+      title: "Red Ribbon Club",
       description:
-        "Cultural and academic events that enrich student experience.",
+        "Regular dental checkup being done by Red Ribbon Club.",
     },
     {
       id: 4,
-      imageSrc: "/collegeevent2.png",
-      title: "College Event 2",
+      imageSrc: "/gallery4.jpg",
+      title: "National Science Day",
       description:
-        "Cultural and academic events that enrich student experience.",
+        "On the day of National Science Day , students made a chart about the career option in Science.",
     },
     {
       id: 5,
       imageSrc: "/sportact.png",
-      title: "Sports Activity 1",
+      title: "Sports Activity",
       description:
         "Sports facilities and competitions to promote physical fitness.",
     },
     {
       id: 6,
-      imageSrc: "/sportact.png",
-      title: "Sports Activity 2",
+      imageSrc: "/gallery5.jpg",
+      title: "NCC Cadets",
       description:
-        "Sports facilities and competitions to promote physical fitness.",
+        "NCC to provide an environment to motivate young Indians to join the armed forces.",
     },
     {
       id: 7,
-      imageSrc: "/studentactivity.png",
-      title: "Student Activity 1",
+      imageSrc: "/gallery6.jpg",
+      title: "Invited Lectures",
       description:
-        "Extracurricular activities that develop leadership and teamwork.",
+        "Faculity inviting guest lectures to provide knowledge to students.",
     },
     {
       id: 8,
-      imageSrc: "/studentactivity.png",
-      title: "Student Activity 2",
+      imageSrc: "/gallery7.jpg",
+      title: "Jashan-e-Commerce",
       description:
-        "Extracurricular activities that develop leadership and teamwork.",
+        "Jashan organised by college.",
     },
     {
       id: 9,
-      imageSrc: "/verka.png",
-      title: "Library",
+      imageSrc: "/gallery8.jpg",
+      title: "Ardaas Diwas",
       description:
-        "Our well-stocked library houses thousands of books, journals, and digital resources.",
+        "Annual Ardas Diwas being celebrated to begin the journey of new academic session.",
     },
     {
       id: 10,
-      imageSrc: "/computer.png",
-      title: "Computer Labs",
+      imageSrc: "/convocation.jpg",
+      title: "Convocation",
       description:
-        "Modern computer laboratories equipped with the latest hardware and software.",
+        "Convocation of students being done by college.",
     },
     {
       id: 11,
-      imageSrc: "/sports.png",
-      title: "Sports Complex",
+      imageSrc: "/eco club.jpg",
+      title: "Eco Club",
       description:
-        "Comprehensive sports facilities including indoor and outdoor courts and fields.",
+        "Eco Club in the college spreading awareness about the environment.",
     },
     {
       id: 12,
-      imageSrc: "/verka.png",
-      title: "Auditorium",
+      imageSrc: "/gallery12.jpg",
+      title: "Seminar",
       description:
-        "A spacious auditorium for hosting cultural events, seminars, and conferences.",
+        "Seminar being conducted by honourable professor of college.",
     },
   ];
 
