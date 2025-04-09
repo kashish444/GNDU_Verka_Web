@@ -1,44 +1,40 @@
-"use client";
+"use client"
 
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  Twitter,
-  User,
-  Youtube,
-  ChevronDown,
-} from "lucide-react";
-import { Button } from "./button";
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { usePathname, useRouter } from "next/navigation"
+import { motion, AnimatePresence } from "framer-motion"
+import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, User, Youtube, ChevronDown } from "lucide-react"
+import { Button } from "./button"
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const router = useRouter();
+  const pathname = usePathname()
+  const router = useRouter()
 
-  const [menu, setMenu] = useState(false);
-  const [othersOpen, setOthersOpen] = useState(false);
-  const [mobileOthersOpen, setMobileOthersOpen] = useState(false);
+  const [menu, setMenu] = useState(false)
+  const [othersOpen, setOthersOpen] = useState(false)
+  const [mobileOthersOpen, setMobileOthersOpen] = useState(false)
+  const [academicsOpen, setAcademicsOpen] = useState(false)
+  const [admissionsOpen, setAdmissionsOpen] = useState(false)
+  const [studentCornerOpen, setStudentCornerOpen] = useState(false)
+  const [mobileAcademicsOpen, setMobileAcademicsOpen] = useState(false)
+  const [mobileAdmissionsOpen, setMobileAdmissionsOpen] = useState(false)
+  const [mobileStudentCornerOpen, setMobileStudentCornerOpen] = useState(false)
 
-  const gotohome = () => router.push("/");
+  const gotohome = () => router.push("/")
 
   useEffect(() => {
-    document.body.style.overflow = menu ? "hidden" : "";
+    document.body.style.overflow = menu ? "hidden" : ""
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menu]);
+      document.body.style.overflow = ""
+    }
+  }, [menu])
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href)
 
   const navItemClass = (href: string) =>
-    `font-medium ${isActive(href) ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"}`;
+    `font-medium ${isActive(href) ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"}`
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -55,9 +51,7 @@ export default function Navbar() {
               <span className="md:block hidden">osd.verka@gndu.ac.in</span>
             </Link>
           </div>
-          <span className="absolute -z-10 left-0 right-0 m-auto lg:flex hidden text-center justify-center items-center">
-            Guru Nanak Dev University Verka College
-          </span>
+          <span>Guru Nanak Dev University College Verka</span>
           <div className="flex items-center space-x-3">
             {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
               <Link href="#" key={i} aria-label={Icon.name}>
@@ -84,27 +78,168 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex space-x-6 items-center relative">
-          {[
-            { name: "Home", href: "/" },
-            { name: "Academics", href: "/academics" },
-            { name: "Admissions", href: "/admissions" },
-            { name: "Student Corner", href: "/student-corner" },
-            { name: "Gallery", href: "/gallery" },
-          ].map((item) => (
-            <Link key={item.href} href={item.href} className={navItemClass(item.href)}>
-              {item.name}
-            </Link>
-          ))}
+          <Link href="/" className={navItemClass("/")}>
+            Home
+          </Link>
 
-          {/* Others Dropdown */}
+          {/* Academics Dropdown */}
           <div
             className="relative"
-            onMouseEnter={() => setOthersOpen(true)}
-            onMouseLeave={() => setOthersOpen(false)}
+            onMouseEnter={() => setAcademicsOpen(true)}
+            onMouseLeave={() => setAcademicsOpen(false)}
           >
-            <button className={`flex items-center ${pathname.startsWith("/about") || pathname.startsWith("/contact") || pathname.startsWith("/library") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}>
+            <Link
+              href="/academics"
+              className={`flex items-center ${isActive("/academics") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}
+            >
+              Academics <ChevronDown className="ml-1 w-4 h-4" />
+            </Link>
+            <AnimatePresence>
+              {academicsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-48 z-50"
+                >
+                  <Link
+                    href="/academics/courses"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/courses") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Courses
+                  </Link>
+                  <Link
+                    href="/academics/faculty"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/faculty") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Faculty
+                  </Link>
+                  <Link
+                    href="/academics/timetable"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/timetable") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Time Table
+                  </Link>
+                  <Link
+                    href="/academics/calendar"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/calendar") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Academic Calendar
+                  </Link>
+                  <Link
+                    href="/academics/examination"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/examination") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Examination Guidelines
+                  </Link>
+                  <Link
+                    href="/academics/datasheet"
+                    className={`block px-4 py-2 text-sm ${isActive("/academics/datasheet") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Datasheet
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Admissions Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setAdmissionsOpen(true)}
+            onMouseLeave={() => setAdmissionsOpen(false)}
+          >
+            <Link
+              href="/admissions"
+              className={`flex items-center ${isActive("/admissions") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}
+            >
+              Admissions <ChevronDown className="ml-1 w-4 h-4" />
+            </Link>
+            <AnimatePresence>
+              {admissionsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
+                >
+                  <Link
+                    href="/admissions/courses"
+                    className={`block px-4 py-2 text-sm ${isActive("/admissions/courses") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Courses Offered
+                  </Link>
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-[#0c2340] hover:bg-amber-100"
+                  >
+                    Prospectus
+                  </a>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Student Corner Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setStudentCornerOpen(true)}
+            onMouseLeave={() => setStudentCornerOpen(false)}
+          >
+            <Link
+              href="/student-corner"
+              className={`flex items-center ${isActive("/student-corner") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}
+            >
+              Student Corner <ChevronDown className="ml-1 w-4 h-4" />
+            </Link>
+            <AnimatePresence>
+              {studentCornerOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
+                >
+                  <Link
+                    href="/student-corner/societies"
+                    className={`block px-4 py-2 text-sm ${isActive("/student-corner/societies") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Societies and Clubs
+                  </Link>
+                  <Link
+                    href="/student-corner/facilities"
+                    className={`block px-4 py-2 text-sm ${isActive("/student-corner/facilities") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Facilities
+                  </Link>
+                  <Link
+                    href="/student-corner/support"
+                    className={`block px-4 py-2 text-sm ${isActive("/student-corner/support") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
+                    Student Support
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <Link href="/gallery" className={navItemClass("/gallery")}>
+            Gallery
+          </Link>
+
+          {/* Others Dropdown */}
+          <div className="relative" onMouseEnter={() => setOthersOpen(true)} onMouseLeave={() => setOthersOpen(false)}>
+            <Link
+              href="/about"
+              className={`flex items-center ${isActive("/about") || isActive("/contact") || isActive("/library") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}
+            >
               Others <ChevronDown className="ml-1 w-4 h-4" />
-            </button>
+            </Link>
             <AnimatePresence>
               {othersOpen && (
                 <motion.div
@@ -114,13 +249,22 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
                 >
-                  <Link href="/library" className={`block px-4 py-2 text-sm ${isActive("/library") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}>
+                  <Link
+                    href="/library"
+                    className={`block px-4 py-2 text-sm ${isActive("/library") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
                     Library
                   </Link>
-                  <Link href="/contact" className={`block px-4 py-2 text-sm ${isActive("/contact") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}>
+                  <Link
+                    href="/contact"
+                    className={`block px-4 py-2 text-sm ${isActive("/contact") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
                     Contact Us
                   </Link>
-                  <Link href="/about" className={`block px-4 py-2 text-sm ${isActive("/about") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}>
+                  <Link
+                    href="/about"
+                    className={`block px-4 py-2 text-sm ${isActive("/about") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
+                  >
                     About Us
                   </Link>
                 </motion.div>
@@ -143,29 +287,193 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="absolute inset-0 flex flex-col items-center w-screen h-screen gap-5 bg-white z-40 pt-24"
+            className="absolute inset-0 flex flex-col items-center w-screen h-screen gap-5 bg-white z-40 pt-24 overflow-y-auto"
           >
-            {[
-              { name: "Home", href: "/" },
-              { name: "About Us", href: "/about" },
-              { name: "Academics", href: "/academics" },
-              { name: "Admissions", href: "/admissions" },
-              { name: "Student Corner", href: "/student-corner" },
-              { name: "Gallery", href: "/gallery" },
-            ].map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setMenu(false)} className={navItemClass(item.href)}>
-                {item.name}
-              </Link>
-            ))}
+            <Link href="/" onClick={() => setMenu(false)} className={navItemClass("/")}>
+              Home
+            </Link>
+
+            {/* Mobile Academics Dropdown */}
+            <div className="flex flex-col items-center">
+              <div className="flex items-center">
+                <Link href="/academics" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
+                  Academics
+                </Link>
+                <button
+                  onClick={() => setMobileAcademicsOpen(!mobileAcademicsOpen)}
+                  className="ml-1 text-[#0c2340] hover:text-amber-600"
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </div>
+              <AnimatePresence>
+                {mobileAcademicsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex flex-col mt-2"
+                  >
+                    <Link
+                      href="/academics/courses"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Courses
+                    </Link>
+                    <Link
+                      href="/academics/faculty"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Faculty
+                    </Link>
+                    <Link
+                      href="/academics/timetable"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Time Table
+                    </Link>
+                    <Link
+                      href="/academics/calendar"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Academic Calendar
+                    </Link>
+                    <Link
+                      href="/academics/examination"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Examination Guidelines
+                    </Link>
+                    <Link
+                      href="/academics/datasheet"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Datasheet
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Mobile Admissions Dropdown */}
+            <div className="flex flex-col items-center">
+              <div className="flex items-center">
+                <Link href="/admissions" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
+                  Admissions
+                </Link>
+                <button
+                  onClick={() => setMobileAdmissionsOpen(!mobileAdmissionsOpen)}
+                  className="ml-1 text-[#0c2340] hover:text-amber-600"
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </div>
+              <AnimatePresence>
+                {mobileAdmissionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex flex-col mt-2"
+                  >
+                    <Link
+                      href="/admissions/courses"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Courses Offered
+                    </Link>
+                    <a
+                      href="https://example.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Prospectus
+                    </a>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Mobile Student Corner Dropdown */}
+            <div className="flex flex-col items-center">
+              <div className="flex items-center">
+                <Link
+                  href="/student-corner"
+                  onClick={() => setMenu(false)}
+                  className="text-[#0c2340] hover:text-amber-600"
+                >
+                  Student Corner
+                </Link>
+                <button
+                  onClick={() => setMobileStudentCornerOpen(!mobileStudentCornerOpen)}
+                  className="ml-1 text-[#0c2340] hover:text-amber-600"
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </div>
+              <AnimatePresence>
+                {mobileStudentCornerOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex flex-col mt-2"
+                  >
+                    <Link
+                      href="/student-corner/societies"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Societies and Clubs
+                    </Link>
+                    <Link
+                      href="/student-corner/facilities"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Facilities
+                    </Link>
+                    <Link
+                      href="/student-corner/support"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Student Support
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <Link href="/gallery" onClick={() => setMenu(false)} className={navItemClass("/gallery")}>
+              Gallery
+            </Link>
 
             {/* Mobile Others Dropdown */}
             <div className="flex flex-col items-center">
-              <button
-                onClick={() => setMobileOthersOpen(!mobileOthersOpen)}
-                className="text-[#0c2340] hover:text-amber-600 flex items-center"
-              >
-                Others <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
+              <div className="flex items-center">
+                <Link href="/about" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
+                  Others
+                </Link>
+                <button
+                  onClick={() => setMobileOthersOpen(!mobileOthersOpen)}
+                  className="ml-1 text-[#0c2340] hover:text-amber-600"
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </div>
               <AnimatePresence>
                 {mobileOthersOpen && (
                   <motion.div
@@ -175,19 +483,27 @@ export default function Navbar() {
                     transition={{ duration: 0.2 }}
                     className="flex flex-col mt-2"
                   >
-                    {["/library", "/contact", "/about"].map((href) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        onClick={() => {
-                          setMenu(false);
-                          setMobileOthersOpen(false);
-                        }}
-                        className={`${isActive(href) ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"}`}
-                      >
-                        {href.replace("/", "").replace("-", " ").replace(/\b\w/g, (c) => c.toUpperCase())}
-                      </Link>
-                    ))}
+                    <Link
+                      href="/library"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Library
+                    </Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Contact Us
+                    </Link>
+                    <Link
+                      href="/about"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      About Us
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -196,5 +512,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  );
+  )
 }
