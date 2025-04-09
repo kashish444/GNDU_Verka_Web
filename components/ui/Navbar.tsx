@@ -13,7 +13,7 @@ export default function Navbar() {
   const router = useRouter()
 
   const [menu, setMenu] = useState(false)
-  const [othersOpen, setOthersOpen] = useState(false)
+  
   const [mobileOthersOpen, setMobileOthersOpen] = useState(false)
   const [academicsOpen, setAcademicsOpen] = useState(false)
   const [admissionsOpen, setAdmissionsOpen] = useState(false)
@@ -31,8 +31,7 @@ export default function Navbar() {
     }
   }, [menu])
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(href)
-
+  const isActive = (href: string) => pathname === href 
   const navItemClass = (href: string) =>
     `font-medium ${isActive(href) ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"}`
 
@@ -143,7 +142,7 @@ export default function Navbar() {
               )}
             </AnimatePresence>
           </div>
-
+         
           {/* Admissions Dropdown */}
           <div
             className="relative"
@@ -231,46 +230,29 @@ export default function Navbar() {
           <Link href="/gallery" className={navItemClass("/gallery")}>
             Gallery
           </Link>
-
-          {/* Others Dropdown */}
-          <div className="relative" onMouseEnter={() => setOthersOpen(true)} onMouseLeave={() => setOthersOpen(false)}>
-            <Link
-              href="/about"
-              className={`flex items-center ${isActive("/about") || isActive("/contact") || isActive("/library") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"} font-medium`}
-            >
-              Others <ChevronDown className="ml-1 w-4 h-4" />
-            </Link>
-            <AnimatePresence>
-              {othersOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
-                >
-                  <Link
-                    href="/library"
-                    className={`block px-4 py-2 text-sm ${isActive("/library") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
-                  >
-                    Library
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className={`block px-4 py-2 text-sm ${isActive("/contact") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
-                  >
-                    Contact Us
-                  </Link>
-                  <Link
-                    href="/about"
-                    className={`block px-4 py-2 text-sm ${isActive("/about") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"}`}
-                  >
-                    About Us
-                  </Link>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+           
+          <Link
+                      href="/library"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Library
+                    </Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      Contact Us
+                    </Link>
+                    <Link
+                      href="/about"
+                      onClick={() => setMenu(false)}
+                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                    >
+                      About Us
+                    </Link>
+          
         </nav>
 
         {/* Mobile Menu Button */}
