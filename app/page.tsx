@@ -19,8 +19,8 @@ function PrincipalsMessage() {
       <p className="text-gray-700 mb-4">
         Education is a fundamental societal need which churns human mind with the essentialities of a basic value
         system. Values and worldly education share a dialectical relationship. Students imbibe values and simultaneously
-        study hard for career building and thus achieve self-actualization. The Bhagwad Gita states, "Right knowledge is
-        the ultimate solution to all our problems." As we delve deeply into Lord Krishna&apos;s &apos;Karamyog
+        study hard for career building and thus achieve self-actualization. The Bhagwad Gita states, Right knowledge is
+        the ultimate solution to all our problems. As we delve deeply into Lord Krishna&apos;s &apos;Karamyog
         Philosophy&apos; we realise that every act can be an act of prayer. Career building and spiritual enhancement
         must evolve in a parallel pattern. Guru Nanak Dev University College, Verka is an insignia of an
         institutionalised value system.
