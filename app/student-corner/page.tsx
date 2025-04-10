@@ -26,6 +26,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "@/components/ui/Navbar";
+import Lander from "@/components/ui/Lander";
 
 export default function StudentCornerPage() {
   return (
@@ -34,14 +35,15 @@ export default function StudentCornerPage() {
 
       <main className="flex-1">
         {/* Page Title */}
-        <section className="bg-[#0c2340] text-white py-12">
+        {/* <section className="bg-[#0c2340] text-white py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold">Student Corner</h1>
             <p className="mt-2 text-lg">
               Resources and support for GNDU College Verka-Amritsar students
             </p>
           </div>
-        </section>
+        </section> */}
+        <Lander image={"collegeevent1.png"} heading={"Student Corner"} description={"Resources and support for GNDU College Verka-Amritsar students"} cover="bottom"/>
 
         {/* Introduction */}
         <section className="py-12">
@@ -63,7 +65,7 @@ export default function StudentCornerPage() {
         </section>
 
         {/* Societies and Clubs */}
-        <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50" id="societies">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Societies & Clubs
@@ -248,7 +250,7 @@ export default function StudentCornerPage() {
         </section>
 
         {/* Facilities */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-gray-50" id="facilities">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Student Facilities
@@ -357,7 +359,7 @@ export default function StudentCornerPage() {
         </section>
 
         {/* Anti-Ragging & Grievance Redressal */}
-        <section className="py-12">
+        <section className="py-12" id="support">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Student Support

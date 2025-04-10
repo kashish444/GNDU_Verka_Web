@@ -163,7 +163,7 @@ export default function LibraryPage() {
             <div className="max-w-4xl mx-auto">
               <Card>
                 <CardContent className="p-6">
-                  <ul className="space-y-4">
+                  <ul className="space-y-4" key="list">
                     {rules.map((rule, index) => (
                       <>
                         <li className="flex items-center" key={index}>

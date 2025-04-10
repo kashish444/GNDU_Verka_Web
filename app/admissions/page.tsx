@@ -20,6 +20,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/Navbar";
+import Lander from "@/components/ui/Lander";
 
 export default function AcademicsPage() {
   return (
@@ -30,7 +31,7 @@ export default function AcademicsPage() {
       {/* Header */}
 
       {/* Page Title */}
-      <section className="bg-[#0c2340] text-white py-12">
+      {/* <section className="bg-[#0c2340] text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold">Admissions</h1>
           <p className="mt-2 text-lg">
@@ -38,10 +39,17 @@ export default function AcademicsPage() {
             GNDU College Verka-Amritsar
           </p>
         </div>
-      </section>
+      </section> */}
+      <Lander
+        image={"verka.png"}
+        heading={"Admissions"}
+        description={
+          "Empowering Minds, Shaping Futures – Explore Our Diverse Courses at GNDU College Verka-Amritsar"
+        }
+      />
 
       {/* Courses Offered */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50" id="courses">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
             Courses Offered
@@ -323,12 +331,15 @@ export default function AcademicsPage() {
                     </Table>
                   </div>
                   <div className="mt-6 flex justify-center">
-                 <a href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-amber-600 hover:bg-amber-700">
-    <Eye className="mr-2 h-4 w-4" /> View Prospectus
-  </Button>
-</a>
-
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -480,12 +491,15 @@ export default function AcademicsPage() {
                     </Table>
                   </div>
                   <div className="mt-6 flex justify-center">
-                 <a href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-amber-600 hover:bg-amber-700">
-    <Eye className="mr-2 h-4 w-4" /> View Prospectus
-  </Button>
-</a>
-
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -562,12 +576,15 @@ export default function AcademicsPage() {
                     </Table>
                   </div>
                   <div className="mt-6 flex justify-center">
-                 <a href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-amber-600 hover:bg-amber-700">
-    <Eye className="mr-2 h-4 w-4" /> View Prospectus
-  </Button>
-</a>
-
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
