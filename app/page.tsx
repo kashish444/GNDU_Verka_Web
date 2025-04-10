@@ -266,17 +266,17 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
+                <div className="text-4xl font-bold text-amber-400 mb-2">20+</div>
                 <p className="text-lg">Academic Programs</p>
               </div>
 
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">100+</div>
+                <div className="text-4xl font-bold text-amber-400 mb-2">10+</div>
                 <p className="text-lg">Faculty Members</p>
               </div>
 
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">5000+</div>
+                <div className="text-4xl font-bold text-amber-400 mb-2">800+</div>
                 <p className="text-lg">Students</p>
               </div>
             </div>

@@ -1,26 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
-import { Mail, MapPin, Phone, Eye } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import Navbar from "@/components/ui/Navbar";
-import Lander from "@/components/ui/Lander";
+import { Mail, MapPin, Phone, Eye } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+import Navbar from "@/components/ui/Navbar"
+import Lander from "@/components/ui/Lander"
 
 export default function AcademicsPage() {
   return (
@@ -43,17 +30,13 @@ export default function AcademicsPage() {
       <Lander
         image={"verka.png"}
         heading={"Admissions"}
-        description={
-          "Empowering Minds, Shaping Futures – Explore Our Diverse Courses at GNDU College Verka-Amritsar"
-        }
+        description={"Empowering Minds, Shaping Futures – Explore Our Diverse Courses at GNDU College Verka-Amritsar"}
       />
 
       {/* Courses Offered */}
       <section className="py-12 bg-gray-50" id="courses">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
-            Courses Offered
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Courses Offered</h2>
 
           <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-8">
@@ -65,9 +48,7 @@ export default function AcademicsPage() {
             <TabsContent value="ug">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">
-                    Undergraduate Programmes
-                  </CardTitle>
+                  <CardTitle className="text-xl text-[#0c2340]">Undergraduate Programmes</CardTitle>
                   <CardDescription>4-year UG Degree Programme</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -78,22 +59,14 @@ export default function AcademicsPage() {
                           <TableHead className="w-[100px]">Sr. No.</TableHead>
                           <TableHead>Course</TableHead>
                           <TableHead>Department</TableHead>
-                          <TableHead>Duration</TableHead>
-                          <TableHead>Eligibility</TableHead>
-                          <TableHead>Seats</TableHead>
                           <TableHead className="text-right">Syllabus</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         <TableRow>
                           <TableCell>1</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Arts (BA)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Arts (BA)</TableCell>
                           <TableCell>Department of Arts</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>400</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -107,13 +80,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>2</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (Medical)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (Medical)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 with Biology</TableCell>
-                          <TableCell>45</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -127,13 +95,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>3</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (Non-Medical)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (Non-Medical)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 with Physics & Math</TableCell>
-                          <TableCell>45</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -147,13 +110,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>4</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (Computer Science)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (Computer Science)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 with Math</TableCell>
-                          <TableCell>45</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -167,13 +125,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>5</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (Economics)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (Economics)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>45</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -187,13 +140,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>6</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (Fashion Designing)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (Fashion Designing)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -207,13 +155,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>7</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Computer Application (BCA)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Computer Application (BCA)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>140</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -227,13 +170,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>8</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Science (IT)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Science (IT)</TableCell>
                           <TableCell>Department of Science</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>40</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -247,13 +185,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>9</TableCell>
-                          <TableCell className="font-medium">
-                            B.Com. (Regular)
-                          </TableCell>
+                          <TableCell className="font-medium">B.Com. (Regular)</TableCell>
                           <TableCell>Department of Commerce</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>300</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -267,13 +200,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>10</TableCell>
-                          <TableCell className="font-medium">
-                            B.Com. (Financial Services)
-                          </TableCell>
+                          <TableCell className="font-medium">B.Com. (Financial Services)</TableCell>
                           <TableCell>Department of Commerce</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>60</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -287,13 +215,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>11</TableCell>
-                          <TableCell className="font-medium">
-                            Bachelor of Business Administration (BBA)
-                          </TableCell>
+                          <TableCell className="font-medium">Bachelor of Business Administration (BBA)</TableCell>
                           <TableCell>Department of Commerce</TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -307,15 +230,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>12</TableCell>
-                          <TableCell className="font-medium">
-                            B.Voc. (Software Development)
-                          </TableCell>
-                          <TableCell>
-                            Department of Vocational Studies
-                          </TableCell>
-                          <TableCell>4 Years</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>50</TableCell>
+                          <TableCell className="font-medium">B.Voc. (Software Development)</TableCell>
+                          <TableCell>Department of Vocational Studies</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -348,12 +264,8 @@ export default function AcademicsPage() {
             <TabsContent value="pg">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">
-                    Postgraduate Programmes
-                  </CardTitle>
-                  <CardDescription>
-                    Master&apos;;s Degree and PG Diploma Programmes
-                  </CardDescription>
+                  <CardTitle className="text-xl text-[#0c2340]">Postgraduate Programmes</CardTitle>
+                  <CardDescription>Master&apos;;s Degree and PG Diploma Programmes</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="overflow-x-auto">
@@ -363,9 +275,6 @@ export default function AcademicsPage() {
                           <TableHead className="w-[100px]">Sr. No.</TableHead>
                           <TableHead>Course</TableHead>
                           <TableHead>Department</TableHead>
-                          <TableHead>Duration</TableHead>
-                          <TableHead>Eligibility</TableHead>
-                          <TableHead>Seats</TableHead>
                           <TableHead className="text-right">Syllabus</TableHead>
                         </TableRow>
                       </TableHeader>
@@ -374,9 +283,6 @@ export default function AcademicsPage() {
                           <TableCell>1</TableCell>
                           <TableCell className="font-medium">M.Com.</TableCell>
                           <TableCell>Department of Commerce</TableCell>
-                          <TableCell>2 Years</TableCell>
-                          <TableCell>B.Com or equivalent</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -390,13 +296,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>2</TableCell>
-                          <TableCell className="font-medium">
-                            MA (Political Science)
-                          </TableCell>
+                          <TableCell className="font-medium">MA (Political Science)</TableCell>
                           <TableCell>Department of Political Science</TableCell>
-                          <TableCell>2 Years</TableCell>
-                          <TableCell>Bachelor&apos;;s degree</TableCell>
-                          <TableCell>60</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -410,13 +311,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>3</TableCell>
-                          <TableCell className="font-medium">
-                            M.Sc. (Computer Science)
-                          </TableCell>
+                          <TableCell className="font-medium">M.Sc. (Computer Science)</TableCell>
                           <TableCell>Department of Computer Science</TableCell>
-                          <TableCell>2 Years</TableCell>
-                          <TableCell>BCA/B.Sc. IT or equivalent</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -430,13 +326,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>4</TableCell>
-                          <TableCell className="font-medium">
-                            M.Sc. Mathematics
-                          </TableCell>
+                          <TableCell className="font-medium">M.Sc. Mathematics</TableCell>
                           <TableCell>Department of Mathematics</TableCell>
-                          <TableCell>2 Years</TableCell>
-                          <TableCell>B.Sc. with Mathematics</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -452,9 +343,6 @@ export default function AcademicsPage() {
                           <TableCell>5</TableCell>
                           <TableCell className="font-medium">PGDCA</TableCell>
                           <TableCell>Department of Computer Science</TableCell>
-                          <TableCell>1 Year</TableCell>
-                          <TableCell>Bachelor&apos;s degree</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -469,13 +357,9 @@ export default function AcademicsPage() {
                         <TableRow>
                           <TableCell>6</TableCell>
                           <TableCell className="font-medium">
-                            PG Diploma in Financial Services (Banking and
-                            Insurance)
+                            PG Diploma in Financial Services (Banking and Insurance)
                           </TableCell>
                           <TableCell>Department of Commerce</TableCell>
-                          <TableCell>1 Year</TableCell>
-                          <TableCell>Bachelor&apos;s degree</TableCell>
-                          <TableCell>30</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -508,12 +392,8 @@ export default function AcademicsPage() {
             <TabsContent value="diploma">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">
-                    Diploma & Certificate Courses
-                  </CardTitle>
-                  <CardDescription>
-                    Short-term Professional Courses
-                  </CardDescription>
+                  <CardTitle className="text-xl text-[#0c2340]">Diploma & Certificate Courses</CardTitle>
+                  <CardDescription>Short-term Professional Courses</CardDescription>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="overflow-x-auto">
@@ -523,9 +403,6 @@ export default function AcademicsPage() {
                           <TableHead className="w-[100px]">Sr. No.</TableHead>
                           <TableHead>Course</TableHead>
                           <TableHead>Department</TableHead>
-                          <TableHead>Duration</TableHead>
-                          <TableHead>Eligibility</TableHead>
-                          <TableHead>Seats</TableHead>
                           <TableHead className="text-right">Syllabus</TableHead>
                         </TableRow>
                       </TableHeader>
@@ -535,12 +412,7 @@ export default function AcademicsPage() {
                           <TableCell className="font-medium">
                             Certificate Course in Medical Lab Technology (CMLT)
                           </TableCell>
-                          <TableCell>
-                            Department of Medical Lab Technology
-                          </TableCell>
-                          <TableCell>6 Months</TableCell>
-                          <TableCell>10+2 with Science</TableCell>
-                          <TableCell>50</TableCell>
+                          <TableCell>Department of Medical Lab Technology</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -554,13 +426,8 @@ export default function AcademicsPage() {
                         </TableRow>
                         <TableRow>
                           <TableCell>2</TableCell>
-                          <TableCell className="font-medium">
-                            Diploma in Computer Application (DCA)
-                          </TableCell>
+                          <TableCell className="font-medium">Diploma in Computer Application (DCA)</TableCell>
                           <TableCell>Department of Computer Science</TableCell>
-                          <TableCell>1 Year</TableCell>
-                          <TableCell>10+2 in any stream</TableCell>
-                          <TableCell>50</TableCell>
                           <TableCell className="text-right">
                             <a
                               href="https://example.com/ba-syllabus"
@@ -608,15 +475,12 @@ export default function AcademicsPage() {
                 />
                 <div>
                   <h3 className="text-lg font-bold">GNDU</h3>
-                  <p className="text-sm text-gray-300">
-                    College Verka-Amritsar
-                  </p>
+                  <p className="text-sm text-gray-300">College Verka-Amritsar</p>
                 </div>
               </div>
               <p className="text-gray-300 mb-4">
-                Guru Nanak Dev University College, Verka-Amritsar is committed
-                to providing quality education and fostering academic
-                excellence.
+                Guru Nanak Dev University College, Verka-Amritsar is committed to providing quality education and
+                fostering academic excellence.
               </p>
             </div>
 
@@ -624,26 +488,17 @@ export default function AcademicsPage() {
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    href="/about"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/about" className="text-gray-300 hover:text-amber-300">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/academics"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/academics" className="text-gray-300 hover:text-amber-300">
                     Academics
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/admissions"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/admissions" className="text-gray-300 hover:text-amber-300">
                     Admissions
                   </Link>
                 </li>
@@ -654,26 +509,17 @@ export default function AcademicsPage() {
               <h3 className="text-lg font-bold mb-4">Important Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    href="/examination"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/examination" className="text-gray-300 hover:text-amber-300">
                     Examination
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/results"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/results" className="text-gray-300 hover:text-amber-300">
                     Results
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/careers"
-                    className="text-gray-300 hover:text-amber-300"
-                  >
+                  <Link href="/careers" className="text-gray-300 hover:text-amber-300">
                     Careers
                   </Link>
                 </li>
@@ -686,8 +532,7 @@ export default function AcademicsPage() {
                 <li className="flex">
                   <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
                   <span className="text-gray-300">
-                    Guru Nanak Dev University College, Verka-Amritsar, Punjab -
-                    143001
+                    Guru Nanak Dev University College, Verka-Amritsar, Punjab - 143001
                   </span>
                 </li>
                 <li className="flex">
@@ -704,12 +549,11 @@ export default function AcademicsPage() {
 
           <div className="border-t border-gray-700 pt-6 mt-6 text-center text-gray-300 text-sm">
             <p>
-              &copy; {new Date().getFullYear()} Guru Nanak Dev University
-              College, Verka-Amritsar. All rights reserved.
+              &copy; {new Date().getFullYear()} Guru Nanak Dev University College, Verka-Amritsar. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  );
+  )
 }
