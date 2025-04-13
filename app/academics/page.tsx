@@ -572,10 +572,11 @@ export default function AcademicsPage() {
                         <li>Holidays and vacations</li>
                         <li>Special events and functions</li>
                       </ul>
-                      <Button className="mt-2" variant="outline">
-                        <Calendar className="mr-2 h-4 w-4" /> Download Academic
-                        Calendar
-                      </Button>
+                      <a href="https://drive.google.com/file/d/15UCbwABR_W2MNzNEvRVGQP7fOHKgwdry/view?usp=sharing">
+  <Button className="mt-2" variant="outline">
+    <Calendar className="mr-2 h-4 w-4" /> Download Academic Calendar
+  </Button>
+</a>
                     </div>
                   </AccordionContent>
                 </AccordionItem>

@@ -171,7 +171,7 @@ export default function Navbar() {
                     Time Table
                   </Link>
                   <Link
-                    href="/academics#resources"
+                    href="https://drive.google.com/file/d/15UCbwABR_W2MNzNEvRVGQP7fOHKgwdry/view?usp=sharing"
                     className={`block px-4 py-2 text-sm ${
                       isActive("/academics/calendar")
                         ? "text-amber-600"
@@ -317,26 +317,16 @@ export default function Navbar() {
             Gallery
           </Link>
 
-          <Link
-            href="/library"
-            onClick={() => setMenu(false)}
-            className="text-[#0c2340] hover:text-amber-600 py-1"
-          >
+          <Link href="/library" className={navItemClass("/library")}>
             Library
           </Link>
-          <Link
-            href="/contact"
-            onClick={() => setMenu(false)}
-            className="text-[#0c2340] hover:text-amber-600 py-1"
-          >
-            Contact Us
+
+          <Link href="/contact" className={navItemClass("/contact")}>
+           Contact Us
           </Link>
-          <Link
-            href="/about"
-            onClick={() => setMenu(false)}
-            className="text-[#0c2340] hover:text-amber-600 py-1"
-          >
-            About Us
+
+          <Link href="/about" className={navItemClass("/about")}>
+           About Us
           </Link>
         </nav>
 
