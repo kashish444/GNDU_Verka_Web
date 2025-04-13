@@ -69,7 +69,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Arts</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -84,7 +84,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -99,7 +99,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -114,7 +114,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -129,7 +129,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -144,7 +144,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -159,7 +159,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -174,7 +174,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -189,7 +189,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Commerce</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -204,7 +204,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Commerce</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -219,7 +219,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Commerce</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -234,7 +234,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Vocational Studies</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -285,7 +285,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Commerce</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -300,7 +300,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Political Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -315,7 +315,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Computer Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -330,7 +330,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Mathematics</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -345,7 +345,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Computer Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -362,7 +362,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Commerce</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -415,7 +415,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Medical Lab Technology</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}
@@ -430,7 +430,7 @@ export default function AcademicsPage() {
                           <TableCell>Department of Computer Science</TableCell>
                           <TableCell className="text-right">
                             <a
-                              href="https://example.com/ba-syllabus"
+                              href="https://online.gndu.ac.in/syllabi.asp"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "blue", cursor: "pointer" }}

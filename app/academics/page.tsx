@@ -633,10 +633,16 @@ export default function AcademicsPage() {
                           examinations
                         </li>
                       </ul>
-                      <Button className="mt-2" variant="outline">
-                        <Download className="mr-2 h-4 w-4" /> Download
-                        Examination Guidelines
-                      </Button>
+                      <a
+  href="https://docs.google.com/document/d/1Om9220Q3v6_QO4HLigYWdcPQyX2r5ECb/edit?usp=sharing&ouid=100832964902746238927&rtpof=true&sd=true"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="mt-2" variant="outline">
+    <Download className="mr-2 h-4 w-4" />
+    Download Examination Guidelines
+  </Button>
+</a>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
