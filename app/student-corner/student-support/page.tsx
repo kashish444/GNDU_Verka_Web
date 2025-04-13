@@ -27,7 +27,8 @@ export default function StudentSupportPage() {
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0c2340]">Supporting Student Success</h2>
               <p className="text-gray-700">
                 At GNDU College Verka-Amritsar, we are committed to providing comprehensive support services to ensure
-                our students' academic success, personal growth, and overall wellbeing. Our dedicated support cells and
+                our students&apos;
+ academic success, personal growth, and overall wellbeing. Our dedicated support cells and
                 committees work tirelessly to create a safe, inclusive, and nurturing environment for all students.
               </p>
             </div>
@@ -253,9 +254,11 @@ export default function StudentSupportPage() {
         {/* CTA Section */}
         <section className="py-12 bg-[#0c2340] text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">We're Here to Help</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">We&apos;
+re Here to Help</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Our support services are designed to help you navigate your college journey successfully. Don't hesitate
+              Our support services are designed to help you navigate your college journey successfully. Don&apos;
+t hesitate
               to reach out if you need assistance or guidance.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

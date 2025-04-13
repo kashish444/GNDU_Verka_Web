@@ -27,7 +27,7 @@ export default function ClubsSocietiesPage() {
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0c2340]">Enriching Student Life</h2>
               <p className="text-gray-700">
                 Our clubs and societies offer students opportunities to explore their interests, develop leadership
-                skills, and build lasting friendships. From cultural activities to community service, there's something
+                skills, and build lasting friendships. From cultural activities to community service, there&apos;s something
                 for everyone at GNDU College Verka-Amritsar.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function ClubsSocietiesPage() {
                   <p className="text-gray-700 mb-4">
                     NSS unit was established in the college in 2014-15. Since inception NSS unit has delivered
                     outstanding and fruitful outcomes. NSS has regularly observed a long list of National and
-                    International days as instructed by authorities' time to time. Apart from one day camps NSS dept.
+                    International days as instructed by authorities&apos; time to time. Apart from one day camps NSS dept.
                     has organized special 7 days camp at villages Ludhar, Mudhal, Jahangir and Fathegarh shukar Chak.
                   </p>
                   <p className="text-gray-700 mb-4">
@@ -85,7 +85,7 @@ export default function ClubsSocietiesPage() {
                   <p className="text-gray-700 mb-4">
                     NCC cadets also get opportunities to participate in Republic Day Parade, Prime Minister Rally New
                     Delhi, Youth Exchange Programmes at International Level. There are ample opportunities to make
-                    career in Military and Para Military as there is direct entry for 'C' certificate holders. NCC
+                    career in Military and Para Military as there is direct entry for &apos;C&apos; certificate holders. NCC
                     provides a platform for students to develop their leadership skills, character and sense of social
                     responsibility while also offering career opportunities and networking benefits.
                   </p>
@@ -238,7 +238,7 @@ export default function ClubsSocietiesPage() {
                     about drug addiction.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    This programme is key to Punjab's fight against drugs as it covers the adolescent age group and
+                    This programme is key to Punjab&apos;s fight against drugs as it covers the adolescent age group and
                     young adults between 18 to 25 years who are the most vulnerable group of people as far as drug usage
                     is concerned. On the prevention front, students through the Buddy Program develop knowledge, the
                     right attitude and behaviour along with skills to prevent drug abuse.

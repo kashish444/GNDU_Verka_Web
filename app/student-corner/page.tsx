@@ -5,11 +5,11 @@ import {
   MapPin,
   Phone,
   Users,
-  BookOpen,
+ 
   Shield,
   HeartPulse,
   Coffee,
-  Scale,
+ 
   Award,
   BookMarked,
   Flag
@@ -29,7 +29,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "@/components/ui/Navbar";
-import Lander from "@/components/ui/Lander";
+
 
 export default function StudentCornerPage() {
   return (
@@ -107,7 +107,8 @@ export default function StudentCornerPage() {
                   <h3 className="text-xl font-bold mb-2">Bhagat Puran Singh Literary Society</h3>
                   <p className="text-gray-700 mb-4">
                     Inaugurated in 2017, this society conducts various literary activities like guest lectures,
-                    extempore, recitation, debates, and declamations to enhance students' literary skills.
+                    extempore, recitation, debates, and declamations to enhance students&apos;
+ literary skills.
                   </p>
                   <p className="text-gray-700 mb-4">
                     <span className="font-semibold">Coordinator:</span> Mrs. Puneet Randhawa
@@ -163,7 +164,8 @@ export default function StudentCornerPage() {
                       <ul className="list-disc pl-5 space-y-1 text-gray-700">
                         <li>Post-Matric Scholarship for SC/ST students</li>
                         <li>Central Sector Scholarship Scheme</li>
-                        <li>Prime Minister's Scholarship Scheme</li>
+                        <li>Prime Minister&apos;
+s Scholarship Scheme</li>
                         <li>State Government Scholarships for minority communities</li>
                         <li>SC/BC/Minority Scholarships as per Punjab Government Rules</li>
                       </ul>
