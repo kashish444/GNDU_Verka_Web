@@ -101,30 +101,8 @@ export default function Footer() {
                   Admissions
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/research"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  Research
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/campus-life"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  Campus Life
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/placements"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  Placements
-                </Link>
-              </li>
+             
+            
             </ul>
           </div>
 
@@ -147,14 +125,7 @@ export default function Footer() {
                   Results
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/tenders"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  Tenders
-                </Link>
-              </li>
+              
               <li>
                 <Link
                   href="/careers"
@@ -163,22 +134,8 @@ export default function Footer() {
                   Careers
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/alumni"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  Alumni
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/rti"
-                  className="text-gray-300 hover:text-amber-300"
-                >
-                  RTI
-                </Link>
-              </li>
+              
+              
             </ul>
           </div>
 

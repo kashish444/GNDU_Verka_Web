@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { Mail, MapPin, Phone, } from "lucide-react"
+import { Mail, MapPin, Phone, Eye } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/Navbar"
 import Lander from "@/components/ui/Lander"
 
@@ -178,9 +178,23 @@ export default function AcademicsPage() {
                             <TableCell className="text-right">50</TableCell>
                           </TableRow>
                         </TableBody>
+                        
                       </Table>
+                     
                     </div>
+                    <div className="mt-6 flex justify-center">
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
+                  </div>
                   </CardContent>
+
                 </Card>
               </TabsContent>
 
@@ -264,8 +278,16 @@ export default function AcademicsPage() {
                       </Table>
                     </div>
                     <div className="mt-6 flex justify-center">
-                      
-                    </div>
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
+                  </div>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -316,8 +338,16 @@ export default function AcademicsPage() {
                       </Table>
                     </div>
                     <div className="mt-6 flex justify-center">
-                    
-                    </div>
+                    <a
+                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-amber-600 hover:bg-amber-700">
+                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
+                      </Button>
+                    </a>
+                  </div>
                   </CardContent>
                 </Card>
               </TabsContent>

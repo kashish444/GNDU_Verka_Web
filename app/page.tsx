@@ -7,14 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bell, ChevronDown, ChevronRight, ChevronUp } from "lucide-react"
+import { Bell, ChevronDown, ChevronRight, ChevronUp, Phone, Mail } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Footer from "@/components/ui/Footer"
-import { Award, School, Users } from "lucide-react";
-
-
-import { Calendar, Mail, MapPin, Phone } from "lucide-react";
-
+import { Award, School, Users, Ribbon } from "lucide-react"
+import { Calendar, MapPin } from "lucide-react"
 
 function PrincipalsMessage() {
   const [expanded, setExpanded] = useState(false)
@@ -115,7 +112,6 @@ function MissionContent() {
         </div>
       ) : (
         <>
-          
           <div className="mt-4 text-center">
             <button
               onClick={() => setExpanded(false)}
@@ -189,7 +185,7 @@ function VisionContent() {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div>
       <Navbar />
 
       <main>
@@ -208,6 +204,49 @@ export default function Home() {
                     Empowering minds, transforming lives through quality education and research excellence
                   </p>
                   <div className="flex flex-wrap gap-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership Ribbon */}
+        <section className="py-8 bg-white">
+          <div className="bg-[#0c2340] text-white py-10">
+            <div className="container mx-auto px-4">
+              {/* Heading */}
+              <div className="flex items-center justify-center mb-10">
+                <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
+                <h2 className="text-3xl font-bold text-white">University Leadership</h2>
+              </div>
+
+              {/* Leadership Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                {/* Vice Chancellor */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
+                  <p className="text-gray-300">Vice Chancellor</p>
+                </div>
+
+                {/* Registrar */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
+                  <p className="text-gray-300">Registrar</p>
+                </div>
+
+                {/* Dean */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
+                  <p className="text-gray-300">Dean, College Development Council</p>
                 </div>
               </div>
             </div>
@@ -289,53 +328,39 @@ export default function Home() {
             <div className="mt-12 text-center"></div>
           </div>
         </section>
-{/* College Overview */}
+
+        {/* College Overview */}
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#0c2340]">
-                  About the College
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#0c2340]">About the College</h2>
                 <p className="text-gray-700 mb-4">
-                  Guru Nanak Dev University College, Verka was established as a
-                  constituent college of Guru Nanak Dev University in 2011. It
-                  is a co-educational college. The administrative functioning of
-                  the college is regulated by Guru Nanak Dev University,
-                  Amritsar.
+                  Guru Nanak Dev University College, Verka was established as a constituent college of Guru Nanak Dev
+                  University in 2011. It is a co-educational college. The administrative functioning of the college is
+                  regulated by Guru Nanak Dev University, Amritsar.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  It is situated in the lush green surroundings of the
-                  countryside away from the din of the city. It is located
-                  between the Amritsar-Jalandhar by-pass and Amritsar-Batala
-                  bypass. It has a sprawling campus covering 15 acres of land
-                  donated by Mushtarqa Malkan Committee of the village Verka.
-                  The people of Verka would be remembered for this act forever.
+                  It is situated in the lush green surroundings of the countryside away from the din of the city. It is
+                  located between the Amritsar-Jalandhar by-pass and Amritsar-Batala bypass. It has a sprawling campus
+                  covering 15 acres of land donated by Mushtarqa Malkan Committee of the village Verka. The people of
+                  Verka would be remembered for this act forever.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  The constituent colleges were set up to bring higher education
-                  within the reach of the people of remote rural areas, so that
-                  maximum benefit reaches the less privileged and the needy. The
-                  college will scale new heights under the able guidance of Dr.
-                  Karamjeet Singh, the present Vice-Chancellor of Guru Nanak Dev
-                  University.
+                  The constituent colleges were set up to bring higher education within the reach of the people of
+                  remote rural areas, so that maximum benefit reaches the less privileged and the needy. The college
+                  will scale new heights under the able guidance of Dr. Karamjeet Singh, the present Vice-Chancellor of
+                  Guru Nanak Dev University.
                 </p>
                 <p className="text-gray-700">
-                  The College is covered under the 2(F) & 12(B) scheme of the
-                  UGC. As a result, it is entitled to receive financial support
-                  from the Central government, the government of Punjab and the
-                  UGC. The teaching fraternity of college is highly qualified
-                  and dedicated who constantly strive for their growth as well
-                  as for the holistic development of their students.
+                  The College is covered under the 2(F) & 12(B) scheme of the UGC. As a result, it is entitled to
+                  receive financial support from the Central government, the government of Punjab and the UGC. The
+                  teaching fraternity of college is highly qualified and dedicated who constantly strive for their
+                  growth as well as for the holistic development of their students.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/verka.png"
-                  alt="College Campus"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/verka.png" alt="College Campus" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -344,9 +369,7 @@ export default function Home() {
         {/* College Details */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
-              College Details
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">College Details</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card>
                 <CardContent className="p-6">
@@ -355,12 +378,8 @@ export default function Home() {
                       <School className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">
-                        College Type
-                      </h3>
-                      <p className="font-semibold">
-                        Constituent College of GNDU Amritsar
-                      </p>
+                      <h3 className="font-medium text-gray-500">College Type</h3>
+                      <p className="font-semibold">Constituent College of GNDU Amritsar</p>
                     </div>
                   </div>
                 </CardContent>
@@ -373,12 +392,8 @@ export default function Home() {
                       <Users className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">
-                        College Nature
-                      </h3>
-                      <p className="font-semibold">
-                        Post Graduate, Multi-Faculty, Co-educational
-                      </p>
+                      <h3 className="font-medium text-gray-500">College Nature</h3>
+                      <p className="font-semibold">Post Graduate, Multi-Faculty, Co-educational</p>
                     </div>
                   </div>
                 </CardContent>
@@ -435,9 +450,7 @@ export default function Home() {
                       <Users className="h-6 w-6 text-indigo-600" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-gray-500">
-                        Total Students
-                      </h3>
+                      <h3 className="font-medium text-gray-500">Total Students</h3>
                       <p className="font-semibold">869</p>
                     </div>
                   </div>
@@ -476,7 +489,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
 
         {/* News & Announcements Section */}
         <section className="py-12">
@@ -686,8 +698,10 @@ export default function Home() {
             </Tabs>
           </div>
         </section>
-        {/* Footer */}
+      </main>
+
+      {/* Footer */}
       <Footer />
-   </div>
+    </div>
   )
 }
