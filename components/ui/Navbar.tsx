@@ -37,38 +37,60 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-[#0c2340] text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4 md:text-sm text-xs">
-            <Link href="/contact" className="flex items-center hover:text-amber-300">
-              <Phone className="h-4 w-4 mr-1" />
-              <span className="md:block hidden">81465-14040</span>
-            </Link>
-            <Link href="mailto:info@gndu.ac.in" className="flex items-center hover:text-amber-300">
-              <Mail className="h-4 w-4 mr-1" />
-              <span className="md:block hidden">osd.verka@gndu.ac.in</span>
-            </Link>
-          </div>
-          <span className="hidden md:block text-center">Guru Nanak Dev University College, Verka, Amritsar</span>
-          <div className="flex items-center space-x-3">
-            {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
-              <Link href="#" key={i} aria-label={Icon.name}>
-                <Icon className="h-4 w-4 hover:text-amber-300" />
-              </Link>
-            ))}
-            <Link href="/login" className="flex flex-row items-center space-x-1 hover:text-amber-300">
-              <User className="h-4 w-4" />
-              <p>Admin</p>
-            </Link>
-            <Link href="/register" className="hidden md:block">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-1 text-sm rounded-md shadow-md transition-all hover:shadow-lg">
-                Register Now
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
+     {/* Top Bar */}
+<div className="bg-[#0c2340] text-white py-2 px-4">
+  <div className="container mx-auto flex justify-between items-center">
+    
+    {/* Contact Info */}
+    <div className="flex items-center space-x-4 md:text-sm text-xs">
+      <Link href="/contact" className="flex items-center hover:text-amber-300">
+        <Phone className="h-4 w-4 mr-1" />
+        <span className="md:block hidden">81465-14040</span>
+      </Link>
+      <Link href="mailto:info@gndu.ac.in" className="flex items-center hover:text-amber-300">
+        <Mail className="h-4 w-4 mr-1" />
+        <span className="md:block hidden">osd.verka@gndu.ac.in</span>
+      </Link>
+    </div>
+
+    {/* Center Title + NAAC */}
+    <div className="hidden md:flex items-center space-x-3">
+      <span className="text-sm font-medium">
+        Guru Nanak Dev University College, Verka, Amritsar
+      </span>
+      <span className="text-xs font-semibold bg-amber-500 text-white px-2 py-0.5 rounded-full shadow-sm">
+        NAAC A++
+      </span>
+    </div>
+
+    {/* Socials + Admin + Register */}
+    <div className="flex items-center space-x-3">
+      {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
+        <Link href="#" key={i} aria-label={Icon.name}>
+          <Icon className="h-4 w-4 hover:text-amber-300" />
+        </Link>
+      ))}
+      <Link href="/login" className="flex flex-row items-center space-x-1 hover:text-amber-300">
+        <User className="h-4 w-4" />
+        <p>Admin</p>
+      </Link>
+      <a
+  href="https://gnduadmissions.org/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden md:block"
+>
+  <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-1 text-sm rounded-md shadow-md transition-all hover:shadow-lg">
+    Register Now
+  </Button>
+</a>
+    </div>
+
+  </div>
+</div>
+
+
+
 
       {/* Header */}
       <div className="container mx-auto px-4 py-4 flex justify-between items-center bg-white">

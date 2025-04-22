@@ -390,14 +390,6 @@ s Scholarship Scheme</li>
               Make the most of your college experience by participating in various activities, joining clubs, and
               utilizing the resources available to you.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/student-corner/clubs-societies">
-                <Button className="bg-amber-600 hover:bg-amber-700">Join a Club</Button>
-              </Link>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
-                Student Handbook
-              </Button>
-            </div>
           </div>
         </section>
       </main>
