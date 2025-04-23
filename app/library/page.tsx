@@ -577,17 +577,7 @@ export default function LibraryPage() {
               Explore our extensive collection of books, journals, and digital
               resources to enhance your learning and research.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-amber-600 hover:bg-amber-700">
-                Library Catalog
-              </Button>
-              <Button
-                variant="outline"
-                className="hover:text-black hover:border-white bg-white/10 text-white"
-              >
-                Contact Librarian
-              </Button>
-            </div>
+           
           </div>
         </section>
       </main>

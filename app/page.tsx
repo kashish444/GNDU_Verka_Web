@@ -211,47 +211,57 @@ export default function Home() {
         </section>
 
         {/* Leadership Ribbon */}
-        <section className="py-8 bg-white">
-          <div className="bg-[#0c2340] text-white py-10">
-            <div className="container mx-auto px-4">
-              {/* Heading */}
-              <div className="flex items-center justify-center mb-10">
-                <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
-                <h2 className="text-3xl font-bold text-white">University Leadership</h2>
-              </div>
+<section className=" bg-white">
+  <div className="bg-[#0c2340] text-white py-10">
+    <div className="container mx-auto px-4">
+      {/* Heading */}
+      <div className="flex items-center justify-center mb-10">
+        <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
+        <h2 className="text-3xl font-bold text-white">University Leadership</h2>
+      </div>
 
-              {/* Leadership Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                {/* Vice Chancellor */}
-                <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-                    <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
-                  <p className="text-gray-300">Vice Chancellor</p>
-                </div>
-
-                {/* Registrar */}
-                <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-                    <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
-                  <p className="text-gray-300">Registrar</p>
-                </div>
-
-                {/* Dean */}
-                <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-                    <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
-                  <p className="text-gray-300">Dean, College Development Council</p>
-                </div>
-              </div>
-            </div>
+      {/* Leadership Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+        {/* Vice Chancellor */}
+        <div className="flex flex-col items-center">
+          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
           </div>
-        </section>
+          <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
+          <p className="text-gray-300">Vice Chancellor</p>
+        </div>
+
+        {/* Dean, Academic Affairs */}
+        <div className="flex flex-col items-center">
+          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src="/palwinder.jpg" alt="Dean Academic Affairs" fill className="object-cover" />
+          </div>
+          <h3 className="text-xl font-semibold text-white">Dr. Palwinder Singh</h3>
+          <p className="text-gray-300">Dean, Academic Affairs</p>
+        </div>
+
+        {/* Registrar */}
+        <div className="flex flex-col items-center">
+          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
+          </div>
+          <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
+          <p className="text-gray-300">Registrar</p>
+        </div>
+
+        {/* Dean, CDC */}
+        <div className="flex flex-col items-center">
+          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+            <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
+          </div>
+          <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
+          <p className="text-gray-300">Dean, College Development Council</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Principal's Message Section */}
         <section className="py-12 bg-gray-50">
