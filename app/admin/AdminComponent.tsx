@@ -29,7 +29,9 @@ export default function AdminComponent({ user }: Props) {
     <div className="flex flex-col h-screen justify-center items-center m-auto">
       <div className="flex">
         <p className="flex text-4xl">Welcome</p>
-        <p className="flex text-4xl font-bold pl-2">{user.firstname}</p>
+        <p className="flex text-4xl font-bold pl-2">
+          {user.firstname + " " + (user.lastname)}
+        </p>
       </div>
 
       <p

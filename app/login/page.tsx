@@ -29,7 +29,7 @@ export default function AdminLoginPage() {
     try {
       setLoading(true);
       setError("");
-  
+
       const response = await axios.post("/api/auth/login", {
         email,
         password,
@@ -42,7 +42,11 @@ export default function AdminLoginPage() {
       }
     } catch (err: unknown) {
       // Handle error response
-      if (axios.isAxiosError(err) && err.response && err.response.data?.message) {
+      if (
+        axios.isAxiosError(err) &&
+        err.response &&
+        err.response.data?.message
+      ) {
         setError(err.response.data.message);
       } else {
         setError("Something went wrong. Please try again.");
@@ -69,60 +73,64 @@ export default function AdminLoginPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email / Employee Id</Label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                    <Input
-                      id="email"
-                      placeholder="admin@gndu-verka.ac.in"
-                      type="email"
-                      className="pl-10"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
+                <form className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email / Employee Id</Label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <Input
+                        id="email"
+                        placeholder="admin@gndu-verka.ac.in"
+                        type="email"
+                        className="pl-10"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <Label htmlFor="password">Password</Label>
-                    <Link
-                      href="/admin/forgot-password"
-                      className="text-sm text-amber-600 hover:text-amber-700"
-                    >
-                      Forgot password?
-                    </Link>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="password">Password</Label>
+                      <Link
+                        href="/admin/forgot-password"
+                        className="text-sm text-amber-600 hover:text-amber-700"
+                      >
+                        Forgot password?
+                      </Link>
+                    </div>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <Input
+                        id="password"
+                        type="password"
+                        className="pl-10"
+                        placeholder="********"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                    <Input
-                      id="password"
-                      type="password"
-                      className="pl-10"
-                      placeholder="********"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-                {/* <div className="flex items-center space-x-2">
+                  {/* <div className="flex items-center space-x-2">
                   <Checkbox id="remember" />
                   <Label htmlFor="remember" className="text-sm font-normal">
                     Remember me for 30 days
                   </Label>
                 </div> */}
-                <Button
-                  type="submit"
-                  className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90"
-                  onClick={() => {
-                    handleLogin();
-                  }}
-                >
-                  {loading ? "Loading..." : "Login"}
-                </Button>
-                <p className="text-sm text-center text-red-600">{error && error}</p>
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90"
+                    onClick={() => {
+                      handleLogin();
+                    }}
+                  >
+                    {loading ? "Loading..." : "Login"}
+                  </Button>
+                  <p className="text-sm text-center text-red-600">
+                    {error && error}
+                  </p>
+                </form>
               </CardContent>
               <CardFooter className="flex flex-col space-y-4">
                 <div className="text-center text-sm text-gray-600">

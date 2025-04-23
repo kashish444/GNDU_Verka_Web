@@ -20,8 +20,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const fixedEmail = email.toLowerCase().trim();
+
     const user = await User.findOne({
-      $or: [{ email }, { employeeId: email }],
+      $or: [{ email: fixedEmail }, { employeeId: fixedEmail }],
     });
 
     if (!user) {
@@ -44,6 +46,7 @@ export async function POST(request: NextRequest) {
       {
         _id: user._id,
         firstname: user.firstname,
+        lastname: user.lastname,
         email: user.email,
         employeeId: user.employeeId,
         department: user.department || "",
