@@ -298,9 +298,7 @@ s Scholarship Scheme</li>
               </Card>
             </div>
 
-            <div className="text-center mt-8">
-              <Button className="bg-amber-600 hover:bg-amber-700">Explore All Facilities</Button>
-            </div>
+            
           </div>
         </section>
 

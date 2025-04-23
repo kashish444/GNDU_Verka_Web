@@ -1,8 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Mail, MapPin, Phone, Users, BookOpen, Award, Heart, BookMarked, Leaf, UserCheck, Flag } from "lucide-react"
-import { Button } from "@/components/ui/button"
+
+import { Users, BookOpen, Award, Heart, BookMarked, Leaf, UserCheck, Flag } from "lucide-react"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Footer from "@/components/ui/Footer"
 import Navbar from "@/components/ui/Navbar"
 import Lander from "@/components/ui/Lander"
 
@@ -115,9 +115,7 @@ export default function ClubsSocietiesPage() {
                   <p className="text-gray-700 mb-4">
                     The club is envisaged to instill among all students in the college values of service, develop
                     healthy life styles and increase access to safe and adequate quantities of blood to all the needy by
-                    promotion of Regular Voluntary Blood donation camp every year. Students also attend various camps
-                    (water sports camp, adventure camps organized by ABVIMAS) and educational workshops organized by the
-                    Youth Services Punjab every year.
+                    promotion of Regular Voluntary Blood donation camp every year. 
                   </p>
                   <div className="mt-4">
                     <p className="font-semibold text-[#0c2340]">Coordinator:</p>
@@ -237,12 +235,7 @@ export default function ClubsSocietiesPage() {
                     peer influence. Educational institutions in Punjab have formed buddy groups to make youngsters aware
                     about drug addiction.
                   </p>
-                  <p className="text-gray-700 mb-4">
-                    This programme is key to Punjab&apos;s fight against drugs as it covers the adolescent age group and
-                    young adults between 18 to 25 years who are the most vulnerable group of people as far as drug usage
-                    is concerned. On the prevention front, students through the Buddy Program develop knowledge, the
-                    right attitude and behaviour along with skills to prevent drug abuse.
-                  </p>
+                 
                   <div className="mt-4">
                     <p className="font-semibold text-[#0c2340]">Coordinator:</p>
                     <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
@@ -285,10 +278,7 @@ export default function ClubsSocietiesPage() {
                 <CardContent>
                   <p className="text-gray-700 mb-4">
                     My Bharat is an initiative of Ministry of Youth Affairs and Sports to empower Indian youth through
-                    social mobility, educational equity, and practical skills. The platform also offers a range of
-                    Experiential Learning Programmes across various sectors, empowering young individuals to learn and
-                    grow through practical application. Currently 379 college students are registered on My Bharat
-                    portal.
+                    social mobility, educational equity, and practical skills. 
                   </p>
                   <div className="mt-4">
                     <p className="font-semibold text-[#0c2340]">Coordinator:</p>
@@ -332,112 +322,13 @@ export default function ClubsSocietiesPage() {
               Enhance your college experience by joining one of our many clubs and societies. Develop new skills, make
               friends, and create lasting memories.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-amber-600 hover:bg-amber-700">How to Join</Button>
-              <Link href="/student-corner">
-                <Button variant="outline" className="text-white border-white hover:bg-white/10">
-                  Back to Student Corner
-                </Button>
-              </Link>
-            </div>
+           
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#0c2340] text-white pt-12 pb-6">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <Image
-                  src="/university-logo.jpg"
-                  alt="Guru Nanak Dev University Logo"
-                  width={60}
-                  height={60}
-                  className="mr-3 bg-white rounded-full p-1"
-                />
-                <div>
-                  <h3 className="text-lg font-bold">GNDU</h3>
-                  <p className="text-sm text-gray-300">College Verka-Amritsar</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Guru Nanak Dev University College, Verka-Amritsar is committed to providing quality education and
-                fostering academic excellence.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-gray-300 hover:text-amber-300">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academics" className="text-gray-300 hover:text-amber-300">
-                    Academics
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admissions" className="text-gray-300 hover:text-amber-300">
-                    Admissions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Important Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/examination" className="text-gray-300 hover:text-amber-300">
-                    Examination
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/results" className="text-gray-300 hover:text-amber-300">
-                    Results
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers" className="text-gray-300 hover:text-amber-300">
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-              <ul className="space-y-3">
-                <li className="flex">
-                  <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-300">
-                    Guru Nanak Dev University College, Verka-Amritsar, Punjab - 143001
-                  </span>
-                </li>
-                <li className="flex">
-                  <Phone className="h-5 w-5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-300">81465-14040</span>
-                </li>
-                <li className="flex">
-                  <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-300">osd.verka@gndu.ac.in</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 pt-6 mt-6 text-center text-gray-300 text-sm">
-            <p>
-              &copy; {new Date().getFullYear()} Guru Nanak Dev University College, Verka-Amritsar. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+       {/* Footer */}
+            <Footer />
     </div>
   )
 }
