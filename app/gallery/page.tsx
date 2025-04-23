@@ -11,7 +11,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import { Mail, MapPin, Phone } from "lucide-react";
 import Navbar from "@/components/ui/Navbar";
 export default function CampusLifePage() {
   // Sample image data - you can replace with your actual images

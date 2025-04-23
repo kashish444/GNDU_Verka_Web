@@ -3,9 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/ui/Footer";
 
 import {
-  Mail,
-  MapPin,
-  Phone,
+ 
   Download,
   Calendar,
   BookOpen,

@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/ui/Footer";
 import {
-  Mail,
-  MapPin,
-  Phone,
+  
   Users,
  
   Shield,
