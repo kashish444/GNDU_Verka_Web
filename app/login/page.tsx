@@ -14,12 +14,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 // import { Checkbox } from "@/components/ui/checkbox";
 
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import { useState } from "react";
 export default function AdminLoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -31,12 +33,12 @@ export default function AdminLoginPage() {
       setError("");
 
       const response = await axios.post("/api/auth/login", {
-        email,
-        password,
+        email: email.toLowerCase().trim().toString(),
+        password
       });
 
       if (response.status === 200) {
-        window.location.href = "/admin";
+        router.push("/admin");
       } else {
         setError("Unexpected response from server.");
       }
@@ -73,7 +75,7 @@ export default function AdminLoginPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={(e) => {e.preventDefault(); handleLogin();}}>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email / Employee Id</Label>
                     <div className="relative">
@@ -81,7 +83,7 @@ export default function AdminLoginPage() {
                       <Input
                         id="email"
                         placeholder="admin@gndu-verka.ac.in"
-                        type="email"
+                        type="text"
                         className="pl-10"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
