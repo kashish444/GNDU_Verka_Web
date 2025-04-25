@@ -93,7 +93,7 @@ export default function Navbar() {
 
 
       {/* Header */}
-      <div className="container mx-auto px-1 py-2.5 flex justify-between items-center bg-white">
+      <div className="container mx-auto px-1 py-2 flex justify-between items-center bg-white">
         <div className="flex items-center cursor-pointer" onClick={gotohome}>
           <Image src="/university-logo.jpg" alt="University Logo" width={80} height={80} className="mr-3" />
           <div>

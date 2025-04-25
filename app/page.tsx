@@ -7,11 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bell, ChevronDown, ChevronRight, ChevronUp, Phone, Mail } from "lucide-react"
+import { Bell, ChevronDown, ChevronRight, ChevronUp } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Footer from "@/components/ui/Footer"
-import { Award, School, Users, Ribbon } from "lucide-react"
-import { Calendar, MapPin } from "lucide-react"
+import { Ribbon } from "lucide-react"
 
 function PrincipalsMessage() {
   const [expanded, setExpanded] = useState(false)
@@ -20,11 +19,11 @@ function PrincipalsMessage() {
     <div className="bg-white p-6 rounded-lg shadow-md">
       <p className="text-gray-700 mb-4">
         Education is a fundamental societal need which churns human mind with the essentialities of a basic value
-        system. Values and worldly education share a dialectical relationship. Students imbibe values and simultaneously
-        study hard for career building and thus achieve self-actualization. The Bhagwad Gita states, Right knowledge is
-        the ultimate solution to all our problems. As we delve deeply into Lord Krishna&apos;s &apos;Karamyog
-        Philosophy&apos; we realise that every act can be an act of prayer. Career building and spiritual enhancement
-        must evolve in a parallel pattern. Guru Nanak Dev University College, Verka is an insignia of an
+        system. Values and worldly education share a dialectical relationship. Students imbibe values and also
+        simultaneously study hard for career building and thus achieve self-actualization. The Bhagwad Gita states,
+        Right knowledge is the ultimate solution to all our problems. As we delve deeply into Lord Krishna&apos;s
+        &apos;Karamyog Philosophy&apos; we realise that every act can be an act of prayer. Career building and spiritual
+        enhancement must evolve in a parallel pattern. Guru Nanak Dev University College, Verka is an insignia of an
         institutionalised value system.
       </p>
 
@@ -211,57 +210,56 @@ export default function Home() {
         </section>
 
         {/* Leadership Ribbon */}
-<section className=" bg-white">
-  <div className="bg-[#0c2340] text-white py-10">
-    <div className="container mx-auto px-4">
-      {/* Heading */}
-      <div className="flex items-center justify-center mb-10">
-        <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
-        <h2 className="text-3xl font-bold text-white">University Leadership</h2>
-      </div>
+        <section className=" bg-white">
+          <div className="bg-[#0c2340] text-white py-10">
+            <div className="container mx-auto px-4">
+              {/* Heading */}
+              <div className="flex items-center justify-center mb-10">
+                <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
+                <h2 className="text-3xl font-bold text-white">University Leadership</h2>
+              </div>
 
-      {/* Leadership Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-        {/* Vice Chancellor */}
-        <div className="flex flex-col items-center">
-          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-            <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
+              {/* Leadership Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+                {/* Vice Chancellor */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
+                  <p className="text-gray-300">Vice Chancellor</p>
+                </div>
+
+                {/* Dean, Academic Affairs */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/palwinder.jpg" alt="Dean Academic Affairs" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Palwinder Singh</h3>
+                  <p className="text-gray-300">Dean, Academic Affairs</p>
+                </div>
+
+                {/* Registrar */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
+                  <p className="text-gray-300">Registrar</p>
+                </div>
+
+                {/* Dean, CDC */}
+                <div className="flex flex-col items-center">
+                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
+                  <p className="text-gray-300">Dean, College Development Council</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
-          <p className="text-gray-300">Vice Chancellor</p>
-        </div>
-
-        {/* Dean, Academic Affairs */}
-        <div className="flex flex-col items-center">
-          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-            <Image src="/palwinder.jpg" alt="Dean Academic Affairs" fill className="object-cover" />
-          </div>
-          <h3 className="text-xl font-semibold text-white">Dr. Palwinder Singh</h3>
-          <p className="text-gray-300">Dean, Academic Affairs</p>
-        </div>
-
-        {/* Registrar */}
-        <div className="flex flex-col items-center">
-          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-            <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
-          </div>
-          <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
-          <p className="text-gray-300">Registrar</p>
-        </div>
-
-        {/* Dean, CDC */}
-        <div className="flex flex-col items-center">
-          <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-            <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
-          </div>
-          <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
-          <p className="text-gray-300">Dean, College Development Council</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+        </section>
 
         {/* Principal's Message Section */}
         <section className="py-12 bg-gray-50">
@@ -270,6 +268,9 @@ export default function Home() {
               Principal&apos;s Message
             </h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2">
+                <PrincipalsMessage />
+              </div>
               <div className="md:col-span-1 flex flex-col justify-center items-center">
                 <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden shadow-lg">
                   <Image src="/picture.png" alt="Mrs. Puneet Randhawa - Principal" fill className="object-cover" />
@@ -278,9 +279,6 @@ export default function Home() {
                   <h3 className="font-bold text-lg">Mrs. Puneet Randhawa</h3>
                   <p className="text-gray-600">OSD/Principal</p>
                 </div>
-              </div>
-              <div className="md:col-span-2">
-                <PrincipalsMessage />
               </div>
             </div>
           </div>
@@ -314,7 +312,7 @@ export default function Home() {
         </section>
 
         {/* Campus Highlights */}
-        <section className="py-12 bg-[#0c2340] text-white">
+        <section className="py-6 bg-[#0c2340] text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Campus Highlights</h2>
 
@@ -376,130 +374,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* College Details */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">College Details</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-amber-100 p-3 rounded-full">
-                      <School className="h-6 w-6 text-amber-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">College Type</h3>
-                      <p className="font-semibold">Constituent College of GNDU Amritsar</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      <Users className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">College Nature</h3>
-                      <p className="font-semibold">Post Graduate, Multi-Faculty, Co-educational</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-green-100 p-3 rounded-full">
-                      <Award className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">NAAC Grade</h3>
-                      <p className="font-semibold">A++</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-purple-100 p-3 rounded-full">
-                      <Calendar className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">Established</h3>
-                      <p className="font-semibold">2011</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-red-100 p-3 rounded-full">
-                      <MapPin className="h-6 w-6 text-red-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">District</h3>
-                      <p className="font-semibold">Amritsar</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-indigo-100 p-3 rounded-full">
-                      <Users className="h-6 w-6 text-indigo-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">Total Students</h3>
-                      <p className="font-semibold">869</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-yellow-100 p-3 rounded-full">
-                      <Phone className="h-6 w-6 text-yellow-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">Contact No.</h3>
-                      <p className="font-semibold">81465-14040</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-teal-100 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-teal-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-gray-500">Email-ID</h3>
-                      <p className="font-semibold">osd.verka@gndu.ac.in</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* News & Announcements Section */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -514,83 +388,53 @@ export default function Home() {
               <TabsContent value="news">
                 <div className="space-y-6">
                   <Card className="overflow-hidden">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="md:w-1/4 relative h-48 md:h-auto">
-                        <Image
-                          src="/placeholder.svg?height=200&width=300&text=Registration"
-                          alt="Registration Open"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <CardContent className="md:w-3/4 p-6">
-                        <div className="text-sm text-gray-500 mb-2">May 15, 2025</div>
-                        <h3 className="text-xl font-bold mb-2">Registration Open for New Admission</h3>
-                        <p className="text-gray-600 mb-4">
-                          Applications are now open for new admissions. Complete the registration form to secure your
-                          place for the upcoming academic year.
-                        </p>
-                        <Link
-                          href="https://docs.google.com/forms/d/e/1FAIpQLScVHvIC74AktYR4icNnishdy9Kt3Esl2ZNw2oJ1-dVrMVdfpA/viewform?usp=header"
-                          target="_blank"
-                          className="text-amber-600 hover:text-amber-700 flex items-center"
-                        >
-                          Registration Form <ChevronRight className="h-4 w-4 ml-1" />
-                        </Link>
-                      </CardContent>
-                    </div>
+                    <CardContent className="p-6">
+                      <div className="text-sm text-gray-500 mb-2">May 15, 2025</div>
+                      <h3 className="text-xl font-bold mb-2">Registration Open for New Admission</h3>
+                      <p className="text-gray-600 mb-4">
+                        Applications are now open for new admissions. Complete the registration form to secure your
+                        place for the upcoming academic year.
+                      </p>
+                      <Link
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScVHvIC74AktYR4icNnishdy9Kt3Esl2ZNw2oJ1-dVrMVdfpA/viewform?usp=header"
+                        target="_blank"
+                        className="text-amber-600 hover:text-amber-700 flex items-center"
+                      >
+                        Registration Form <ChevronRight className="h-4 w-4 ml-1" />
+                      </Link>
+                    </CardContent>
                   </Card>
 
                   <Card className="overflow-hidden">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="md:w-1/4 relative h-48 md:h-auto">
-                        <Image
-                          src="/placeholder.svg?height=200&width=300&text=Scholarships"
-                          alt="Scholarships"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <CardContent className="md:w-3/4 p-6">
-                        <div className="text-sm text-gray-500 mb-2">May 12, 2025</div>
-                        <h3 className="text-xl font-bold mb-2">SC/BC/Minority Scholarships</h3>
-                        <p className="text-gray-600 mb-4">
-                          Scholarships available for SC/BC/Minority students as per Punjab Government Rules. Eligible
-                          students are encouraged to apply.
-                        </p>
-                        <Link href="/scholarships" className="text-amber-600 hover:text-amber-700 flex items-center">
-                          Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                        </Link>
-                      </CardContent>
-                    </div>
+                    <CardContent className="p-6">
+                      <div className="text-sm text-gray-500 mb-2">May 12, 2025</div>
+                      <h3 className="text-xl font-bold mb-2">SC/BC/Minority Scholarships</h3>
+                      <p className="text-gray-600 mb-4">
+                        Scholarships available for SC/BC/Minority students as per Punjab Government Rules. Eligible
+                        students are encouraged to apply.
+                      </p>
+                      <Link href="/scholarships" className="text-amber-600 hover:text-amber-700 flex items-center">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Link>
+                    </CardContent>
                   </Card>
 
                   <Card className="overflow-hidden">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="md:w-1/4 relative h-48 md:h-auto">
-                        <Image
-                          src="/placeholder.svg?height=200&width=300&text=Fee+Payment"
-                          alt="Fee Payment"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <CardContent className="md:w-3/4 p-6">
-                        <div className="text-sm text-gray-500 mb-2">May 10, 2025</div>
-                        <h3 className="text-xl font-bold mb-2">Fee Payment Link for College Students</h3>
-                        <p className="text-gray-600 mb-4">
-                          Students can now pay their fees online through the Student Login Portal. Click the link below
-                          to access the payment gateway.
-                        </p>
-                        <Link
-                          href="https://slc.gndu.ac.in/Integration/StudentArea/Login2021.aspx"
-                          target="_blank"
-                          className="text-amber-600 hover:text-amber-700 flex items-center"
-                        >
-                          Pay Fees Online <ChevronRight className="h-4 w-4 ml-1" />
-                        </Link>
-                      </CardContent>
-                    </div>
+                    <CardContent className="p-6">
+                      <div className="text-sm text-gray-500 mb-2">May 10, 2025</div>
+                      <h3 className="text-xl font-bold mb-2">Fee Payment Link for College Students</h3>
+                      <p className="text-gray-600 mb-4">
+                        Students can now pay their fees online through the Student Login Portal. Click the link below to
+                        access the payment gateway.
+                      </p>
+                      <Link
+                        href="https://slc.gndu.ac.in/Integration/StudentArea/Login2021.aspx"
+                        target="_blank"
+                        className="text-amber-600 hover:text-amber-700 flex items-center"
+                      >
+                        Pay Fees Online <ChevronRight className="h-4 w-4 ml-1" />
+                      </Link>
+                    </CardContent>
                   </Card>
                 </div>
               </TabsContent>
