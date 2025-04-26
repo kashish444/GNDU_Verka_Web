@@ -2,15 +2,17 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+
+
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bell, ChevronDown, ChevronRight, ChevronUp } from "lucide-react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Footer from "@/components/ui/Footer"
 import { Ribbon } from "lucide-react"
+import NewsAndAnnouncements from "@/components/ui/NewsAndAnnouncements"
+
 
 function PrincipalsMessage() {
   const [expanded, setExpanded] = useState(false)
@@ -375,183 +377,7 @@ export default function Home() {
         </section>
 
         {/* News & Announcements Section */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">News & Announcements</h2>
-
-            <Tabs defaultValue="news" className="max-w-4xl mx-auto">
-              <TabsList className="grid w-full grid-cols-2 mb-8">
-                <TabsTrigger value="news">Latest News</TabsTrigger>
-                <TabsTrigger value="announcements">Announcements</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="news">
-                <div className="space-y-6">
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="text-sm text-gray-500 mb-2">May 15, 2025</div>
-                      <h3 className="text-xl font-bold mb-2">Registration Open for New Admission</h3>
-                      <p className="text-gray-600 mb-4">
-                        Applications are now open for new admissions. Complete the registration form to secure your
-                        place for the upcoming academic year.
-                      </p>
-                      <Link
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScVHvIC74AktYR4icNnishdy9Kt3Esl2ZNw2oJ1-dVrMVdfpA/viewform?usp=header"
-                        target="_blank"
-                        className="text-amber-600 hover:text-amber-700 flex items-center"
-                      >
-                        Registration Form <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="text-sm text-gray-500 mb-2">May 12, 2025</div>
-                      <h3 className="text-xl font-bold mb-2">SC/BC/Minority Scholarships</h3>
-                      <p className="text-gray-600 mb-4">
-                        Scholarships available for SC/BC/Minority students as per Punjab Government Rules. Eligible
-                        students are encouraged to apply.
-                      </p>
-                      <Link href="/scholarships" className="text-amber-600 hover:text-amber-700 flex items-center">
-                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="text-sm text-gray-500 mb-2">May 10, 2025</div>
-                      <h3 className="text-xl font-bold mb-2">Fee Payment Link for College Students</h3>
-                      <p className="text-gray-600 mb-4">
-                        Students can now pay their fees online through the Student Login Portal. Click the link below to
-                        access the payment gateway.
-                      </p>
-                      <Link
-                        href="https://slc.gndu.ac.in/Integration/StudentArea/Login2021.aspx"
-                        target="_blank"
-                        className="text-amber-600 hover:text-amber-700 flex items-center"
-                      >
-                        Pay Fees Online <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="announcements">
-                <div className="space-y-4">
-                  <Card className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <div className="bg-amber-100 text-amber-600 p-3 rounded-full mr-4">
-                          <Bell className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">May 15, 2025</div>
-                          <h3 className="font-bold mb-1">Registration Open for New Admission</h3>
-                          <p className="text-gray-600 text-sm">
-                            Applications are invited for new admissions. Complete the registration form to secure your
-                            place.
-                          </p>
-                          <Link
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScVHvIC74AktYR4icNnishdy9Kt3Esl2ZNw2oJ1-dVrMVdfpA/viewform?usp=header"
-                            target="_blank"
-                            className="text-amber-600 hover:text-amber-700 text-sm flex items-center mt-2"
-                          >
-                            Registration Form <ChevronRight className="h-4 w-4 ml-1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <div className="bg-amber-100 text-amber-600 p-3 rounded-full mr-4">
-                          <Bell className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">May 12, 2025</div>
-                          <h3 className="font-bold mb-1">SC/BC/Minority Scholarships</h3>
-                          <p className="text-gray-600 text-sm">
-                            Scholarships available for SC/BC/Minority students as per Punjab Government Rules.
-                          </p>
-                          <Link
-                            href="/scholarships"
-                            className="text-amber-600 hover:text-amber-700 text-sm flex items-center mt-2"
-                          >
-                            Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <div className="bg-amber-100 text-amber-600 p-3 rounded-full mr-4">
-                          <Bell className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">May 10, 2025</div>
-                          <h3 className="font-bold mb-1">Admission Dates for UG 3rd & 5th Semester</h3>
-                          <p className="text-gray-600 text-sm">
-                            <strong>Normal Dates:</strong> Upto 18-08-2025
-                            <br />
-                            <strong>With late fee of Rs.100/-:</strong> From 19-08-2025 to 25-08-2025
-                            <br />
-                            <strong>With late fee of Rs.200/-:</strong> From 26-08-2025 to 02-09-2025
-                            <br />
-                            <strong>With late fee of Rs.1000/-:</strong> From 03-09-2025 to 08-09-2025
-                            <br />
-                            <strong>With late fee of Rs.5000/-:</strong> From 09-09-2025 to 15-09-2025
-                          </p>
-                          <Link
-                            href="/admissions"
-                            className="text-amber-600 hover:text-amber-700 text-sm flex items-center mt-2"
-                          >
-                            More Details <ChevronRight className="h-4 w-4 ml-1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <div className="bg-amber-100 text-amber-600 p-3 rounded-full mr-4">
-                          <Bell className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">May 8, 2025</div>
-                          <h3 className="font-bold mb-1">Fee Payment Link for College Students</h3>
-                          <p className="text-gray-600 text-sm">
-                            Students can now pay their fees online through the Student Login Portal.
-                          </p>
-                          <Link
-                            href="https://slc.gndu.ac.in/Integration/StudentArea/Login2021.aspx"
-                            target="_blank"
-                            className="text-amber-600 hover:text-amber-700 text-sm flex items-center mt-2"
-                          >
-                            Pay Fees Online <ChevronRight className="h-4 w-4 ml-1" />
-                          </Link>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <div className="text-center mt-8">
-                    <Button variant="outline">View All Announcements</Button>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </section>
+        <NewsAndAnnouncements/>
       </main>
 
       {/* Footer */}
