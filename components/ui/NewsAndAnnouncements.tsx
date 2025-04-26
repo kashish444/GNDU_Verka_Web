@@ -12,7 +12,7 @@ interface Data {
   description: string;
   date: string;
   type: string;
-  linkText?: string;
+  linkName?: string;
   link?: string;
 }
 
@@ -99,14 +99,16 @@ export default function NewsAndAnnouncements() {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{data.title}</h3>
                       <p className="text-gray-600 mb-4">{data.description}</p>
-                      <Link
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScVHvIC74AktYR4icNnishdy9Kt3Esl2ZNw2oJ1-dVrMVdfpA/viewform?usp=header"
-                        target="_blank"
-                        className="text-amber-600 hover:text-amber-700 flex items-center"
-                      >
-                        {data.linkText ? data.linkText : "Learn More"}
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      {data.link && (
+                        <Link
+                          href={data.link || "#"}
+                          target="_blank"
+                          className="text-amber-600 hover:text-amber-700 flex items-center"
+                        >
+                          {data.linkName ? data.linkName : "Learn More"}
+                          <ChevronRight className="h-4 w-4 ml-1" />
+                        </Link>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -163,14 +165,16 @@ export default function NewsAndAnnouncements() {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{data.title}</h3>
                       <p className="text-gray-600 mb-4">{data.description}</p>
-                      <Link
-                        href={data.link || "#"}
-                        target="_blank"
-                        className="text-amber-600 hover:text-amber-700 flex items-center"
-                      >
-                        {data.linkText ? data.linkText : "Learn More"}
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      {data.link && (
+                        <Link
+                          href={data.link || "#"}
+                          target="_blank"
+                          className="text-amber-600 hover:text-amber-700 flex items-center"
+                        >
+                          {data.linkName ? data.linkName : "Learn More"}
+                          <ChevronRight className="h-4 w-4 ml-1" />
+                        </Link>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
