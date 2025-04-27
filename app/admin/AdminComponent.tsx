@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import React, { useState } from "react";
@@ -123,7 +124,7 @@ export default function AdminComponent({ user }: Props) {
         });
         if (response.status !== 200) {
           console.log("error adding news");
-          setEditing({ ...editing, loading: false  });
+          setEditing({ ...editing, loading: false });
         } else {
           queryClient.invalidateQueries({ queryKey: ["news"] });
           queryClient.invalidateQueries({ queryKey: ["announcements"] });
@@ -176,15 +177,17 @@ export default function AdminComponent({ user }: Props) {
     <>
       {/* navbar div */}
       <div className="flex justify-between items-center bg-black text-white px-10 py-4">
-        <h1 className="text-2xl font-bold">Verka Dashboard</h1>
+        <a className="text-2xl font-bold" href="/admin">
+          Verka Dashboard
+        </a>
         <nav className="flex space-x-4">
-          <a href="/admin" className="hover:text-gray-400">
+          <a href="/" className="hover:text-gray-400">
             Home
           </a>
-          <a href="/admin/users" className="hover:text-gray-400">
+          {/* <a href="/admin/users" className="hover:text-gray-400">
             Users
-          </a>
-          <p className="hover:text-gray-400" onClick={() => handleLogout()}>
+          </a> */}
+          <p className="hover:text-gray-400 cursor-pointer" onClick={() => handleLogout()}>
             Logout
           </p>
         </nav>
@@ -205,7 +208,7 @@ export default function AdminComponent({ user }: Props) {
           </h2>
 
           <div className=" flex-col grid grid-cols-2 gap-5">
-            <div key={"news"}>
+            <div>
               <h2 className="text-xl font-semibold text-black mb-2">News</h2>
               {/* add button */}
               <button
@@ -231,55 +234,92 @@ export default function AdminComponent({ user }: Props) {
                 <p className="text-gray-500">No News added!</p>
               )}
               {news &&
-                news.map((item: any, index: number) => (
-                  <>
-                    <div
-                      key={index}
-                      className="bg-white p-5 relative rounded-lg w-full mb-5"
-                    >
-                      <p className="text-xs">{formatDate(item.date)}</p>
-                      <h3 className="text-xl font-bold">{item.title}</h3>
-                      <p>{item.description}</p>
-                      {item.link && (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          className="text-yellow-600 text-sm hover:underline"
-                        >
-                          {item.linkName}
-                        </a>
-                      )}
+                news.map((item: any) => (
+                  <div
+                    key={item._id}
+                    className="bg-white p-5 relative rounded-lg w-full mb-5"
+                  >
+                    <p className="text-xs">{formatDate(item.date)}</p>
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <p className="mt-2 text-base">
+                      {(() => {
+                        const parts = item.description.split(
+                          /(<br>|<b>|<\/b>|<i>|<\/i>)/g
+                        );
+                        let bold = false;
+                        let italic = false;
 
-                      <p
-                        className="mt-3 cursor-pointer hover:underline"
-                        onClick={() => {
-                          setEditing({
-                            ...editing,
-                            editing: true,
-                            type: "News",
-                            what: "Edit",
-                            id: item._id,
-                          });
-                          setData({
-                            title: item.title,
-                            description: item.description,
-                            date: item.date,
-                            type: "Announcement",
-                            link: item.link,
-                            linkName: item.linkName,
-                          });
-                        }}
+                        return parts.map((part: string, index: number) => {
+                          if (part === "<br>") {
+                            return <br key={index} />;
+                          } else if (part === "<b>") {
+                            bold = true;
+                            return null;
+                          } else if (part === "</b>") {
+                            bold = false;
+                            return null;
+                          } else if (part === "<i>") {
+                            italic = true;
+                            return null;
+                          } else if (part === "</i>") {
+                            italic = false;
+                            return null;
+                          } else {
+                            let content: React.ReactNode = part;
+                            if (bold) {
+                              content = <strong key={index}>{content}</strong>;
+                            }
+                            if (italic) {
+                              content = <em key={index}>{content}</em>;
+                            }
+                            return (
+                              <React.Fragment key={index}>
+                                {content}
+                              </React.Fragment>
+                            );
+                          }
+                        });
+                      })()}
+                    </p>
+                    {item.link && (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        className="text-yellow-600 text-sm hover:underline"
                       >
-                        Edit
-                      </p>
-                      <p
-                        className="text-red-600 cursor-pointer hover:underline"
-                        onClick={() => handleDelete(item._id)}
-                      >
-                        Delete
-                      </p>
-                    </div>
-                  </>
+                        {item.linkName || "Know More >"}
+                      </a>
+                    )}
+
+                    <p
+                      className="mt-3 cursor-pointer hover:underline"
+                      onClick={() => {
+                        setEditing({
+                          ...editing,
+                          editing: true,
+                          type: "News",
+                          what: "Edit",
+                          id: item._id,
+                        });
+                        setData({
+                          title: item.title,
+                          description: item.description,
+                          date: item.date,
+                          type: "Announcement",
+                          link: item.link,
+                          linkName: item.linkName,
+                        });
+                      }}
+                    >
+                      Edit
+                    </p>
+                    <p
+                      className="text-red-600 cursor-pointer hover:underline"
+                      onClick={() => handleDelete(item._id)}
+                    >
+                      Delete
+                    </p>
+                  </div>
                 ))}
             </div>
 
@@ -311,14 +351,53 @@ export default function AdminComponent({ user }: Props) {
               )}
 
               {announcements &&
-                announcements.map((item: any, index: number) => (
+                announcements.map((item: any) => (
                   <div
-                    key={index}
+                    key={item._id}
                     className="bg-white p-5 relative rounded-lg w-full"
                   >
                     <p className="text-xs">{formatDate(item.date)}</p>
                     <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p>{item.description}</p>
+                    <p className="mt-2 text-base">
+                      {(() => {
+                        const parts = item.description.split(
+                          /(<br>|<b>|<\/b>|<i>|<\/i>)/g
+                        );
+                        let bold = false;
+                        let italic = false;
+
+                        return parts.map((part: string, index: number) => {
+                          if (part === "<br>") {
+                            return <br key={index} />;
+                          } else if (part === "<b>") {
+                            bold = true;
+                            return null;
+                          } else if (part === "</b>") {
+                            bold = false;
+                            return null;
+                          } else if (part === "<i>") {
+                            italic = true;
+                            return null;
+                          } else if (part === "</i>") {
+                            italic = false;
+                            return null;
+                          } else {
+                            let content: React.ReactNode = part;
+                            if (bold) {
+                              content = <strong key={index}>{content}</strong>;
+                            }
+                            if (italic) {
+                              content = <em key={index}>{content}</em>;
+                            }
+                            return (
+                              <React.Fragment key={index}>
+                                {content}
+                              </React.Fragment>
+                            );
+                          }
+                        });
+                      })()}
+                    </p>
                     {item.link && (
                       <a
                         href={item.link}
@@ -403,7 +482,7 @@ export default function AdminComponent({ user }: Props) {
                   <input
                     type="text"
                     placeholder="Title"
-                    value={data.title}
+                    value={data.title || ""}
                     onChange={(e) =>
                       setData({ ...data, title: e.target.value })
                     }
@@ -411,7 +490,7 @@ export default function AdminComponent({ user }: Props) {
                   />
                   <textarea
                     placeholder="Description"
-                    value={data.description}
+                    value={data.description || ""}
                     onChange={(e) =>
                       setData({ ...data, description: e.target.value })
                     }
@@ -420,14 +499,14 @@ export default function AdminComponent({ user }: Props) {
 
                   <input
                     type="text"
-                    value={data.link}
+                    value={data.link || ""}
                     onChange={(e) => setData({ ...data, link: e.target.value })}
                     placeholder="Link (optional)"
                     className="border border-gray-300 rounded-lg p-2 w-full"
                   />
                   <input
                     type="text"
-                    value={data.linkName}
+                    value={data.linkName || ""}
                     onChange={(e) =>
                       setData({ ...data, linkName: e.target.value })
                     }
@@ -435,8 +514,8 @@ export default function AdminComponent({ user }: Props) {
                     className="border border-gray-300 rounded-lg p-2 w-full"
                   />
                   <button
+                    type="submit"
                     className="bg-black text-white px-4 py-2 rounded-lg mt-4 transition-all duration-300"
-                    onClick={() => handleEdit()}
                   >
                     {editing.loading ? "Loading..." : editing.what}
                   </button>

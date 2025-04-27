@@ -55,7 +55,7 @@ export default function NewsAndAnnouncements() {
     queryKey: ["announcements"],
     queryFn: async () => {
       const res = await axios.get(
-        "/api/news&announcements?type=announcements&limit=5"
+        "/api/news&announcements?type=announcement&limit=5"
       );
       if (res.status !== 200) {
         throw new Error("Network response was not ok");
@@ -80,7 +80,7 @@ export default function NewsAndAnnouncements() {
           <TabsContent value="news">
             <div className="space-y-6">
               {news && news.length == 0 && (
-                <div className="text-center py-4">No announcements yet!</div>
+                <div className="text-center py-4">No news yet!</div>
               )}
               {newsLoading && (
                 <div className="text-center py-4">Loading...</div>
@@ -98,7 +98,48 @@ export default function NewsAndAnnouncements() {
                         {formatDate(data.date)}
                       </div>
                       <h3 className="text-xl font-bold mb-2">{data.title}</h3>
-                      <p className="text-gray-600 mb-4">{data.description}</p>
+                      <p className="mt-2 mb-4 text-base">
+                        {(() => {
+                          const parts = data.description.split(
+                            /(<br>|<b>|<\/b>|<i>|<\/i>)/g
+                          );
+                          let bold = false;
+                          let italic = false;
+
+                          return parts.map((part: string, index: number) => {
+                            if (part === "<br>") {
+                              return <br key={index} />;
+                            } else if (part === "<b>") {
+                              bold = true;
+                              return null;
+                            } else if (part === "</b>") {
+                              bold = false;
+                              return null;
+                            } else if (part === "<i>") {
+                              italic = true;
+                              return null;
+                            } else if (part === "</i>") {
+                              italic = false;
+                              return null;
+                            } else {
+                              let content: React.ReactNode = part;
+                              if (bold) {
+                                content = (
+                                  <strong key={index}>{content}</strong>
+                                );
+                              }
+                              if (italic) {
+                                content = <em key={index}>{content}</em>;
+                              }
+                              return (
+                                <React.Fragment key={index}>
+                                  {content}
+                                </React.Fragment>
+                              );
+                            }
+                          });
+                        })()}
+                      </p>
                       {data.link && (
                         <Link
                           href={data.link || "#"}
@@ -164,7 +205,48 @@ export default function NewsAndAnnouncements() {
                         {data.date}
                       </div>
                       <h3 className="text-xl font-bold mb-2">{data.title}</h3>
-                      <p className="text-gray-600 mb-4">{data.description}</p>
+                      <p className="mt-2 mb-4 text-base">
+                        {(() => {
+                          const parts = data.description.split(
+                            /(<br>|<b>|<\/b>|<i>|<\/i>)/g
+                          );
+                          let bold = false;
+                          let italic = false;
+
+                          return parts.map((part: string, index: number) => {
+                            if (part === "<br>") {
+                              return <br key={index} />;
+                            } else if (part === "<b>") {
+                              bold = true;
+                              return null;
+                            } else if (part === "</b>") {
+                              bold = false;
+                              return null;
+                            } else if (part === "<i>") {
+                              italic = true;
+                              return null;
+                            } else if (part === "</i>") {
+                              italic = false;
+                              return null;
+                            } else {
+                              let content: React.ReactNode = part;
+                              if (bold) {
+                                content = (
+                                  <strong key={index}>{content}</strong>
+                                );
+                              }
+                              if (italic) {
+                                content = <em key={index}>{content}</em>;
+                              }
+                              return (
+                                <React.Fragment key={index}>
+                                  {content}
+                                </React.Fragment>
+                              );
+                            }
+                          });
+                        })()}
+                      </p>
                       {data.link && (
                         <Link
                           href={data.link || "#"}

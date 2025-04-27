@@ -70,7 +70,7 @@ export default function Navbar() {
           <Icon className="h-4 w-4 hover:text-amber-300" />
         </Link>
       ))}
-      <Link href="/login" className="flex flex-row items-center space-x-1 hover:text-amber-300">
+      <Link href="/admin" className="flex flex-row items-center space-x-1 hover:text-amber-300">
         <User className="h-4 w-4" />
         <p>Admin</p>
       </Link>
