@@ -202,7 +202,7 @@ export default function AdminComponent({ user }: Props) {
           </p>
         </div>
 
-        <div className="flex flex-col mt-10 w-full bg-black/5 rounded-xl p-10">
+        <div className="flex flex-col my-10 w-full bg-black/5 rounded-xl p-10">
           <h2 className="text-3xl font-bold text-black mb-4">
             News & Announcements
           </h2>
@@ -237,7 +237,7 @@ export default function AdminComponent({ user }: Props) {
                 news.map((item: any) => (
                   <div
                     key={item._id}
-                    className="bg-white p-5 relative rounded-lg w-full mb-5"
+                    className="bg-white p-5 relative rounded-lg w-full mb-5 last:mb-0"
                   >
                     <p className="text-xs">{formatDate(item.date)}</p>
                     <h3 className="text-xl font-bold">{item.title}</h3>
@@ -354,7 +354,7 @@ export default function AdminComponent({ user }: Props) {
                 announcements.map((item: any) => (
                   <div
                     key={item._id}
-                    className="bg-white p-5 relative rounded-lg w-full"
+                    className="bg-white p-5 relative rounded-lg w-full mb-5 last:mb-0"
                   >
                     <p className="text-xs">{formatDate(item.date)}</p>
                     <h3 className="text-xl font-bold">{item.title}</h3>
