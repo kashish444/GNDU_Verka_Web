@@ -10,7 +10,6 @@ import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Footer from "@/components/ui/Footer"
-import { Ribbon } from "lucide-react"
 import NewsAndAnnouncements from "@/components/ui/NewsAndAnnouncements"
 
 

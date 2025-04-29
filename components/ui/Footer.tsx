@@ -2,11 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
+
   MapPin,
   Phone,
   Mail,

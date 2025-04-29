@@ -7,7 +7,6 @@ import {
   Download,
   Calendar,
   BookOpen,
-  Eye
 } from "lucide-react";
 import {
   Card,

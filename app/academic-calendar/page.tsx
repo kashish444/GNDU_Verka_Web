@@ -72,7 +72,7 @@ export default function AcademicCalendar() {
                   </TableRow>
                   <TableRow>
                     <TableCell>3</TableCell>
-                    <TableCell>End Semester Practical's</TableCell>
+                    <TableCell>End Semester Practical&apos;s</TableCell>
                     <TableCell>
                       25-04-2025
                       <br />
@@ -152,7 +152,7 @@ export default function AcademicCalendar() {
                   </TableRow>
                   <TableRow>
                     <TableCell>9</TableCell>
-                    <TableCell>End Semester Practical's</TableCell>
+                    <TableCell>End Semester Practical&apos;s</TableCell>
                     <TableCell>
                       17-11-2025
                       <br />
