@@ -236,7 +236,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>admissions.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For admission inquiries, application status, and
@@ -256,7 +256,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>exam.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For examination schedules, results, and
@@ -278,7 +278,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>accounts.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For fee payments, scholarships, and financial matters.
@@ -297,7 +297,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>placement.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For career guidance, placement opportunities, and industry
@@ -317,7 +317,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>library.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For library resources, book issuance, and digital resource
@@ -337,7 +337,7 @@ export default function ContactPage() {
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>welfare.verka@gndu.ac.in</span>
+                      <span>osd.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For student support services, counseling, and

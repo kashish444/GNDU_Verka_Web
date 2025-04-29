@@ -117,9 +117,9 @@ export default function CampusLifePage() {
         </section>
 
         {/* Introduction */}
-        <section className="py-12">
+        <section className="py-8">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="max-w-3xl mx-auto text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0c2340]">
                 Life at GNDU College Verka
               </h2>
@@ -135,8 +135,8 @@ export default function CampusLifePage() {
         </section>
 
         {/* Gallery - Simplified to show all images together */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-6 bg-gray-50">
+          <div className="container mx-auto px-4 mb-7">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#0c2340]">
               Campus Gallery
             </h2>
@@ -154,18 +154,6 @@ export default function CampusLifePage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 bg-[#0c2340] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Experience Campus Life at GNDU College Verka
-            </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Join us to experience a vibrant campus life that balances academic
-              excellence with extracurricular activities.
-            </p>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}

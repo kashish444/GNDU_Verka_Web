@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import { MapPin, BookOpen, Clock } from "lucide-react";
@@ -12,6 +13,8 @@ import {
 import Navbar from "@/components/ui/Navbar";
 import Lander from "@/components/ui/Lander";
 import Footer from "@/components/ui/Footer";
+import Library from "@/components/ui/Library";
+
 
 export default function LibraryPage() {
   const rules = [
@@ -154,256 +157,12 @@ export default function LibraryPage() {
           </div>
         </section>
         {/* Library Rules */}
-        <section className="py-12">
-          <div className="container mx-auto px-4 w-1/2">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
-              Library Rules
-            </h2>
-
-            <div className="max-w-4xl mx-auto">
-              <Card>
-                <CardContent className="p-6">
-                  <ul className="space-y-4" key="list">
-                    {rules.map((rule, index) => (
-                      <>
-                        <li className="flex items-center" key={index}>
-                          <div className="bg-amber-100 text-amber-600 p-1 rounded-full mr-3 mt-1">
-                            {index + 1}
-                          </div>
-                          <p className="text-gray-700">{rule}</p>
-                        </li>
-                      </>
-                    ))}
-                  </ul>
-                  {/* <div className="mt-6 text-center">
-                    <Button variant="outline">
-                      <Download className="mr-2 h-4 w-4" /> Download Complete
-                      Library Guidelines
-                    </Button>
-                  </div> */}
-                </CardContent>
-              </Card>
-            </div>
+      <div>
+          <Library rules={rules} />
           </div>
-        </section>
+        
 
-        {/* Resources */}
-        {/* <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
-              Library Resources
-            </h2>
-
-            <Tabs defaultValue="journals" className="max-w-5xl mx-auto">
-              <TabsList className="grid w-full grid-cols-4 mb-8">
-                <TabsTrigger value="journals">Journals</TabsTrigger>
-                <TabsTrigger value="magazines">Magazines</TabsTrigger>
-                <TabsTrigger value="newspapers">Newspapers</TabsTrigger>
-                <TabsTrigger value="digital">Digital Resources</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="journals">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <FileText className="h-5 w-5 text-amber-600 mr-2" />
-                      Academic Journals
-                    </CardTitle>
-                    <CardDescription>
-                      Scholarly publications for research and academic reference
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Science & Technology
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>Journal of Computer Science</li>
-                          <li>International Journal of Physics</li>
-                          <li>Chemical Science Review</li>
-                          <li>Biological Research Quarterly</li>
-                          <li>Mathematics Today</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Arts & Humanities
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>Journal of Historical Studies</li>
-                          <li>Literary Review</li>
-                          <li>Economics & Finance Journal</li>
-                          <li>Political Science Quarterly</li>
-                          <li>Sociological Perspectives</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mt-6 text-center">
-                      <Button variant="outline">
-                        View Complete Journal List
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="magazines">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <FileText className="h-5 w-5 text-blue-600 mr-2" />
-                      Magazines
-                    </CardTitle>
-                    <CardDescription>
-                      General interest and specialized magazines
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          General Interest
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>India Today</li>
-                          <li>Outlook</li>
-                          <li>The Week</li>
-                          <li>Frontline</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Science & Technology
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>Science Reporter</li>
-                          <li>Electronics For You</li>
-                          <li>Digit</li>
-                          <li>Sanctuary Asia</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Business & Career
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>Business Today</li>
-                          <li>Competition Success Review</li>
-                          <li>Employment News</li>
-                          <li>Yojana</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mt-6 text-center">
-                      <Button variant="outline">View All Magazines</Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="newspapers">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Newspaper className="h-5 w-5 text-green-600 mr-2" />
-                      Newspapers
-                    </CardTitle>
-                    <CardDescription>
-                      Daily and weekly newspapers for current affairs
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">English</h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>The Times of India</li>
-                          <li>The Hindu</li>
-                          <li>Hindustan Times</li>
-                          <li>The Indian Express</li>
-                          <li>The Tribune</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Regional Languages
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>Ajit (Punjabi)</li>
-                          <li>Jagbani (Punjabi)</li>
-                          <li>Punjab Kesari (Hindi)</li>
-                          <li>Dainik Bhaskar (Hindi)</li>
-                          <li>Punjabi Tribune (Punjabi)</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p className="mt-4 text-gray-700 text-center">
-                      Newspapers are available in the reading section and must
-                      be consulted within the library premises.
-                    </p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="digital">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Globe className="h-5 w-5 text-purple-600 mr-2" />
-                      Digital Resources & INFLIBNET
-                    </CardTitle>
-                    <CardDescription>
-                      Online databases and e-resources
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-700 mb-4">
-                      The library provides access to various digital resources
-                      and online databases through INFLIBNET&apos;s N-LIST
-                      program, enabling students and faculty to access
-                      e-journals, e-books, and research papers.
-                    </p>
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          Available Resources
-                        </h4>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                          <li>E-journals through N-LIST</li>
-                          <li>E-books collection</li>
-                          <li>Online research databases</li>
-                          <li>
-                            Digital repository of previous years&apos; question
-                            papers
-                          </li>
-                          <li>Access to National Digital Library of India</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          How to Access
-                        </h4>
-                        <p className="text-gray-700">
-                          Students and faculty can access these resources using
-                          their institutional login credentials. Computer
-                          terminals are available in the library for accessing
-                          digital resources. Remote access is also available for
-                          registered users.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-6 flex justify-center space-x-4">
-                      <Button>Access INFLIBNET</Button>
-                      <Button variant="outline">Digital Resources Guide</Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </section> */}
+        
 
         {/* Library Staff */}
         <section className="py-12">
@@ -415,14 +174,7 @@ export default function LibraryPage() {
             <div className="flex md:flex-row flex-col gap-6 max-w-5xl mx-auto flex-wrap justify-center m-auto">
               <Card className="text-center w-72">
                 <div className="pt-6">
-                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                    <Image
-                      src="/person.png"
-                      alt="Chief Librarian"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  
                 </div>
                 <CardContent>
                   <h3 className="text-xl font-bold">Dr. Manjit Kaur</h3>
@@ -436,15 +188,8 @@ export default function LibraryPage() {
               </Card>
 
               <Card className="text-center  w-72">
-                <div className="pt-6">
-                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                    <Image
-                      src="/person.png"
-                      alt="Assistant Librarian"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                <div className="pt-12">
+                  
                 </div>
                 <CardContent>
                   <h3 className="text-xl font-bold">Mr. Navjit Singh</h3>
@@ -456,7 +201,7 @@ export default function LibraryPage() {
             </div>
           </div>
         </section>
-        <div className="flex md:w-1/2 w-[80%] mx-auto mb-20 ">
+        <div className="flex md:w-1/2 w-[80%] mx-auto mb-10 ">
           <Card>
             <CardContent className="p-6 text-center">
               <h3 className="text-xl font-bold text-[#0c2340] mb-4">
@@ -477,8 +222,8 @@ export default function LibraryPage() {
         </div>
 
         {/* FAQ Section */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-2 bg-gray-50">
+          <div className="container mx-auto px-4 mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Frequently Asked Questions
             </h2>
@@ -567,19 +312,7 @@ export default function LibraryPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 bg-[#0c2340] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Visit Our Library Today
-            </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Explore our extensive collection of books, journals, and digital
-              resources to enhance your learning and research.
-            </p>
-           
-          </div>
-        </section>
+        
       </main>
 
       {/* Footer */}

@@ -60,7 +60,7 @@ export default function StudentCornerPage() {
         </section>
 
         {/* Societies and Clubs */}
-        <section className="py-12 bg-gray-50" id="societies">
+        <section className=" bg-gray-50" id="societies">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Societies & Clubs</h2>
 
@@ -146,9 +146,7 @@ export default function StudentCornerPage() {
                       <p className="text-gray-700 mt-2">
                         <span className="font-semibold">Application Period:</span> July 15 - August 30 each year
                       </p>
-                      <Button className="mt-2" variant="outline">
-                        Download Application Form
-                      </Button>
+                      
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -172,9 +170,7 @@ s Scholarship Scheme</li>
                         <span className="font-semibold">Application Process:</span> Apply through the National
                         Scholarship Portal
                       </p>
-                      <Button className="mt-2" variant="outline">
-                        Visit National Scholarship Portal
-                      </Button>
+                     
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -195,9 +191,7 @@ s Scholarship Scheme</li>
                       <p className="text-gray-700 mt-2">
                         <span className="font-semibold">Contact:</span> Financial Aid Office, Administrative Block
                       </p>
-                      <Button className="mt-2" variant="outline">
-                        Apply for Financial Aid
-                      </Button>
+                      
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -327,9 +321,7 @@ s Scholarship Scheme</li>
         <ul className="list-disc pl-5 space-y-1 text-gray-700">
           <li>Dr. Sonika Thakur (Assistant Professor in Physics)</li>
         </ul>
-        <p className="text-gray-700 mt-2">
-          <span className="font-semibold">Contact:</span> anti-ragging@gndu-verka.ac.in
-        </p>
+        
       </div>
     </CardContent>
   </div>
@@ -353,7 +345,7 @@ s Scholarship Scheme</li>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
                     The cell was formulated to provide career guidance to the students. It helps students explore career
-                    options, prepare for interviews, and make informed decisions about their future.
+                     and make informed decisions about their future.
                   </p>
                   <div className="space-y-2">
                     <p className="text-gray-700">
@@ -362,9 +354,7 @@ s Scholarship Scheme</li>
                     <ul className="list-disc pl-5 space-y-1 text-gray-700">
                       <li>Dr. Jasminder Pal Singh (Assistant Professor in Economics)</li>
                     </ul>
-                    <p className="text-gray-700 mt-2">
-                      <span className="font-semibold">Contact:</span> career.counseling@gndu-verka.ac.in
-                    </p>
+                   
                   </div>
                   <Button className="mt-4 w-full">Schedule Counseling Session</Button>
                 </CardContent>

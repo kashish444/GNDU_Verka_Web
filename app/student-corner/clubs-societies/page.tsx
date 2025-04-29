@@ -314,17 +314,7 @@ export default function ClubsSocietiesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 bg-[#0c2340] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Join a Club Today</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Enhance your college experience by joining one of our many clubs and societies. Develop new skills, make
-              friends, and create lasting memories.
-            </p>
-           
-          </div>
-        </section>
+        
       </main>
 
        {/* Footer */}

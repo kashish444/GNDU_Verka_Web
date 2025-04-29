@@ -215,7 +215,7 @@ export default function Home() {
           <div className="bg-[#0c2340] text-white py-4">
             <div className="container mx-auto px-4">
               {/* Heading */}
-              <div className="flex items-center justify-center mb-10">
+              <div className="flex items-center justify-center mb-4">
                
                 <h2 className="text-3xl font-bold text-white">University Leadership</h2>
               </div>
@@ -224,7 +224,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
                 {/* Vice Chancellor */}
                 <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                  <div className="relative h-[150px] w-[150px] rounded-full overflow-hidden shadow-lg mb-4">
                     <Image src="/karamjeet.png" alt="Vice Chancellor" fill className="object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">Dr. Karamjeet Singh</h3>
@@ -233,8 +233,8 @@ export default function Home() {
 
                 {/* Dean, Academic Affairs */}
                 <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
-                    <Image src="/palwinder.jpg" alt="Dean Academic Affairs" fill className="object-cover" />
+                  <div className="relative h-[150px] w-[150px] rounded-full overflow-hidden shadow-lg mb-4">
+                    <Image src="/palwinder.png" alt="Dean Academic Affairs" fill className="object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">Dr. Palwinder Singh</h3>
                   <p className="text-gray-300">Dean, Academic Affairs</p>
@@ -242,7 +242,7 @@ export default function Home() {
 
                 {/* Registrar */}
                 <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                  <div className="relative h-[150px] w-[150px] rounded-full overflow-hidden shadow-lg mb-4">
                     <Image src="/karanjeet.jpg" alt="Registrar" fill className="object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">Dr. Karamjit Singh Chahal</h3>
@@ -251,7 +251,7 @@ export default function Home() {
 
                 {/* Dean, CDC */}
                 <div className="flex flex-col items-center">
-                  <div className="relative h-[200px] w-[200px] rounded-full overflow-hidden shadow-lg mb-4">
+                  <div className="relative h-[150px] w-[150px] rounded-full overflow-hidden shadow-lg mb-4">
                     <Image src="/saroj.jpg" alt="Dean" fill className="object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">Dr. Saroj Bala</h3>
@@ -273,7 +273,7 @@ export default function Home() {
                 <PrincipalsMessage />
               </div>
               <div className="md:col-span-1 flex flex-col justify-center items-center">
-                <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden shadow-lg">
+                <div className="relative h-[360px] w-[360px] rounded-full overflow-hidden shadow-lg">
                   <Image src="/picture.png" alt="Mrs. Puneet Randhawa - Principal" fill className="object-cover" />
                 </div>
                 <div className="text-center mt-4">

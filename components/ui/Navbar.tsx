@@ -54,14 +54,20 @@ export default function Navbar() {
     </div>
 
     {/* Center Title + NAAC */}
-    <div className="hidden md:flex items-center space-x-3">
-      <span className="text-sm font-medium">
-        Guru Nanak Dev University College, Verka, Amritsar
-      </span>
-      <span className="text-xs font-semibold bg-amber-500 text-white px-2 py-0.5 rounded-full shadow-sm">
-        NAAC A++
-      </span>
-    </div>
+    <div className="hidden md:flex flex-col items-center space-y-1">
+  <div className="flex items-center space-x-3">
+    <span className="text-sm font-medium">
+      Guru Nanak Dev University College, Verka, Amritsar
+    </span>
+    <span className="text-xs font-semibold bg-amber-500 text-white px-2 py-0.5 rounded-full shadow-sm">
+      NAAC A++
+    </span>
+  </div>
+  <span className="text-sm italic font-serif text-amber-600">
+  (Constituent College)
+</span>
+
+</div>
 
     {/* Socials + Admin + Register */}
     <div className="flex items-center space-x-3">
@@ -80,7 +86,7 @@ export default function Navbar() {
   rel="noopener noreferrer"
   className="hidden md:block"
 >
-  <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-1 text-sm rounded-md shadow-md transition-all hover:shadow-lg">
+  <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-2 py-1 text-sm rounded-sm shadow-md transition-all hover:shadow-lg">
     Register Now
   </Button>
 </a>
@@ -93,7 +99,7 @@ export default function Navbar() {
 
 
       {/* Header */}
-      <div className="container mx-auto px-1 py-1 flex justify-between items-center bg-white">
+      <div className="container mx-auto px-1 py-3 flex justify-between items-center bg-white">
         <div className="flex items-center cursor-pointer" onClick={gotohome}>
           <Image src="/university-logo.jpg" alt="University Logo" width={65} height={65} className="mr-3" />
           <div>
@@ -156,7 +162,7 @@ export default function Navbar() {
                     Time Table
                   </Link>
                   <Link
-                    href="https://drive.google.com/file/d/15UCbwABR_W2MNzNEvRVGQP7fOHKgwdry/view?usp=sharing"
+                    href="/academic-calendar"
                     className={`block px-4 py-2 text-sm ${
                       isActive("/academics/calendar") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
                     }`}
@@ -517,18 +523,12 @@ export default function Navbar() {
                     >
                       Contact Us
                     </Link>
-                    <Link
-                      href="/about"
-                      onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
-                    >
-                      About Us
-                    </Link>
+                    
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
-            <Link href="/register" onClick={() => setMenu(false)} className="mt-4">
+            <Link href="https://gnduadmissions.org/" onClick={() => setMenu(false)} className="mt-4">
               <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-md shadow-md transition-all hover:shadow-lg text-lg">
                 Register Now
               </Button>
