@@ -7,9 +7,6 @@ import {
   Download,
   Calendar,
   BookOpen,
-  GraduationCap,
-  Award,
-  Users,
   Eye
 } from "lucide-react";
 import {
@@ -58,7 +55,7 @@ export default function AcademicsPage() {
         {/* Academic Overview */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="max-w-3xl mx-auto text-center mb-2">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0c2340]">
                 Academic Excellence
               </h2>
@@ -71,56 +68,13 @@ export default function AcademicsPage() {
                 successful careers.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-amber-100 flex items-center justify-center mb-4">
-                    <GraduationCap className="h-8 w-8 text-amber-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Quality Education</h3>
-                  <p className="text-gray-600">
-                    Comprehensive curriculum designed to meet industry standards
-                    and academic excellence.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Expert Faculty</h3>
-                  <p className="text-gray-600">
-                    Highly qualified and dedicated faculty members committed to
-                    student success.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center mb-4">
-                    <Award className="h-8 w-8 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">
-                    Recognized Programs
-                  </h3>
-                  <p className="text-gray-600">
-                    UGC recognized programs with focus on both theoretical
-                    knowledge and practical skills.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+</div>
+            </section>
 
        {/* Courses Offered */}
-      <section className="py-12 bg-gray-50" id="courses">
+      <section className="py-2 bg-gray-50" id="courses">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">Courses Offered</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center text-[#0c2340]">Courses Offered</h2>
 
           <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-8">
@@ -330,17 +284,7 @@ export default function AcademicsPage() {
                       </TableBody>
                     </Table>
                   </div>
-                  <div className="mt-6 flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="bg-amber-600 hover:bg-amber-700">
-                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
-                      </Button>
-                    </a>
-                  </div>
+                 
                 </CardContent>
               </Card>
             </TabsContent>
@@ -458,17 +402,7 @@ export default function AcademicsPage() {
                       </TableBody>
                     </Table>
                   </div>
-                  <div className="mt-6 flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="bg-amber-600 hover:bg-amber-700">
-                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
-                      </Button>
-                    </a>
-                  </div>
+                 
                 </CardContent>
               </Card>
             </TabsContent>
@@ -526,17 +460,7 @@ export default function AcademicsPage() {
                       </TableBody>
                     </Table>
                   </div>
-                  <div className="mt-6 flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1eEZQ2A4sI8lEMLXVwi5cLmibj9Q4qG1A/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="bg-amber-600 hover:bg-amber-700">
-                        <Eye className="mr-2 h-4 w-4" /> View Prospectus
-                      </Button>
-                    </a>
-                  </div>
+                     
                 </CardContent>
               </Card>
             </TabsContent>
@@ -545,7 +469,7 @@ export default function AcademicsPage() {
       </section>
 
         {/* Faculty Details */}
-        <section className="py-12 bg-gray-50" id="faculty">
+        <section className="py-5 bg-gray-50" id="faculty">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
               Our Distinguished Faculty
@@ -682,9 +606,9 @@ export default function AcademicsPage() {
         </section>
 
         {/* Academic Resources */}
-        <section className="py-12 bg-gray-50" id="resources">
+        <section className="py-5 bg-gray-50" id="resources">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-[#0c2340]">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-[#0c2340]">
               Academic Resources
             </h2>
 
@@ -706,9 +630,9 @@ export default function AcademicsPage() {
                         <li>Holidays and vacations</li>
                         <li>Special events and functions</li>
                       </ul>
-                      <a href="https://drive.google.com/file/d/15UCbwABR_W2MNzNEvRVGQP7fOHKgwdry/view?usp=sharing">
+                      <a href="/academic-calendar">
   <Button className="mt-2" variant="outline">
-    <Calendar className="mr-2 h-4 w-4" /> Download Academic Calendar
+    <Calendar className="mr-2 h-4 w-4" /> View Academic Calendar
   </Button>
 </a>
                     </div>
@@ -727,23 +651,17 @@ export default function AcademicsPage() {
                         assessment methods.
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                        <Button variant="outline" className="justify-start">
-                          <BookOpen className="mr-2 h-4 w-4" /> Undergraduate
-                          Syllabus
-                        </Button>
-                        <Button variant="outline" className="justify-start">
-                          <BookOpen className="mr-2 h-4 w-4" /> Postgraduate
-                          Syllabus
-                        </Button>
-                        <Button variant="outline" className="justify-start">
-                          <BookOpen className="mr-2 h-4 w-4" /> Diploma Course
-                          Syllabus
-                        </Button>
-                        <Button variant="outline" className="justify-start">
-                          <BookOpen className="mr-2 h-4 w-4" /> Certificate
-                          Course Syllabus
-                        </Button>
-                      </div>
+  <a
+    href="https://online.gndu.ac.in/syllabi.asp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button variant="outline" className="justify-start w-full">
+      <BookOpen className="mr-2 h-4 w-4" />
+      View Syllabus
+    </Button>
+  </a>
+</div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -813,18 +731,7 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-12 bg-[#0c2340] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Begin Your Academic Journey?
-            </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Join GNDU College Verka-Amritsar to experience quality education
-              and comprehensive academic programs.
-            </p>
-          </div>
-        </section>
+      
       </main>
 
       {/* Footer */}

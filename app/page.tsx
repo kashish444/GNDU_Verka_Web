@@ -213,11 +213,11 @@ export default function Home() {
 
         {/* Leadership Ribbon */}
         <section className=" bg-white">
-          <div className="bg-[#0c2340] text-white py-10">
+          <div className="bg-[#0c2340] text-white py-4">
             <div className="container mx-auto px-4">
               {/* Heading */}
               <div className="flex items-center justify-center mb-10">
-                <Ribbon className="h-6 w-6 text-amber-500 mr-3" />
+               
                 <h2 className="text-3xl font-bold text-white">University Leadership</h2>
               </div>
 
@@ -264,9 +264,9 @@ export default function Home() {
         </section>
 
         {/* Principal's Message Section */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-5 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[#0c2340]">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-[#0c2340]">
               Principal&apos;s Message
             </h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
@@ -314,11 +314,11 @@ export default function Home() {
         </section>
 
         {/* Campus Highlights */}
-        <section className="py-6 bg-[#0c2340] text-white">
+        <section className="py-5 bg-[#0c2340] text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Campus Highlights</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Campus Highlights</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center">
                 <div className="text-4xl font-bold text-amber-400 mb-2">20+</div>
                 <p className="text-lg">Academic Programs</p>
@@ -335,7 +335,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 text-center"></div>
+            <div className="mt-4 text-center"></div>
           </div>
         </section>
 

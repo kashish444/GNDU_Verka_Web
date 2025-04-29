@@ -14,11 +14,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0c2340] text-white pt-12 pb-6">
+    <footer className="bg-[#0c2340] text-white pt-6 pb-4">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-2">
               <Image
                 src="/university-logo.jpg"
                 alt="Guru Nanak Dev University Logo"
@@ -31,52 +31,14 @@ export default function Footer() {
                 <p className="text-sm text-gray-300">Verka Branch</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-300 mb-2">
               Guru Nanak Dev University, Verka Branch is committed to providing
               quality education and fostering academic excellence.
             </p>
-            <div className="flex space-x-4">
-              <Link
-                href="https://facebook.com"
-                aria-label="Facebook"
-                className="hover:text-amber-300"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                aria-label="Twitter"
-                className="hover:text-amber-300"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://instagram.com"
-                aria-label="Instagram"
-                className="hover:text-amber-300"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                aria-label="LinkedIn"
-                className="hover:text-amber-300"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                aria-label="YouTube"
-                className="hover:text-amber-300"
-              >
-                <Youtube className="h-5 w-5" />
-              </Link>
             </div>
-          </div>
-
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-bold mb-2">Quick Links</h3>
+            <ul className="space-y-1">
               <li>
                 <Link
                   href="/"
@@ -108,7 +70,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-bold mb-4">Important Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               <li>
                 <Link
                   href="/academics#resource"
@@ -161,7 +123,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-6 mt-6 text-center text-gray-300 text-sm">
+        <div className="border-t border-gray-700 pt-5 text-center text-gray-300 text-sm">
           <p>
             &copy; {new Date().getFullYear()} Guru Nanak Dev University, Verka
             Branch. All rights reserved.

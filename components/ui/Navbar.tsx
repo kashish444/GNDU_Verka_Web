@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
      {/* Top Bar */}
-<div className="bg-[#0c2340] text-white py-1.5 px-4">
+<div className="bg-[#0c2340] text-white py-2 px-4">
   <div className="container mx-auto flex justify-between items-center">
     
     {/* Contact Info */}
@@ -93,11 +93,11 @@ export default function Navbar() {
 
 
       {/* Header */}
-      <div className="container mx-auto px-1 py-2 flex justify-between items-center bg-white">
+      <div className="container mx-auto px-1 py-1 flex justify-between items-center bg-white">
         <div className="flex items-center cursor-pointer" onClick={gotohome}>
-          <Image src="/university-logo.jpg" alt="University Logo" width={80} height={80} className="mr-3" />
+          <Image src="/university-logo.jpg" alt="University Logo" width={65} height={65} className="mr-3" />
           <div>
-            <h1 className="text-xl md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
+            <h1 className="text-sm md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
             <p className="text-sm text-gray-600">Amritsar</p>
           </div>
         </div>
