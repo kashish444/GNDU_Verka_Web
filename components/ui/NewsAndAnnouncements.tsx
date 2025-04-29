@@ -202,7 +202,7 @@ export default function NewsAndAnnouncements() {
                   <Card key={index} className="overflow-hidden">
                     <CardContent className="p-6">
                       <div className="text-sm text-gray-500 mb-2">
-                        {data.date}
+                        {formatDate(data.date)}
                       </div>
                       <h3 className="text-xl font-bold mb-2">{data.title}</h3>
                       <p className="mt-2 mb-4 text-base">
