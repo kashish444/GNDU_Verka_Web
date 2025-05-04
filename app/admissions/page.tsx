@@ -18,7 +18,7 @@ export default function AcademicsPage() {
       {/* Header */}
 
       {/* Page Title */}
-      {/* <section className="bg-[#0c2340] text-white py-12">
+      <section className="bg-[#0c2340] text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold">Admissions</h1>
           <p className="mt-2 text-lg">
@@ -26,12 +26,12 @@ export default function AcademicsPage() {
             GNDU College Verka-Amritsar
           </p>
         </div>
-      </section> */}
-      <Lander
+      </section> 
+     {/* <Lander
         image={"verka.png"}
         heading={"Admissions"}
         description={"Empowering Minds, Shaping Futures – Explore Our Diverse Courses at GNDU College Verka-Amritsar"}
-      />
+      />*/}
 {/* Courses Offered */}
 <section className="py-12 bg-gray-50" id="courses">
           <div className="container mx-auto px-4">
@@ -39,7 +39,7 @@ export default function AcademicsPage() {
               Courses Offered
             </h2>
 
-            <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
+            <Tabs defaultValue="ug" className="max-w-4xl mx-auto">
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="ug">UG Programmes</TabsTrigger>
                 <TabsTrigger value="pg">PG Programmes</TabsTrigger>
@@ -61,7 +61,7 @@ export default function AcademicsPage() {
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead className="w-[60px]">Sr. No.</TableHead>
                             <TableHead>Course</TableHead>
                             <TableHead>Duration</TableHead>
                             <TableHead>Eligibility</TableHead>

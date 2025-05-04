@@ -41,15 +41,15 @@ export default function AcademicsPage() {
 
       <main className="flex-1">
         {/* Page Title */}
-        {/* <section className="bg-[#0c2340] text-white py-12">
+         <section className="bg-[#0c2340] text-white py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold">Academics</h1>
             <p className="mt-2 text-lg">
               Excellence in Education at GNDU College Verka-Amritsar
             </p>
           </div>
-        </section> */}
-        <Lander image={"convocation.jpg"} heading={"Academics"} description={"Excellence in Education at GNDU College Verka-Amritsar"} cover="top"/>
+        </section> 
+     {  /* <Lander image={"convocation.jpg"} heading={"Academics"} description={"Excellence in Education at GNDU College Verka-Amritsar"} cover="top"/>*/}
 
         {/* Academic Overview */}
         <section className="py-12">
@@ -75,7 +75,7 @@ export default function AcademicsPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center text-[#0c2340]">Courses Offered</h2>
 
-          <Tabs defaultValue="ug" className="max-w-5xl mx-auto">
+          <Tabs defaultValue="ug" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="ug">UG Programmes</TabsTrigger>
               <TabsTrigger value="pg">PG Programmes</TabsTrigger>
