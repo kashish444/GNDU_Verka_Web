@@ -5,6 +5,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import Link from "next/link";
+import PdfUpload from "./PdfUpload";
+import GalleryUpload from "./GalleryUpload";
+
+
+
 interface Props {
   user: {
     _id: string;
@@ -49,6 +55,7 @@ export default function AdminComponent({ user }: Props) {
   });
   const queryClient = useQueryClient();
   const router = useRouter();
+  
 
   const handleLogout = async () => {
     const response = await axios.get("api/auth/logout");
@@ -192,6 +199,8 @@ export default function AdminComponent({ user }: Props) {
           </p>
         </nav>
       </div>
+      
+      
 
       <div className="flex flex-col w-full px-10">
         {/* Welcome user */}
@@ -528,6 +537,8 @@ export default function AdminComponent({ user }: Props) {
           </div>
         </>
       )}
+      <PdfUpload/>
+      <GalleryUpload/>
     </>
   );
 }

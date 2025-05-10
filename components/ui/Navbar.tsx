@@ -154,9 +154,9 @@ export default function Navbar() {
                     Faculty
                   </Link>
                   <Link
-                    href="/academics#resources"
+                    href="/pdf/view?category=timetable"
                     className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/timetable") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
+                      isActive("//api/pdf/stream?category=timetable") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
                     }`}
                   >
                     Time Table
@@ -178,12 +178,12 @@ export default function Navbar() {
                     Examination Guidelines
                   </Link>
                   <Link
-                    href="/academics#resources"
+                    href="/pdf/view?category=datesheet"
                     className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/datasheet") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
+                      isActive("/pdf/view?category=datesheet") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
                     }`}
                   >
-                    Datasheet
+                    Date Sheet
                   </Link>
                 </motion.div>
               )}

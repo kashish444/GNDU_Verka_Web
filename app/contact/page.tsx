@@ -232,11 +232,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 101)</span>
+                      <span>9041904149 (Ext. 101)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>gnducverka@gmail.com</span>
                     </p>
                     <p className="text-sm mt-2">
                       For admission inquiries, application status, and
@@ -252,11 +252,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 102)</span>
+                      <span>9041904149, 9501085220 (Ext. 102)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>Sonikaphy.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For examination schedules, results, and
@@ -274,11 +274,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 103)</span>
+                      <span>9041904149 (Ext. 103)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>gnducverka@gmail.com</span>
                     </p>
                     <p className="text-sm mt-2">
                       For fee payments, scholarships, and financial matters.
@@ -293,11 +293,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 104)</span>
+                      <span>9501085220 (Ext. 104)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>Sonikaphy.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For career guidance, placement opportunities, and industry
@@ -313,11 +313,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 105)</span>
+                      <span>7837369181,9463170114 (Ext. 105)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>Libverka.mk@gmail.com</span>
                     </p>
                     <p className="text-sm mt-2">
                       For library resources, book issuance, and digital resource
@@ -333,11 +333,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-gray-700">
                     <p className="flex items-center">
                       <Phone className="h-4 w-4 mr-2" />
-                      <span>81465-14040 (Ext. 106)</span>
+                      <span>9988301345 (Ext. 106)</span>
                     </p>
                     <p className="flex items-center">
                       <Mail className="h-4 w-4 mr-2" />
-                      <span>osd.verka@gndu.ac.in</span>
+                      <span>Nisha.verka@gndu.ac.in</span>
                     </p>
                     <p className="text-sm mt-2">
                       For student support services, counseling, and
