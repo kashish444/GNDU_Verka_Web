@@ -95,7 +95,7 @@ export default function Footer() {
             </ul>
           </div>
 
-         {/* 5. Faculty Credits Section */}
+{/* 5. Faculty Credits Section */}
 <div className="lg:col-span-2">
   <h3 className="text-lg font-bold mb-4 text-center">Meet the Minds</h3>
   <div className="flex flex-row justify-center gap-6">
@@ -104,9 +104,9 @@ export default function Footer() {
       <Image
         src="/headmam.jpeg"
         alt="Dr. Kuljit Kaur"
-        width={72}
-        height={72}
-        className="rounded-full object-cover border-2 flex-shrink-0"
+         width={96}
+        height={96}
+        className="rounded-full object-cover [object-position:center_1%] border-2 w-[96px] h-[96px]"
       />
       <p className="text-sm mt-2 font-semibold text-white whitespace-nowrap">Dr. Kuljit Kaur</p>
       <p className="text-xs text-gray-300 whitespace-nowrap">(Head and Professor)</p>
@@ -115,11 +115,11 @@ export default function Footer() {
     {/* Profile 2 */}
     <div className="flex flex-col items-center text-center min-w-[150px]">
       <Image
-        src="/kashish.jpg"
+        src="/kashish.jpeg"
         alt="Mr. Kashish Sharma"
-        width={72}
-        height={72}
-        className="rounded-full object-cover border-2 flex-shrink-0"
+        width={96}
+        height={96}
+        className="rounded-full object-cover [object-position:center_10%] border-2 w-[96px] h-[96px]"
       />
       <p className="text-sm mt-2 font-semibold text-white whitespace-nowrap">Mr. Kashish Sharma</p>
       <p className="text-xs text-gray-300 whitespace-nowrap">(Assistant Professor)</p>
