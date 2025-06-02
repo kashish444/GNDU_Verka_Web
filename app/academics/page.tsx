@@ -32,7 +32,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Navbar from "@/components/ui/Navbar";
-import Lander from "@/components/ui/Lander";
 
 export default function AcademicsPage() {
   return (
@@ -49,7 +48,6 @@ export default function AcademicsPage() {
             </p>
           </div>
         </section> 
-     {  /* <Lander image={"convocation.jpg"} heading={"Academics"} description={"Excellence in Education at GNDU College Verka-Amritsar"} cover="top"/>*/}
 
         {/* Academic Overview */}
         <section className="py-12">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useRef } from "react";
 
 const PdfUpload = () => {
@@ -42,7 +43,7 @@ const PdfUpload = () => {
         setIsSuccess(false);
         setMessage(data.message || "Something went wrong.");
       }
-    } catch (error) {
+    } catch (_error) {
       setIsSuccess(false);
       setMessage("Error uploading PDF.");
     } finally {
