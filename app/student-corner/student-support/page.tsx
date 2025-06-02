@@ -68,10 +68,16 @@ export default function StudentSupportPage() {
     </CardContent>
   </div>
 
-  <div className="px-6 pb-6 mt-auto">
-    <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
-      Report Ragging Incident
-    </Button>
+    <div className="px-6 pb-6 mt-6 mb-6">
+    <a
+      href="mailto:sonikaphy.verka@gndu.ac.in?subject=Reporting Ragging Incident&body=Dear Dr. Sonika Thakur,%0D%0A%0D%0AI would like to report a ragging incident that occurred..."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
+        Report Ragging Incident
+      </Button>
+    </a>
   </div>
 </Card>
 
@@ -100,9 +106,17 @@ export default function StudentSupportPage() {
                       <span className="font-semibold">Office Hours:</span> 10:00 AM - 3:00 PM (Monday-Friday)
                     </p>
                   </div>
-                  <Button className="mt-4 w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
-                    Schedule Counseling Session
-                  </Button>
+                 <div className="px-6 pb-6 mt-10">
+                  <a
+                    href="mailto:jasminder.verka@gndu.ac.in?subject=Request for Counseling Session&body=Dear Dr. Jasminder Pal Singh,%0D%0A%0D%0AI would like to schedule a counseling session. Please let me know your availability.%0D%0A%0D%0ARegards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
+                      Schedule Counseling Session
+                    </Button>
+                  </a>
+                </div>
                 </CardContent>
               </Card>
 
@@ -139,11 +153,18 @@ export default function StudentSupportPage() {
     </CardContent>
   </div>
 
-  <div className="px-6 pb-6 mt-auto">
+ <div className="px-6 pb-6 mt-4 mb-6">
+  <a
+    href="mailto:sonikaphy.verka@gndu.ac.in?subject=Internal Complaint Submission&body=Dear Dr. Sonika Thakur,%0D%0A%0D%0AI would like to submit a complaint to the Internal Complaint Committee. The details are as follows:%0D%0A%0D%0A[Please describe your issue here]%0D%0A%0D%0ARegards,"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
-      Submit Complaint
+     Submit Complaint
     </Button>
-  </div>
+  </a>
+</div>
+
 </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -177,7 +198,17 @@ export default function StudentSupportPage() {
                     </ul>
                     
                   </div>
-                  <Button className="mt-4 w-full bg-[#0c2340] hover:bg-[#0c2340]/90">Report Incident</Button>
+                   <div className="px-6 pb-6 mt-10">
+                    <a
+                      href="mailto:sonikaphy.verka@gndu.ac.in?subject=Sexual Harassment Complaint&body=Dear Dr. Sonika Thakur,%0D%0A%0D%0AI would like to report a sexual harassment incident. Below are the details:%0D%0A%0D%0A[Provide specific information about the incident, including date, location, persons involved, etc.]%0D%0A%0D%0AThis is a confidential matter. Please advise on the next steps.%0D%0A%0D%0ARegards,"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
+                      Report Incident
+                      </Button>
+                    </a>
+                    </div>
                 </CardContent>
               </Card>
 
@@ -203,9 +234,17 @@ export default function StudentSupportPage() {
                     </ul>
                   
                   </div>
-                  <Button className="mt-4 w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
-                    Contact Discipline Committee
-                  </Button>
+                  <div className="px-6 pb-6 mt-10">
+                    <a
+                      href="mailto:osd.verka@gndu.ac.in?subject=Disciplinary Concern Submission&body=Dear Sir/Mam,%0D%0A%0D%0AI would like to report a disciplinary concern. The details are as follows:%0D%0A%0D%0A[Describe the issue]%0D%0A%0D%0ARegards,"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
+                      Contact Discipline Committee 
+                      </Button>
+                    </a>
+                    </div>
                 </CardContent>
               </Card>
 
@@ -232,7 +271,17 @@ export default function StudentSupportPage() {
                     </ul>
                    
                   </div>
-                  <Button className="mt-4 w-full bg-[#0c2340] hover:bg-[#0c2340]/90">Book Counseling Session</Button>
+                  <div className="px-6 pb-6 mt-10">
+                    <a
+                      href="mailto:nisha.verka@gndu.ac.in?subject=Counseling Session Request&body=Dear Dr. Nisha Chhabra,%0D%0A%0D%0AI would like to schedule a counseling session. Please share available slots.%0D%0A%0D%0ARegards,"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="w-full bg-[#0c2340] hover:bg-[#0c2340]/90">
+                     Book Counseling Session
+                      </Button>
+                    </a>
+                    </div>
                 </CardContent>
               </Card>
             </div>

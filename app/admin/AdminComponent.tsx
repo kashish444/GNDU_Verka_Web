@@ -538,7 +538,8 @@ export default function AdminComponent({ user }: Props) {
         </>
       )}
       <PdfUpload/>
-      <GalleryUpload/>
+      {/* <GalleryUpload/> */}
+    
     </>
   );
 }

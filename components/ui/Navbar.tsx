@@ -81,7 +81,7 @@ export default function Navbar() {
         <p>Admin</p>
       </Link>
       <a
-  href="https://gnduadmissions.org/"
+  href="https://admission.punjab.gov.in/student/register/UG"
   target="_blank"
   rel="noopener noreferrer"
   className="hidden md:block"
@@ -222,7 +222,7 @@ export default function Navbar() {
                     Courses Offered
                   </Link>
                   <a
-                    href="/prospectus.pdf"
+                    href="https://www.gnduadmissions.org/campusadmissions/pdf/verkacollege202526.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 text-sm text-[#0c2340] hover:bg-amber-100"
@@ -528,7 +528,7 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            <Link href="https://gnduadmissions.org/" onClick={() => setMenu(false)} className="mt-4">
+            <Link href="https://admission.punjab.gov.in/student/register/UG" onClick={() => setMenu(false)} className="mt-4">
               <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-md shadow-md transition-all hover:shadow-lg text-lg">
                 Register Now
               </Button>

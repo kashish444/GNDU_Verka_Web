@@ -630,10 +630,10 @@ export default function AcademicsPage() {
                         <li>Special events and functions</li>
                       </ul>
                       <a href="/academic-calendar">
-  <Button className="mt-2" variant="outline">
-    <Calendar className="mr-2 h-4 w-4" /> View Academic Calendar
-  </Button>
-</a>
+                      <Button className="mt-2" variant="outline">
+                        <Calendar className="mr-2 h-4 w-4" /> View Academic Calendar
+                      </Button>
+                    </a>
                     </div>
                   </AccordionContent>
                 </AccordionItem>

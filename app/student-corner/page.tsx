@@ -207,14 +207,6 @@ s Scholarship Scheme</li>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=200&width=400&text=Medical+Room"
-                    alt="Medical Room"
-                    fill
-                    className="object-cover rounded-t-lg"
-                  />
-                </div>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <HeartPulse className="h-6 w-6 text-red-500 mr-2" />
@@ -235,14 +227,6 @@ s Scholarship Scheme</li>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=200&width=400&text=Canteen"
-                    alt="Canteen"
-                    fill
-                    className="object-cover rounded-t-lg"
-                  />
-                </div>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Coffee className="h-6 w-6 text-amber-600 mr-2" />
@@ -263,14 +247,6 @@ s Scholarship Scheme</li>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="relative h-48">
-                  <Image
-                    src="/placeholder.svg?height=200&width=400&text=Common+Room"
-                    alt="Common Room"
-                    fill
-                    className="object-cover rounded-t-lg"
-                  />
-                </div>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Users className="h-6 w-6 text-blue-600 mr-2" />
