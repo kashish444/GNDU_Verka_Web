@@ -1,14 +1,10 @@
-import Image from "next/image"
-import Link from "next/link"
-
-import { Mail, MapPin, Phone, Eye } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/Navbar"
-import Lander from "@/components/ui/Lander"
 import Footer from "@/components/ui/Footer"
+import { Eye } from "lucide-react";
 
 export default function AcademicsPage() {
   return (
