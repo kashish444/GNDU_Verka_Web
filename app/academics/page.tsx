@@ -1,9 +1,8 @@
-
 import Link from "next/link";
 import Footer from "@/components/ui/Footer";
 
 import {
- 
+
   Download,
   Calendar,
   BookOpen,
@@ -40,14 +39,14 @@ export default function AcademicsPage() {
 
       <main className="flex-1">
         {/* Page Title */}
-         <section className="bg-[#0c2340] text-white py-12">
+        <section className="bg-[#0c2340] text-white py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold">Academics</h1>
             <p className="mt-2 text-lg">
               Excellence in Education at GNDU College Verka-Amritsar
             </p>
           </div>
-        </section> 
+        </section>
 
         {/* Academic Overview */}
         <section className="py-12">
@@ -65,405 +64,405 @@ export default function AcademicsPage() {
                 successful careers.
               </p>
             </div>
-</div>
-            </section>
+          </div>
+        </section>
 
-       {/* Courses Offered */}
-      <section className="py-2 bg-gray-50" id="courses">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center text-[#0c2340]">Courses Offered</h2>
+        {/* Courses Offered */}
+        <section className="py-2 bg-gray-50" id="courses">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center text-[#0c2340]">Courses Offered</h2>
 
-          <Tabs defaultValue="ug" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="ug">UG Programmes</TabsTrigger>
-              <TabsTrigger value="pg">PG Programmes</TabsTrigger>
-              <TabsTrigger value="diploma">Diploma/Certificate</TabsTrigger>
-            </TabsList>
+            <Tabs defaultValue="ug" className="max-w-4xl mx-auto">
+              <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="ug">UG Programmes</TabsTrigger>
+                <TabsTrigger value="pg">PG Programmes</TabsTrigger>
+                <TabsTrigger value="diploma">Diploma/Certificate</TabsTrigger>
+              </TabsList>
 
-            <TabsContent value="ug">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">Undergraduate Programmes</CardTitle>
-                  <CardDescription>4-year UG Degree Programme</CardDescription>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="overflow-x-auto">
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead>Department</TableHead>
-                          <TableHead className="text-right">Syllabus</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell className="font-medium">Bachelor of Arts (BA)</TableCell>
-                          <TableCell>Department of Arts</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (Medical)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>3</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (Non-Medical)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>4</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (Computer Science)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>5</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (Economics)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>6</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (Fashion Designing)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>7</TableCell>
-                          <TableCell className="font-medium">Bachelor of Computer Application (BCA)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>8</TableCell>
-                          <TableCell className="font-medium">Bachelor of Science (IT)</TableCell>
-                          <TableCell>Department of Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>9</TableCell>
-                          <TableCell className="font-medium">B.Com. (Regular)</TableCell>
-                          <TableCell>Department of Commerce</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>10</TableCell>
-                          <TableCell className="font-medium">B.Com. (Financial Services)</TableCell>
-                          <TableCell>Department of Commerce</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>11</TableCell>
-                          <TableCell className="font-medium">Bachelor of Business Administration (BBA)</TableCell>
-                          <TableCell>Department of Commerce</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>12</TableCell>
-                          <TableCell className="font-medium">B.Voc. (Software Development)</TableCell>
-                          <TableCell>Department of Vocational Studies</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </div>
-                 
-                </CardContent>
-              </Card>
-            </TabsContent>
+              <TabsContent value="ug">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Undergraduate Programmes</CardTitle>
+                    <CardDescription>4-year UG Degree Programme</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Department</TableHead>
+                            <TableHead className="text-right">Syllabus</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">Bachelor of Arts (BA)</TableCell>
+                            <TableCell>Department of Arts</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Medical)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>3</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Non-Medical)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>4</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Computer Science)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>5</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Economics)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>6</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (Fashion Designing)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>7</TableCell>
+                            <TableCell className="font-medium">Bachelor of Computer Application (BCA)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>8</TableCell>
+                            <TableCell className="font-medium">Bachelor of Science (IT)</TableCell>
+                            <TableCell>Department of Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>9</TableCell>
+                            <TableCell className="font-medium">B.Com. (Regular)</TableCell>
+                            <TableCell>Department of Commerce</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>10</TableCell>
+                            <TableCell className="font-medium">B.Com. (Financial Services)</TableCell>
+                            <TableCell>Department of Commerce</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>11</TableCell>
+                            <TableCell className="font-medium">Bachelor of Business Administration (BBA)</TableCell>
+                            <TableCell>Department of Commerce</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>12</TableCell>
+                            <TableCell className="font-medium">B.Voc. (Software Development)</TableCell>
+                            <TableCell>Department of Vocational Studies</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
 
-            <TabsContent value="pg">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">Postgraduate Programmes</CardTitle>
-                  <CardDescription>Master&apos;;s Degree and PG Diploma Programmes</CardDescription>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="overflow-x-auto">
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead>Department</TableHead>
-                          <TableHead className="text-right">Syllabus</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell className="font-medium">M.Com.</TableCell>
-                          <TableCell>Department of Commerce</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell className="font-medium">MA (Political Science)</TableCell>
-                          <TableCell>Department of Political Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>3</TableCell>
-                          <TableCell className="font-medium">M.Sc. (Computer Science)</TableCell>
-                          <TableCell>Department of Computer Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>4</TableCell>
-                          <TableCell className="font-medium">M.Sc. Mathematics</TableCell>
-                          <TableCell>Department of Mathematics</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>5</TableCell>
-                          <TableCell className="font-medium">PGDCA</TableCell>
-                          <TableCell>Department of Computer Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>6</TableCell>
-                          <TableCell className="font-medium">
-                            PG Diploma in Financial Services (Banking and Insurance)
-                          </TableCell>
-                          <TableCell>Department of Commerce</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </div>
-                 
-                </CardContent>
-              </Card>
-            </TabsContent>
+                  </CardContent>
+                </Card>
+              </TabsContent>
 
-            <TabsContent value="diploma">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl text-[#0c2340]">Diploma & Certificate Courses</CardTitle>
-                  <CardDescription>Short-term Professional Courses</CardDescription>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="overflow-x-auto">
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead className="w-[100px]">Sr. No.</TableHead>
-                          <TableHead>Course</TableHead>
-                          <TableHead>Department</TableHead>
-                          <TableHead className="text-right">Syllabus</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        <TableRow>
-                          <TableCell>1</TableCell>
-                          <TableCell className="font-medium">
-                            Certificate Course in Medical Lab Technology (CMLT)
-                          </TableCell>
-                          <TableCell>Department of Medical Lab Technology</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>2</TableCell>
-                          <TableCell className="font-medium">Diploma in Computer Application (DCA)</TableCell>
-                          <TableCell>Department of Computer Science</TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href="https://online.gndu.ac.in/syllabi.asp"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Link
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                      </TableBody>
-                    </Table>
-                  </div>
-                     
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+              <TabsContent value="pg">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Postgraduate Programmes</CardTitle>
+                    <CardDescription>Master&apos;;s Degree and PG Diploma Programmes</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Department</TableHead>
+                            <TableHead className="text-right">Syllabus</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">M.Com.</TableCell>
+                            <TableCell>Department of Commerce</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">MA (Political Science)</TableCell>
+                            <TableCell>Department of Political Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>3</TableCell>
+                            <TableCell className="font-medium">M.Sc. (Computer Science)</TableCell>
+                            <TableCell>Department of Computer Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>4</TableCell>
+                            <TableCell className="font-medium">M.Sc. Mathematics</TableCell>
+                            <TableCell>Department of Mathematics</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>5</TableCell>
+                            <TableCell className="font-medium">PGDCA</TableCell>
+                            <TableCell>Department of Computer Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>6</TableCell>
+                            <TableCell className="font-medium">
+                              PG Diploma in Financial Services (Banking and Insurance)
+                            </TableCell>
+                            <TableCell>Department of Commerce</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
+
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="diploma">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-[#0c2340]">Diploma & Certificate Courses</CardTitle>
+                    <CardDescription>Short-term Professional Courses</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">Sr. No.</TableHead>
+                            <TableHead>Course</TableHead>
+                            <TableHead>Department</TableHead>
+                            <TableHead className="text-right">Syllabus</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell className="font-medium">
+                              Certificate Course in Medical Lab Technology (CMLT)
+                            </TableCell>
+                            <TableCell>Department of Medical Lab Technology</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                          <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell className="font-medium">Diploma in Computer Application (DCA)</TableCell>
+                            <TableCell>Department of Computer Science</TableCell>
+                            <TableCell className="text-right">
+                              <a
+                                href="https://online.gndu.ac.in/syllabi.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "blue", cursor: "pointer" }}
+                              >
+                                Link
+                              </a>
+                            </TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </div>
+
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </section>
 
         {/* Faculty Details */}
         <section className="py-5 bg-gray-50" id="faculty">
@@ -628,10 +627,10 @@ export default function AcademicsPage() {
                         <li>Special events and functions</li>
                       </ul>
                       <a href="/academic-calendar">
-                      <Button className="mt-2" variant="outline">
-                        <Calendar className="mr-2 h-4 w-4" /> View Academic Calendar
-                      </Button>
-                    </a>
+                        <Button className="mt-2" variant="outline">
+                          <Calendar className="mr-2 h-4 w-4" /> View Academic Calendar
+                        </Button>
+                      </a>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -648,17 +647,17 @@ export default function AcademicsPage() {
                         assessment methods.
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-  <a
-    href="https://online.gndu.ac.in/syllabi.asp"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button variant="outline" className="justify-start w-full">
-      <BookOpen className="mr-2 h-4 w-4" />
-      View Syllabus
-    </Button>
-  </a>
-</div>
+                        <a
+                          href="https://online.gndu.ac.in/syllabi.asp"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="outline" className="justify-start w-full">
+                            <BookOpen className="mr-2 h-4 w-4" />
+                            View Syllabus
+                          </Button>
+                        </a>
+                      </div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -683,15 +682,15 @@ export default function AcademicsPage() {
                         </li>
                       </ul>
                       <a
-  href="https://docs.google.com/document/d/1Om9220Q3v6_QO4HLigYWdcPQyX2r5ECb/edit?usp=sharing&ouid=100832964902746238927&rtpof=true&sd=true"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button className="mt-2" variant="outline">
-    <Download className="mr-2 h-4 w-4" />
-    Download Examination Guidelines
-  </Button>
-</a>
+                        href="https://docs.google.com/document/d/1Om9220Q3v6_QO4HLigYWdcPQyX2r5ECb/edit?usp=sharing&ouid=100832964902746238927&rtpof=true&sd=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button className="mt-2" variant="outline">
+                          <Download className="mr-2 h-4 w-4" />
+                          Download Examination Guidelines
+                        </Button>
+                      </a>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -728,11 +727,11 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-      
+
       </main>
 
       {/* Footer */}
-            <Footer />
+      <Footer />
     </div>
   );
 }
