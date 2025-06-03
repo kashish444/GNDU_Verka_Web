@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
     // Parse the form data
     const formData = await req.formData();
-    
+
     // Get the file from form data
     const file = formData.get("file");
     if (!file) {
