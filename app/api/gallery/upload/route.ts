@@ -1,5 +1,5 @@
 import connectDb from "@/lib/connectDb";
-import Gallery from "@/models/Gallery";
+import Gallery from "@/models/Gallery"
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {

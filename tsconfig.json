@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "tailwind.config.js"
-  ],
+, ".next/types/app/api/pdfs/[category]/page.tsx", ".next/types/app/api/pdfs/[category]/page.js", "app/pdfs/[category]/page.jsx"  ],
   "exclude": ["node_modules"]
 }

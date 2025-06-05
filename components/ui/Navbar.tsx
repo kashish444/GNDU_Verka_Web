@@ -1,11 +1,23 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, User, Youtube, ChevronDown } from "lucide-react"
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  Twitter,
+  User,
+  Youtube,
+  ChevronDown,
+  Search,
+  Home,
+} from "lucide-react"
 import { Button } from "./button"
 
 export default function Navbar() {
@@ -13,8 +25,7 @@ export default function Navbar() {
   const router = useRouter()
 
   const [menu, setMenu] = useState(false)
-
-  const [mobileOthersOpen, setMobileOthersOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [academicsOpen, setAcademicsOpen] = useState(false)
   const [admissionsOpen, setAdmissionsOpen] = useState(false)
   const [studentCornerOpen, setStudentCornerOpen] = useState(false)
@@ -24,6 +35,26 @@ export default function Navbar() {
 
   const gotohome = () => router.push("/")
 
+  // Debounced scroll handler
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.scrollY
+    setScrolled(scrollTop > 100)
+  }, [])
+
+  useEffect(() => {
+    let timeoutId
+    const debouncedScroll = () => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(handleScroll, 50) // Debounce scroll event
+    }
+
+    window.addEventListener("scroll", debouncedScroll)
+    return () => {
+      window.removeEventListener("scroll", debouncedScroll)
+      clearTimeout(timeoutId)
+    }
+  }, [handleScroll])
+
   useEffect(() => {
     document.body.style.overflow = menu ? "hidden" : ""
     return () => {
@@ -32,277 +63,349 @@ export default function Navbar() {
   }, [menu])
 
   const isActive = (href: string) => pathname === href
-  const navItemClass = (href: string) =>
-    `font-medium ${isActive(href) ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"}`
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-     {/* Top Bar */}
-<div className="bg-[#0c2340] text-white py-2 px-4">
-  <div className="container mx-auto flex justify-between items-center">
-    
-    {/* Contact Info */}
-    <div className="flex items-center space-x-4 md:text-sm text-xs">
-      <Link href="/contact" className="flex items-center hover:text-amber-300">
-        <Phone className="h-4 w-4 mr-1" />
-        <span className="md:block hidden">81465-14040</span>
-      </Link>
-      <Link href="mailto:info@gndu.ac.in" className="flex items-center hover:text-amber-300">
-        <Mail className="h-4 w-4 mr-1" />
-        <span className="md:block hidden">osd.verka@gndu.ac.in</span>
-      </Link>
-    </div>
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      {/* Top Bar - Hidden when scrolled */}
+      <AnimatePresence>
+        {!scrolled && (
+          <motion.div
+            initial={{ height: "auto", opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0, marginTop: 0 }}
+            transition={{ 
+              duration: 0.4, // Slightly longer duration for smoother effect
+              ease: "easeInOut", // Easing for natural feel
+              opacity: { duration: 0.3 }, // Faster opacity transition
+              height: { duration: 0.4 } // Smoother height collapse
+            }}
+            className="overflow-hidden"
+          >
+            {/* Top Blue Bar */}
+            <div className="bg-[#0c2340] text-white py-1">
+              <div className="container mx-auto px-2 flex justify-between items-center">
+                {/* Left Side - Quick Links */}
+                <div className="hidden lg:flex items-center space-x-4 text-xs font-medium">
+                  <Link href="/academics" className="hover:text-amber-300 transition-colors">
+                    ACADEMICS
+                  </Link>
+                  <Link href="/admissions" className="hover:text-amber-300 transition-colors">
+                    ADMISSIONS
+                  </Link>
+                  <Link href="/library" className="hover:text-amber-300 transition-colors">
+                    LIBRARY
+                  </Link>
+                  <Link href="/contact" className="hover:text-amber-300 transition-colors">
+                    CONTACT
+                  </Link>
+                </div>
+                <div className="flex justify-end items-center space-x-2">
+                  <span className="text-xs font-semibold bg-amber-500 text-white px-1.5 py-0.5 rounded-full shadow-sm">
+                    NAAC A++
+                  </span>
+                  <span className="text-xs text-white italic">(Constituent College)</span>
+                </div>
+                {/* Right Side - Social Media & Admin */}
+                <div className="flex items-center space-x-2">
+                  <div className="hidden lg:flex items-center space-x-2">
+                    {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
+                      <Link href="#" key={i} aria-label={Icon.name} className="hover:text-amber-300 transition-colors">
+                        <Icon className="h-3 w-3" />
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="h-3 w-px bg-white/30 hidden lg:block"></div>
+                  <Link
+                    href="/admin"
+                    className="flex items-center space-x-1 hover:text-amber-300 transition-colors text-xs font-medium"
+                  >
+                    <User className="h-3 w-3" />
+                    <span className="hidden md:block">ADMIN</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-    {/* Center Title + NAAC */}
-    <div className="hidden md:flex flex-col items-center space-y-1">
-  <div className="flex items-center space-x-3">
-    <span className="text-sm font-medium">
-      Guru Nanak Dev University College, Verka, Amritsar
-    </span>
-    <span className="text-xs font-semibold bg-amber-500 text-white px-2 py-0.5 rounded-full shadow-sm">
-      NAAC A++
-    </span>
-  </div>
-  <span className="text-sm italic font-serif text-amber-600">
-  (Constituent College)
-</span>
+            {/* Middle White Section with Logo */}
+            <div className="bg-white py-2">
+              <div className="container mx-auto px-2">
+                <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-2">
+                  {/* Left Side - Punjabi Text & Contact */}
+                  <div className="hidden lg:block text-left">
+                    <div className="text-[#0c2340] font-bold text-sm mb-1">ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਯੂਨੀਵਰਸਿਟੀ ਕਾਲਜ</div>
+                    <div className="text-[#0c2340] text-xs mb-1">ਵੇਰਕਾ, ਅੰਮ੍ਰਿਤਸਰ (ਪੰਜਾਬ)</div>
+                    <div className="flex items-center space-x-3 text-xs text-gray-600">
+                      <div className="flex items-center">
+                        <Phone className="h-2 w-2 mr-1" />
+                        <span>81465-14040</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="h-2 w-2 mr-1" />
+                        <span>osd.verka@gndu.ac.in</span>
+                      </div>
+                    </div>
+                  </div>
 
-</div>
+                  {/* Center - Logo */}
+                  <div className="flex justify-center">
+                    <div className="flex flex-col items-center cursor-pointer" onClick={gotohome}>
+                      <div className="relative">
+                        <Image
+                          src="/university-logo.jpg"
+                          alt="University Logo"
+                          width={70}
+                          height={70}
+                          className="rounded-full shadow-md border-2 border-amber-200"
+                        />
+                      </div>
+                    </div>
+                  </div>
 
-    {/* Socials + Admin + Register */}
-    <div className="flex items-center space-x-3">
-      {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
-        <Link href="#" key={i} aria-label={Icon.name}>
-          <Icon className="h-4 w-4 hover:text-amber-300" />
-        </Link>
-      ))}
-      <Link href="/admin" className="flex flex-row items-center space-x-1 hover:text-amber-300">
-        <User className="h-4 w-4" />
-        <p>Admin</p>
-      </Link>
-      <a
-  href="https://admission.punjab.gov.in/student/register/UG"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden md:block"
->
-  <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-2 py-1 text-sm rounded-sm shadow-md transition-all hover:shadow-lg">
-    Register Now
-  </Button>
-</a>
-    </div>
+                  {/* Right Side - English Text & NAAC */}
+                  <div className="hidden lg:block text-right">
+                    <div className="text-[#0c2340] font-bold text-sm mb-1">GURU NANAK DEV UNIVERSITY COLLEGE</div>
+                    <div className="text-[#0c2340] text-xs mb-1">VERKA, AMRITSAR (PUNJAB)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-  </div>
-</div>
+      {/* Main Navigation Bar - Always Visible */}
+      <div className="bg-[#0c2340] py-1">
+        <div className="container mx-auto px-2 flex justify-between items-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-6 w-full">
+            {/* Left Side Navigation */}
+            <div className="flex items-center space-x-4">
+              <Link
+                href="/"
+                className={`flex items-center font-medium text-xs transition-colors duration-200 ${
+                  isActive("/") ? "text-amber-400" : "text-white hover:text-amber-300"
+                }`}
+              >
+                <Home className="h-3 w-3 mr-1" />
+                HOME
+              </Link>
 
+              {/* Academics Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setAcademicsOpen(true)}
+                onMouseLeave={() => setAcademicsOpen(false)}
+              >
+                <Link
+                  href="/academics"
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
+                    isActive("/academics") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
+                >
+                  ACADEMICS <ChevronDown className="ml-1 w-3 h-3" />
+                </Link>
+                <AnimatePresence>
+                  {academicsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full mt-1 bg-white shadow-xl rounded-md w-40 z-50 border"
+                    >
+                      <Link
+                        href="/academics#courses"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Courses
+                      </Link>
+                      <Link
+                        href="/academics#faculty"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Faculty
+                      </Link>
+                      <Link
+                        href="/pdf/view?category=timetable"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Time Table
+                      </Link>
+                      <Link
+                        href="/academic-calendar"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Academic Calendar
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
+              {/* Admissions Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setAdmissionsOpen(true)}
+                onMouseLeave={() => setAdmissionsOpen(false)}
+              >
+                <Link
+                  href="/admissions"
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
+                    isActive("/admissions") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
+                >
+                  ADMISSIONS <ChevronDown className="ml-1 w-3 h-3" />
+                </Link>
+                <AnimatePresence>
+                  {admissionsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full mt-1 bg-white shadow-xl rounded-md w-36 z-50 border"
+                    >
+                      <Link
+                        href="/admissions#courses"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Courses Offered
+                      </Link>
+                      <a
+                        href="/prospectus.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Prospectus
+                      </a>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
 
+            {/* Center - Logo (when scrolled) */}
+            <div className="flex-1 flex justify-center">
+              {scrolled && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-center cursor-pointer"
+                  onClick={gotohome}
+                >
+                  <Image
+                    src="/university-logo.jpg"
+                    alt="University Logo"
+                    width={32}
+                    height={32}
+                    className="rounded-full shadow-md border border-amber-200"
+                  />
+                </motion.div>
+              )}
+            </div>
 
-      {/* Header */}
-      <div className="container mx-auto px-1 py-3 flex justify-between items-center bg-white">
-        <div className="flex items-center cursor-pointer" onClick={gotohome}>
-          <Image src="/university-logo.jpg" alt="University Logo" width={65} height={65} className="mr-3" />
-          <div>
-            <h1 className="text-sm md:text-2xl font-bold text-[#0c2340]">Guru Nanak Dev University</h1>
-            <p className="text-sm text-gray-600">Amritsar</p>
+            {/* Right Side Navigation */}
+            <div className="flex items-center space-x-4">
+              {/* Student Corner Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setStudentCornerOpen(true)}
+                onMouseLeave={() => setStudentCornerOpen(false)}
+              >
+                <Link
+                  href="/student-corner"
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
+                    isActive("/student-corner") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
+                >
+                  STUDENT CORNER <ChevronDown className="ml-1 w-3 h-3" />
+                </Link>
+                <AnimatePresence>
+                  {studentCornerOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full mt-1 bg-white shadow-xl rounded-md w-40 z-50 border right-0"
+                    >
+                      <Link
+                        href="/student-corner#societies"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Societies and Clubs
+                      </Link>
+                      <Link
+                        href="/student-corner#facilities"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Facilities
+                      </Link>
+                      <Link
+                        href="/student-corner#support"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Student Support
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <Link
+                href="/gallery"
+                className={`font-medium text-xs transition-colors duration-200 ${
+                  isActive("/gallery") ? "text-amber-400" : "text-white hover:text-amber-300"
+                }`}
+              >
+                GALLERY
+              </Link>
+
+              <Link
+                href="/library"
+                className={`font-medium text-xs transition-colors duration-200 ${
+                  isActive("/library") ? "text-amber-400" : "text-white hover:text-amber-300"
+                }`}
+              >
+                LIBRARY
+              </Link>
+
+              <Link
+                href="/contact"
+                className={`font-medium text-xs transition-colors duration-200 ${
+                  isActive("/contact") ? "text-amber-400" : "text-white hover:text-amber-300"
+                }`}
+              >
+                CONTACT US
+              </Link>
+
+              <Search className="h-4 w-4 text-white hover:text-amber-300 cursor-pointer transition-colors" />
+            </div>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-white hover:text-amber-300 transition-colors ml-auto"
+            onClick={() => setMenu(!menu)}
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          {/* Mobile Logo */}
+          <div className="lg:hidden flex items-center cursor-pointer" onClick={gotohome}>
+            <Image
+              src="/university-logo.jpg"
+              alt="University Logo"
+              width={28}
+              height={28}
+              className="rounded-full shadow-md border border-amber-200"
+            />
           </div>
         </div>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-6">
-          <Link href="/" className={navItemClass("/")}>
-            Home
-          </Link>
-
-          {/* Academics Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setAcademicsOpen(true)}
-            onMouseLeave={() => setAcademicsOpen(false)}
-          >
-            <Link
-              href="/academics"
-              className={`flex items-center ${
-                isActive("/academics") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"
-              } font-medium`}
-            >
-              Academics <ChevronDown className="ml-1 w-4 h-4" />
-            </Link>
-            <AnimatePresence>
-              {academicsOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-48 z-50"
-                >
-                  <Link
-                    href="/academics#courses"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/courses") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Courses
-                  </Link>
-                  <Link
-                    href="/academics#faculty"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/faculty") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Faculty
-                  </Link>
-                  <Link
-                    href="/pdf/view?category=timetable"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("//api/pdf/stream?category=timetable") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Time Table
-                  </Link>
-                  <Link
-                    href="/academic-calendar"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/calendar") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Academic Calendar
-                  </Link>
-                  <Link
-                    href="/academics#resources"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/academics/examination") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Examination Guidelines
-                  </Link>
-                  <Link
-                    href="/pdf/view?category=datesheet"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/pdf/view?category=datesheet") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Date Sheet
-                  </Link>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Admissions Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setAdmissionsOpen(true)}
-            onMouseLeave={() => setAdmissionsOpen(false)}
-          >
-            <Link
-              href="/admissions"
-              className={`flex items-center ${
-                isActive("/admissions") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"
-              } font-medium`}
-            >
-              Admissions <ChevronDown className="ml-1 w-4 h-4" />
-            </Link>
-            <AnimatePresence>
-              {admissionsOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
-                >
-                  <Link
-                    href="/admissions#courses"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/admissions/courses") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Courses Offered
-                  </Link>
-                  <a
-                    href="https://www.gnduadmissions.org/campusadmissions/pdf/verkacollege202526.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-[#0c2340] hover:bg-amber-100"
-                  >
-                    Prospectus
-                  </a>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Student Corner Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setStudentCornerOpen(true)}
-            onMouseLeave={() => setStudentCornerOpen(false)}
-          >
-            <Link
-              href="/student-corner"
-              className={`flex items-center ${
-                isActive("/student-corner") ? "text-amber-600" : "text-[#0c2340] hover:text-amber-600"
-              } font-medium`}
-            >
-              Student Corner <ChevronDown className="ml-1 w-4 h-4" />
-            </Link>
-            <AnimatePresence>
-              {studentCornerOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-6 mt-2 bg-white shadow-lg rounded-md w-40 z-50"
-                >
-                  <Link
-                    href="/student-corner#societies"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/student-corner/societies") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Societies and Clubs
-                  </Link>
-                  <Link
-                    href="/student-corner#facilities"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/student-corner/facilities") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Facilities
-                  </Link>
-                  <Link
-                    href="/student-corner#support"
-                    className={`block px-4 py-2 text-sm ${
-                      isActive("/student-corner/support") ? "text-amber-600" : "text-[#0c2340] hover:bg-amber-100"
-                    }`}
-                  >
-                    Student Support
-                  </Link>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          <Link href="/gallery" className={navItemClass("/gallery")}>
-            Gallery
-          </Link>
-
-          <Link href="/library" className={navItemClass("/library")}>
-            Library
-          </Link>
-
-          <Link href="/contact" className={navItemClass("/contact")}>
-            Contact Us
-          </Link>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <Button variant="outline" className="lg:hidden" onClick={() => setMenu(!menu)}>
-          Menu
-        </Button>
       </div>
 
       {/* Mobile Menu */}
@@ -313,17 +416,25 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="absolute inset-0 flex flex-col items-center w-screen h-screen gap-5 bg-white z-40 pt-24 overflow-y-auto"
+            className="absolute inset-0 flex flex-col items-center w-screen h-screen gap-3 bg-white z-40 pt-16 overflow-y-auto lg:hidden"
           >
-            <Link href="/" onClick={() => setMenu(false)} className={navItemClass("/")}>
-              Home
+            <Link
+              href="/"
+              onClick={() => setMenu(false)}
+              className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+            >
+              HOME
             </Link>
 
             {/* Mobile Academics Dropdown */}
             <div className="flex flex-col items-center">
               <div className="flex items-center">
-                <Link href="/academics" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
-                  Academics
+                <Link
+                  href="/academics"
+                  onClick={() => setMenu(false)}
+                  className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+                >
+                  ACADEMICS
                 </Link>
                 <button
                   onClick={() => setMobileAcademicsOpen(!mobileAcademicsOpen)}
@@ -339,49 +450,35 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="flex flex-col mt-2"
+                    className="flex flex-col mt-2 space-y-1"
                   >
                     <Link
-                      href="/academics/courses"
+                      href="/academics#courses"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Courses
                     </Link>
                     <Link
-                      href="/academics/faculty"
+                      href="/academics#faculty"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Faculty
                     </Link>
                     <Link
-                      href="/academics/timetable"
+                      href="/pdf/view?category=timetable"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Time Table
                     </Link>
                     <Link
-                      href="/academics/calendar"
+                      href="/academic-calendar"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Academic Calendar
-                    </Link>
-                    <Link
-                      href="/academics/examination"
-                      onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
-                    >
-                      Examination Guidelines
-                    </Link>
-                    <Link
-                      href="/academics/datasheet"
-                      onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
-                    >
-                      Datasheet
                     </Link>
                   </motion.div>
                 )}
@@ -391,8 +488,12 @@ export default function Navbar() {
             {/* Mobile Admissions Dropdown */}
             <div className="flex flex-col items-center">
               <div className="flex items-center">
-                <Link href="/admissions" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
-                  Admissions
+                <Link
+                  href="/admissions"
+                  onClick={() => setMenu(false)}
+                  className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+                >
+                  ADMISSIONS
                 </Link>
                 <button
                   onClick={() => setMobileAdmissionsOpen(!mobileAdmissionsOpen)}
@@ -408,21 +509,21 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="flex flex-col mt-2"
+                    className="flex flex-col mt-2 space-y-1"
                   >
                     <Link
-                      href="/admissions/courses"
+                      href="/admissions#courses"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Courses Offered
                     </Link>
                     <a
-                      href="https://example.com"
+                      href="/prospectus.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Prospectus
                     </a>
@@ -437,9 +538,9 @@ export default function Navbar() {
                 <Link
                   href="/student-corner"
                   onClick={() => setMenu(false)}
-                  className="text-[#0c2340] hover:text-amber-600"
+                  className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
                 >
-                  Student Corner
+                  STUDENT CORNER
                 </Link>
                 <button
                   onClick={() => setMobileStudentCornerOpen(!mobileStudentCornerOpen)}
@@ -455,26 +556,26 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="flex flex-col mt-2"
+                    className="flex flex-col mt-2 space-y-1"
                   >
                     <Link
-                      href="/student-corner/societies"
+                      href="/student-corner#societies"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Societies and Clubs
                     </Link>
                     <Link
-                      href="/student-corner/facilities"
+                      href="/student-corner#facilities"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Facilities
                     </Link>
                     <Link
-                      href="/student-corner/support"
+                      href="/student-corner#support"
                       onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
+                      className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Student Support
                     </Link>
@@ -483,56 +584,35 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/gallery" onClick={() => setMenu(false)} className={navItemClass("/gallery")}>
-              Gallery
+            <Link
+              href="/gallery"
+              onClick={() => setMenu(false)}
+              className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+            >
+              GALLERY
             </Link>
 
-            {/* Mobile Others Dropdown */}
-            <div className="flex flex-col items-center">
-              <div className="flex items-center">
-                <Link href="/about" onClick={() => setMenu(false)} className="text-[#0c2340] hover:text-amber-600">
-                  Others
-                </Link>
-                <button
-                  onClick={() => setMobileOthersOpen(!mobileOthersOpen)}
-                  className="ml-1 text-[#0c2340] hover:text-amber-600"
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-              <AnimatePresence>
-                {mobileOthersOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex flex-col mt-2"
-                  >
-                    <Link
-                      href="/library"
-                      onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
-                    >
-                      Library
-                    </Link>
-                    <Link
-                      href="/contact"
-                      onClick={() => setMenu(false)}
-                      className="text-[#0c2340] hover:text-amber-600 py-1"
-                    >
-                      Contact Us
-                    </Link>
-                    
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            <Link href="https://admission.punjab.gov.in/student/register/UG" onClick={() => setMenu(false)} className="mt-4">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3 rounded-md shadow-md transition-all hover:shadow-lg text-lg">
-                Register Now
-              </Button>
+            <Link
+              href="/library"
+              onClick={() => setMenu(false)}
+              className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+            >
+              LIBRARY
             </Link>
+
+            <Link
+              href="/contact"
+              onClick={() => setMenu(false)}
+              className="text-[#0c2340] hover:text-amber-600 font-medium text-sm"
+            >
+              CONTACT US
+            </Link>
+
+            <a href="https://gnduadmissions.org/" onClick={() => setMenu(false)} className="mt-4">
+              <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-2 rounded-md shadow-md transition-all hover:shadow-lg text-sm">
+                REGISTER NOW
+              </Button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
