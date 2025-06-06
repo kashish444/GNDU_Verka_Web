@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
@@ -35,25 +35,15 @@ export default function Navbar() {
 
   const gotohome = () => router.push("/")
 
-  // Debounced scroll handler
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.scrollY
-    setScrolled(scrollTop > 100)
-  }, [])
-
   useEffect(() => {
-    let timeoutId
-    const debouncedScroll = () => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(handleScroll, 50) // Debounce scroll event
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setScrolled(scrollTop > 50) // Reduced threshold for earlier trigger
     }
 
-    window.addEventListener("scroll", debouncedScroll)
-    return () => {
-      window.removeEventListener("scroll", debouncedScroll)
-      clearTimeout(timeoutId)
-    }
-  }, [handleScroll])
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = menu ? "hidden" : ""
@@ -66,112 +56,123 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar - Hidden when scrolled */}
-      <AnimatePresence>
-        {!scrolled && (
-          <motion.div
-            initial={{ height: "auto", opacity: 1 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0, marginTop: 0 }}
-            transition={{ 
-              duration: 0.4, // Slightly longer duration for smoother effect
-              ease: "easeInOut", // Easing for natural feel
-              opacity: { duration: 0.3 }, // Faster opacity transition
-              height: { duration: 0.4 } // Smoother height collapse
-            }}
-            className="overflow-hidden"
-          >
-            {/* Top Blue Bar */}
-            <div className="bg-[#0c2340] text-white py-1">
-              <div className="container mx-auto px-2 flex justify-between items-center">
-                {/* Left Side - Quick Links */}
-                <div className="hidden lg:flex items-center space-x-4 text-xs font-medium">
-                  <Link href="/academics" className="hover:text-amber-300 transition-colors">
-                    ACADEMICS
+      {/* Top Bar - Smooth Hide/Show when scrolled */}
+      <motion.div
+        initial={false}
+        animate={{
+          height: scrolled ? 0 : "auto",
+          opacity: scrolled ? 0 : 1,
+          marginBottom: scrolled ? 0 : "0px",
+        }}
+        transition={{
+          duration: 0.4,
+          ease: [0.4, 0, 0.2, 1], // Custom easing for smoother animation
+          height: { duration: 0.4 },
+          opacity: { duration: 0.3 },
+        }}
+        className="overflow-hidden"
+        style={{ willChange: "height, opacity" }}
+      >
+        {/* Top Blue Bar */}
+        <div className="bg-[#0c2340] text-white py-1">
+          <div className="container mx-auto px-2 flex justify-between items-center">
+            {/* Left Side - Quick Links */}
+            <div className="hidden lg:flex items-center space-x-4 text-xs font-medium">
+              <Link href="/academics" className="hover:text-amber-300 transition-colors">
+                ACADEMICS
+              </Link>
+              <Link href="/admissions" className="hover:text-amber-300 transition-colors">
+                ADMISSIONS
+              </Link>
+              <Link href="/library" className="hover:text-amber-300 transition-colors">
+                LIBRARY
+              </Link>
+              <Link href="/contact" className="hover:text-amber-300 transition-colors">
+                CONTACT
+              </Link>
+            </div>
+
+            {/* Right Side - Social Media & Admin */}
+            <div className="flex items-center space-x-2">
+              <div className="hidden lg:flex items-center space-x-2">
+                {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
+                  <Link href="#" key={i} aria-label={Icon.name} className="hover:text-amber-300 transition-colors">
+                    <Icon className="h-3 w-3" />
                   </Link>
-                  <Link href="/admissions" className="hover:text-amber-300 transition-colors">
-                    ADMISSIONS
-                  </Link>
-                  <Link href="/library" className="hover:text-amber-300 transition-colors">
-                    LIBRARY
-                  </Link>
-                  <Link href="/contact" className="hover:text-amber-300 transition-colors">
-                    CONTACT
-                  </Link>
+                ))}
+              </div>
+              <div className="h-3 w-px bg-white/30 hidden lg:block"></div>
+              <Link
+                href="/admin"
+                className="flex items-center space-x-1 hover:text-amber-300 transition-colors text-xs font-medium"
+              >
+                <User className="h-3 w-3" />
+                <span className="hidden md:block">ADMIN</span>
+              </Link>
+              <a
+                href="https://gnduadmissions.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:block"
+              >
+                <Button className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-2 py-0.5 text-xs rounded shadow-md transition-all hover:shadow-lg">
+                  REGISTER
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Middle White Section with Logo */}
+        <div className="bg-white py-2">
+          <div className="container mx-auto px-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-2">
+              {/* Left Side - Punjabi Text & Contact */}
+              <div className="hidden lg:block text-left">
+                <div className="text-[#0c2340] font-bold text-sm mb-1">ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਯੂਨੀਵਰਸਿਟੀ ਕਾਲਜ</div>
+                <div className="text-[#0c2340] text-xs mb-1">ਵੇਰਕਾ, ਅੰਮ੍ਰਿਤਸਰ (ਪੰਜਾਬ)</div>
+                <div className="flex items-center space-x-3 text-xs text-gray-600">
+                  <div className="flex items-center">
+                    <Phone className="h-2 w-2 mr-1" />
+                    <span>81465-14040</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="h-2 w-2 mr-1" />
+                    <span>osd.verka@gndu.ac.in</span>
+                  </div>
                 </div>
+              </div>
+
+              {/* Center - Logo */}
+              <div className="flex justify-center">
+                <div className="flex flex-col items-center cursor-pointer" onClick={gotohome}>
+                  <div className="relative">
+                    <Image
+                      src="/university-logo.jpg"
+                      alt="University Logo"
+                      width={50}
+                      height={50}
+                      className="rounded-full shadow-md border-2 border-amber-200"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - English Text & NAAC */}
+              <div className="hidden lg:block text-right">
+                <div className="text-[#0c2340] font-bold text-sm mb-1">GURU NANAK DEV UNIVERSITY COLLEGE</div>
+                <div className="text-[#0c2340] text-xs mb-1">VERKA, AMRITSAR (PUNJAB)</div>
                 <div className="flex justify-end items-center space-x-2">
                   <span className="text-xs font-semibold bg-amber-500 text-white px-1.5 py-0.5 rounded-full shadow-sm">
                     NAAC A++
                   </span>
-                  <span className="text-xs text-white italic">(Constituent College)</span>
-                </div>
-                {/* Right Side - Social Media & Admin */}
-                <div className="flex items-center space-x-2">
-                  <div className="hidden lg:flex items-center space-x-2">
-                    {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
-                      <Link href="#" key={i} aria-label={Icon.name} className="hover:text-amber-300 transition-colors">
-                        <Icon className="h-3 w-3" />
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="h-3 w-px bg-white/30 hidden lg:block"></div>
-                  <Link
-                    href="/admin"
-                    className="flex items-center space-x-1 hover:text-amber-300 transition-colors text-xs font-medium"
-                  >
-                    <User className="h-3 w-3" />
-                    <span className="hidden md:block">ADMIN</span>
-                  </Link>
+                  <span className="text-xs text-gray-600 italic">(Constituent College)</span>
                 </div>
               </div>
             </div>
-
-            {/* Middle White Section with Logo */}
-            <div className="bg-white py-2">
-              <div className="container mx-auto px-2">
-                <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-2">
-                  {/* Left Side - Punjabi Text & Contact */}
-                  <div className="hidden lg:block text-left">
-                    <div className="text-[#0c2340] font-bold text-sm mb-1">ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਯੂਨੀਵਰਸਿਟੀ ਕਾਲਜ</div>
-                    <div className="text-[#0c2340] text-xs mb-1">ਵੇਰਕਾ, ਅੰਮ੍ਰਿਤਸਰ (ਪੰਜਾਬ)</div>
-                    <div className="flex items-center space-x-3 text-xs text-gray-600">
-                      <div className="flex items-center">
-                        <Phone className="h-2 w-2 mr-1" />
-                        <span>81465-14040</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="h-2 w-2 mr-1" />
-                        <span>osd.verka@gndu.ac.in</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Center - Logo */}
-                  <div className="flex justify-center">
-                    <div className="flex flex-col items-center cursor-pointer" onClick={gotohome}>
-                      <div className="relative">
-                        <Image
-                          src="/university-logo.jpg"
-                          alt="University Logo"
-                          width={70}
-                          height={70}
-                          className="rounded-full shadow-md border-2 border-amber-200"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right Side - English Text & NAAC */}
-                  <div className="hidden lg:block text-right">
-                    <div className="text-[#0c2340] font-bold text-sm mb-1">GURU NANAK DEV UNIVERSITY COLLEGE</div>
-                    <div className="text-[#0c2340] text-xs mb-1">VERKA, AMRITSAR (PUNJAB)</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </motion.div>
 
       {/* Main Navigation Bar - Always Visible */}
       <div className="bg-[#0c2340] py-1">
@@ -211,7 +212,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full mt-1 bg-white shadow-xl rounded-md w-40 z-50 border"
+                      className="absolute top-full mt-1 bg-white shadow-xl rounded-md w-44 z-50 border"
                     >
                       <Link
                         href="/academics#courses"
@@ -236,6 +237,12 @@ export default function Navbar() {
                         className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
                       >
                         Academic Calendar
+                      </Link>
+                      <Link
+                        href="/pdf/view?category=datesheet"
+                        className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                      >
+                        Date Sheet
                       </Link>
                     </motion.div>
                   )}
@@ -287,14 +294,23 @@ export default function Navbar() {
 
             {/* Center - Logo (when scrolled) */}
             <div className="flex-1 flex justify-center">
-              {scrolled && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex items-center cursor-pointer"
-                  onClick={gotohome}
-                >
+              <motion.div
+                initial={false}
+                animate={{
+                  opacity: scrolled ? 1 : 0,
+                  scale: scrolled ? 1 : 0.8,
+                  y: scrolled ? 0 : -10,
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: [0.4, 0, 0.2, 1],
+                  delay: scrolled ? 0.2 : 0, // Slight delay when appearing
+                }}
+                className="flex items-center cursor-pointer"
+                onClick={gotohome}
+                style={{ willChange: "opacity, transform" }}
+              >
+                {scrolled && (
                   <Image
                     src="/university-logo.jpg"
                     alt="University Logo"
@@ -302,8 +318,8 @@ export default function Navbar() {
                     height={32}
                     className="rounded-full shadow-md border border-amber-200"
                   />
-                </motion.div>
-              )}
+                )}
+              </motion.div>
             </div>
 
             {/* Right Side Navigation */}
@@ -479,6 +495,13 @@ export default function Navbar() {
                       className="text-amber-600 hover:text-amber-700 text-xs"
                     >
                       Academic Calendar
+                    </Link>
+                    <Link
+                      href="/pdf/view?category=datesheet"
+                      onClick={() => setMenu(false)}
+                      className="text-amber-600 hover:text-amber-700 text-xs"
+                    >
+                      Date Sheet
                     </Link>
                   </motion.div>
                 )}
