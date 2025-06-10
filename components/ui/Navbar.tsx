@@ -183,9 +183,8 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
               <Link
                 href="/"
-                className={`flex items-center font-medium text-xs transition-colors duration-200 ${
-                  isActive("/") ? "text-amber-400" : "text-white hover:text-amber-300"
-                }`}
+                className={`flex items-center font-medium text-xs transition-colors duration-200 ${isActive("/") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
               >
                 <Home className="h-3 w-3 mr-1" />
                 HOME
@@ -199,9 +198,8 @@ export default function Navbar() {
               >
                 <Link
                   href="/academics"
-                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
-                    isActive("/academics") ? "text-amber-400" : "text-white hover:text-amber-300"
-                  }`}
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${isActive("/academics") ? "text-amber-400" : "text-white hover:text-amber-300"
+                    }`}
                 >
                   ACADEMICS <ChevronDown className="ml-1 w-3 h-3" />
                 </Link>
@@ -257,9 +255,8 @@ export default function Navbar() {
               >
                 <Link
                   href="/admissions"
-                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
-                    isActive("/admissions") ? "text-amber-400" : "text-white hover:text-amber-300"
-                  }`}
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${isActive("/admissions") ? "text-amber-400" : "text-white hover:text-amber-300"
+                    }`}
                 >
                   ADMISSIONS <ChevronDown className="ml-1 w-3 h-3" />
                 </Link>
@@ -332,9 +329,8 @@ export default function Navbar() {
               >
                 <Link
                   href="/student-corner"
-                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${
-                    isActive("/student-corner") ? "text-amber-400" : "text-white hover:text-amber-300"
-                  }`}
+                  className={`flex items-center font-medium text-xs transition-colors duration-200 ${isActive("/student-corner") ? "text-amber-400" : "text-white hover:text-amber-300"
+                    }`}
                 >
                   STUDENT CORNER <ChevronDown className="ml-1 w-3 h-3" />
                 </Link>
@@ -372,27 +368,24 @@ export default function Navbar() {
 
               <Link
                 href="/gallery"
-                className={`font-medium text-xs transition-colors duration-200 ${
-                  isActive("/gallery") ? "text-amber-400" : "text-white hover:text-amber-300"
-                }`}
+                className={`font-medium text-xs transition-colors duration-200 ${isActive("/gallery") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
               >
                 GALLERY
               </Link>
 
               <Link
                 href="/library"
-                className={`font-medium text-xs transition-colors duration-200 ${
-                  isActive("/library") ? "text-amber-400" : "text-white hover:text-amber-300"
-                }`}
+                className={`font-medium text-xs transition-colors duration-200 ${isActive("/library") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
               >
                 LIBRARY
               </Link>
 
               <Link
                 href="/contact"
-                className={`font-medium text-xs transition-colors duration-200 ${
-                  isActive("/contact") ? "text-amber-400" : "text-white hover:text-amber-300"
-                }`}
+                className={`font-medium text-xs transition-colors duration-200 ${isActive("/contact") ? "text-amber-400" : "text-white hover:text-amber-300"
+                  }`}
               >
                 CONTACT US
               </Link>
@@ -542,7 +535,7 @@ export default function Navbar() {
                       Courses Offered
                     </Link>
                     <a
-                      href="/prospectus.pdf"
+                      href="https://www.gnduadmissions.org/campusadmissions/pdf/verkacollege202526.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMenu(false)}
