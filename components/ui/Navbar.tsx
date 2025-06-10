@@ -276,7 +276,7 @@ export default function Navbar() {
                         Courses Offered
                       </Link>
                       <a
-                        href="/prospectus.pdf"
+                        href="https://www.gnduadmissions.org/campusadmissions/pdf/verkacollege202526.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block px-3 py-2 text-xs text-[#0c2340] hover:bg-amber-50 hover:text-amber-600 transition-colors"
