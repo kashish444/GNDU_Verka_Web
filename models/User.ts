@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema(
         "Please enter a valid first name.",
       ],
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
     lastname: {
       type: String,
       required: false,
@@ -31,12 +35,12 @@ const userSchema = new mongoose.Schema(
     },
     employeeId: {
       type: String,
-      required: true,
+      required: false,
       unique: true,
     },
     department: {
       type: String,
-      required: true,
+      required: false,
     },
     password: {
       type: String,

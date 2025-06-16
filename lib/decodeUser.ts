@@ -8,6 +8,7 @@ interface User {
   lastname: string;
   email: string;
   department: string;
+  admin: boolean;
 }
 
 // Decode the JWT token and return the user object

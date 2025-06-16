@@ -6,9 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import PdfUpload from "./PdfUpload";
-
-
-
+import Users from "./Users";
 
 interface Props {
   user: {
@@ -17,6 +15,7 @@ interface Props {
     lastname: string;
     email: string;
     department: string;
+    admin: boolean;
   };
 }
 
@@ -54,7 +53,6 @@ export default function AdminComponent({ user }: Props) {
   });
   const queryClient = useQueryClient();
   const router = useRouter();
-  
 
   const handleLogout = async () => {
     const response = await axios.get("api/auth/logout");
@@ -193,13 +191,14 @@ export default function AdminComponent({ user }: Props) {
           {/* <a href="/admin/users" className="hover:text-gray-400">
             Users
           </a> */}
-          <p className="hover:text-gray-400 cursor-pointer" onClick={() => handleLogout()}>
+          <p
+            className="hover:text-gray-400 cursor-pointer"
+            onClick={() => handleLogout()}
+          >
             Logout
           </p>
         </nav>
       </div>
-      
-      
 
       <div className="flex flex-col w-full px-10">
         {/* Welcome user */}
@@ -208,8 +207,13 @@ export default function AdminComponent({ user }: Props) {
           <p className="flex text-4xl font-bold pl-2">
             {user.firstname + " " + user.lastname}
           </p>
+          {user.admin && <p>Admin</p>}
         </div>
 
+        {/* user management */}
+        {user.admin && <Users id={user._id} />}
+
+        {/* news & announcements */}
         <div className="flex flex-col my-10 w-full bg-black/5 rounded-xl p-10">
           <h2 className="text-3xl font-bold text-black mb-4">
             News & Announcements
@@ -536,9 +540,8 @@ export default function AdminComponent({ user }: Props) {
           </div>
         </>
       )}
-      <PdfUpload/>
+      <PdfUpload />
       {/* <GalleryUpload/> */}
-    
     </>
   );
 }

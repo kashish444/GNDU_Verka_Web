@@ -48,6 +48,7 @@ export async function POST(request: NextRequest) {
         firstname: user.firstname,
         lastname: user.lastname,
         email: user.email,
+        admin: user.admin || false,
         employeeId: user.employeeId,
         department: user.department || "",
       },
